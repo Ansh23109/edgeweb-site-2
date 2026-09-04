@@ -2,8 +2,7 @@ const { kv } = require('@vercel/kv');
 const bcrypt = require('bcryptjs');
 
 const ADMIN_PATH = '/admin';
-
-const defaultConfig = {
+let memoryConfig = {
   siteName: 'EdgeWeb',
   pageTitle: 'EdgeWeb | IT Solutions, Web & App Development, Automation | India',
   metaDescription: 'EdgeWeb builds custom web and mobile applications, process automation, cloud infrastructure and digital marketing for growing businesses. Based in India, working worldwide.',
@@ -19,6 +18,8 @@ const defaultConfig = {
   footerText: 'We help businesses turn ideas into systems that keep growing.'
 };
 
+const defaultConfig = { ...memoryConfig };
+
 function escapeHtml(str = '') {
   return String(str)
     .replace(/&/g, '&amp;')
@@ -31,14 +32,27 @@ function escapeHtml(str = '') {
 async function getSiteData() {
   try {
     const data = await kv.get('edgeweb-site-config');
-    return data || defaultConfig;
+    if (data) {
+      memoryConfig = data;
+      return data;
+    }
+    return memoryConfig;
   } catch (error) {
-    return defaultConfig;
+    return memoryConfig;
   }
 }
 
 async function saveSiteData(data) {
-  await kv.set('edgeweb-site-config', data);
+  memoryConfig = data || memoryConfig;
+
+  try {
+    if (kv && typeof kv.set === 'function') {
+      await kv.set('edgeweb-site-config', data);
+    }
+    return true;
+  } catch (error) {
+    return false;
+  }
 }
 
 async function isAuthenticated(req) {
