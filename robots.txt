@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.edgewebinfotech.com/sitemap.xml
+Sitemap: https://www.edgeweb.co/sitemap.xml
