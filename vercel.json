@@ -1,7 +1,7 @@
 {
   "rewrites": [
     { "source": "/admin", "destination": "/api/admin" },
-    { "source": "/admin/:path*", "destination": "/api/admin/:path*" },
+    { "source": "/admin/:path*", "destination": "/api/admin" },
     { "source": "/api/site", "destination": "/api/site" }
   ],
   "headers": [
