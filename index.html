@@ -1941,7 +1941,7 @@
       showStep(stepIndex);
     });
 
-    function submitLead(){
+    async function submitLead(){
       const lead = {
         ...answers,
         utm_source: document.getElementById('dUtmSource').value,
@@ -1951,8 +1951,25 @@
         referrer: document.getElementById('dReferrer').value,
         submitted_at: new Date().toISOString()
       };
-      // No backend/CRM connected yet — this is the exact shape a future API call would POST.
-      // Example: fetch('/api/leads', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(lead) })
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            ...lead,
+            source: 'discovery_popup',
+            formType: 'project_enquiry'
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error('Request failed');
+        }
+      } catch (error) {
+        console.error('Discovery form email submission failed:', error);
+      }
+
       window.edgewebLeads = window.edgewebLeads || [];
       window.edgewebLeads.push(lead);
       trackEvent && trackEvent('discovery_submit', { build_type: lead.buildType, goal: lead.goal, budget: lead.budget });

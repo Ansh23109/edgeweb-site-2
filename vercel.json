@@ -2,7 +2,8 @@
   "rewrites": [
     { "source": "/admin", "destination": "/api/admin" },
     { "source": "/admin/:path*", "destination": "/api/admin" },
-    { "source": "/api/site", "destination": "/api/site" }
+    { "source": "/api/site", "destination": "/api/site" },
+    { "source": "/api/contact", "destination": "/api/contact" }
   ],
   "headers": [
     {

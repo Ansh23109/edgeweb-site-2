@@ -1055,18 +1055,12 @@
       return ok;
     }
 
-    form.addEventListener('submit', (e)=>{
+    form.addEventListener('submit', async (e)=>{
       e.preventDefault();
       if(!validate()) return;
 
       const data = Object.fromEntries(new FormData(form).entries());
       data.submitted_at = new Date().toISOString();
-
-      // No backend/CRM connected yet — this is the exact shape a future API call would POST.
-      // Example: fetch('/api/leads', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) })
-      window.edgewebLeads = window.edgewebLeads || [];
-      window.edgewebLeads.push(data);
-      if(typeof trackEvent === 'function') trackEvent('contact_form_submit', { service: data.service, budget: data.budget });
 
       const submitBtn = document.getElementById('cfSubmit');
       const status = document.getElementById('cfStatus');
@@ -1075,22 +1069,34 @@
       status.textContent = 'Sending your enquiry…';
       status.classList.add('show');
 
-      const bodyLines = [
-        `Name: ${data.name}`, `Email: ${data.email}`, `Phone: ${data.phone || '-'}`,
-        `Company: ${data.company || '-'}`, `Website: ${data.website || '-'}`,
-        `Service: ${data.service}`, `Budget: ${data.budget || '-'}`, `Timeline: ${data.timeline || '-'}`,
-        `Heard about us via: ${data.hearAbout || '-'}`, '', `Project details:`, data.details,
-        '', `Source: ${data.utm_source || 'direct'} / ${data.utm_medium || '-'} / ${data.utm_campaign || '-'}`,
-        `Landing page: ${data.landing_page}`
-      ].join('\n');
-      const mailto = `mailto:info@edgeweb.co?subject=${encodeURIComponent('New project enquiry — ' + data.service)}&body=${encodeURIComponent(bodyLines)}`;
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
 
-      setTimeout(()=>{
-        window.location.href = mailto;
+        const result = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+          throw new Error(result.message || 'Submission failed');
+        }
+
+        window.edgewebLeads = window.edgewebLeads || [];
+        window.edgewebLeads.push(data);
+        if(typeof trackEvent === 'function') trackEvent('contact_form_submit', { service: data.service, budget: data.budget });
+
         document.getElementById('formWrap').querySelector('.eyebrow').style.display='none';
         form.style.display = 'none';
         document.getElementById('formSuccess').classList.add('show');
-      }, 700);
+        status.textContent = 'Sent successfully';
+      } catch (error) {
+        console.error('Contact form email submission failed:', error);
+        status.textContent = 'Something went wrong. Please email us directly at info@edgeweb.co.';
+        status.classList.add('show');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Start the Conversation →';
+      }
     });
   })();
 
