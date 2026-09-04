@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="EdgeWeb favicon">
+  <rect width="64" height="64" rx="14" fill="#0B0A0C"/>
+  <rect x="9" y="9" width="46" height="46" rx="12" fill="#141216" stroke="#2F2A2E"/>
+  <path d="M18 47V17h8.5l7.5 14 7.5-14H50v30h-7.7V31.4L32 46l-10.3-14.6V47H18Z" fill="#F5F1EC"/>
+  <path d="M34.5 17h8.7L32 40h-8.7L34.5 17Z" fill="#B23A57"/>
+</svg>
