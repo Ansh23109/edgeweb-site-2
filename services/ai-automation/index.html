@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI &amp; Automation Services | AI Agents, Chatbots &amp; Workflow Automation | EdgeWeb</title>
+<meta name="description" content="EdgeWeb builds AI agents, chatbots and workflow automation scoped to a measurable business outcome — document processing, lead routing, support triage and WhatsApp automation.">
+<link rel="canonical" href="https://www.edgewebinfotech.com/services/ai-automation">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EdgeWeb Infotech">
+<meta property="og:title" content="AI & Automation Services | EdgeWeb Infotech">
+<meta property="og:description" content="AI agents, chatbots and workflow automation scoped to a measurable business outcome.">
+<meta property="og:url" content="https://www.edgewebinfotech.com/services/ai-automation">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI & Automation Services | EdgeWeb Infotech">
+<meta name="twitter:description" content="AI agents, chatbots and workflow automation scoped to a measurable business outcome.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.edgewebinfotech.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.edgewebinfotech.com/services" },
+    { "@type": "ListItem", "position": 3, "name": "AI & Automation", "item": "https://www.edgewebinfotech.com/services/ai-automation" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "AI & Automation Services",
+  "serviceType": "AI automation and workflow automation development",
+  "provider": { "@type": "Organization", "name": "EdgeWeb Infotech LLP" },
+  "areaServed": "Worldwide",
+  "description": "AI agents, chatbots, and business process automation including document processing, lead routing, support triage and WhatsApp automation.",
+  "url": "https://www.edgewebinfotech.com/services/ai-automation"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Do we need our data to be 'AI-ready' before starting?", "acceptedAnswer": { "@type": "Answer", "text": "No. Most engagements start by working with the data and systems you already have. Part of the first phase is identifying what's usable as-is and what needs light cleanup before automation can run on it." } },
+    { "@type": "Question", "name": "Will AI replace our team's judgment on important decisions?", "acceptedAnswer": { "@type": "Answer", "text": "Not by default. Most systems we build are scoped to a specific, bounded task — classification, drafting, triage — with a human reviewing anything above a risk or confidence threshold you set." } },
+    { "@type": "Question", "name": "How do you decide what to automate first?", "acceptedAnswer": { "@type": "Answer", "text": "By volume and pain: the manual step that happens most often and causes the most delay or error usually gets automated first, since that's where the return is fastest to see." } },
+    { "@type": "Question", "name": "Can this integrate with the CRM/ERP we already use?", "acceptedAnswer": { "@type": "Answer", "text": "In most cases, yes — through the platform's API or, where no API exists, through a lighter-weight integration approach we scope during the architecture phase." } }
+  ]
+}
+</script>
+
+<style>
+
+  :root{
+    --bg:            #0B0A0C;
+    --bg-raised:     #141216;
+    --bg-raised-2:   #1B1719;
+    --ink:           #F5F1EC;
+    --ink-dim:       #A79E9A;
+    --ink-faint:     #6E6663;
+    --accent:        #7A1B34;
+    --accent-bright: #B23A57;
+    --line:          rgba(245,241,236,0.11);
+    --line-strong:   rgba(245,241,236,0.22);
+
+    --f-display: 'Fraunces', serif;
+    --f-body: 'Manrope', sans-serif;
+
+    --container: 1360px;
+    --gutter: clamp(20px, 5vw, 64px);
+    --radius: 2px;
+
+    --ease: cubic-bezier(.16,.84,.32,1);
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+  }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--f-body);
+    font-size:16px;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  ::selection{ background:var(--accent); color:var(--ink); }
+
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+
+  .wrap{
+    max-width:var(--container);
+    margin:0 auto;
+    padding-left:var(--gutter);
+    padding-right:var(--gutter);
+  }
+
+  /* ---------- grain ---------- */
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:500;
+    opacity:0.035; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- type scale ---------- */
+  h1,h2,h3{ margin:0; font-family:var(--f-display); font-weight:400; letter-spacing:-0.01em; }
+  p{ margin:0; }
+
+  .eyebrow{
+    font-family:var(--f-body); font-size:12px; font-weight:700;
+    letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-dim);
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{ content:''; width:16px; height:1px; background:var(--accent-bright); }
+
+  .display-xl{ font-size:clamp(52px, 8.6vw, 132px); line-height:0.93; }
+  .display-lg{ font-size:clamp(38px, 5.4vw, 74px); line-height:0.98; }
+  .display-md{ font-size:clamp(28px, 3.2vw, 44px); line-height:1.08; }
+
+  .body-lg{ font-size:clamp(17px, 1.6vw, 20px); line-height:1.6; color:var(--ink-dim); max-width:46ch; }
+  .body{ font-size:16px; line-height:1.65; color:var(--ink-dim); max-width:42ch; }
+
+  .mono-label{
+    font-family:var(--f-body); font-size:11px; letter-spacing:0.08em;
+    color:var(--ink-faint); font-variant-numeric:tabular-nums;
+  }
+
+  /* ---------- buttons ---------- */
+  .btn{
+    position:relative; display:inline-flex; align-items:center; gap:10px;
+    font-family:var(--f-body); font-weight:600; font-size:14.5px;
+    padding:15px 26px; border-radius:100px; cursor:pointer; border:1px solid transparent;
+    transition:transform .35s var(--ease), background .3s ease, border-color .3s ease;
+    will-change:transform;
+  }
+  .btn-primary{ background:var(--ink); color:var(--bg); }
+  .btn-primary:hover{ background:var(--accent-bright); color:var(--ink); }
+  .btn-ghost{ border-color:var(--line-strong); color:var(--ink); }
+  .btn-ghost:hover{ border-color:var(--ink); }
+  .btn svg{ width:14px; height:14px; transition:transform .3s var(--ease); }
+  .btn:hover svg{ transform:translateX(3px); }
+
+  /* magnetic wrapper */
+  .magnetic{ display:inline-block; }
+
+  /* ---------- nav ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:400;
+    padding:22px 0; transition:background .4s var(--ease), border-color .4s var(--ease), padding .4s var(--ease);
+    border-bottom:1px solid transparent;
+  }
+  header.solid{
+    background:rgba(11,10,12,0.82); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    border-color:var(--line); padding:16px 0;
+  }
+  nav{ display:flex; align-items:center; justify-content:space-between; }
+  .logo{ font-family:var(--f-display); font-size:21px; letter-spacing:-0.01em; }
+  .logo em{ font-style:italic; font-weight:400; color:var(--ink); }
+  .logo b{ font-style:normal; font-weight:600; color:var(--ink); }
+  .nav-links{ display:flex; gap:38px; list-style:none; margin:0; padding:0; }
+  .nav-links a{
+    font-size:14px; font-weight:500; color:var(--ink-dim);
+    position:relative; transition:color .25s ease;
+  }
+  .nav-links a::after{
+    content:''; position:absolute; left:0; right:0; bottom:-6px; height:1px;
+    background:var(--accent-bright); transform:scaleX(0); transform-origin:left;
+    transition:transform .3s var(--ease);
+  }
+  .nav-links a:hover{ color:var(--ink); }
+  .nav-links a:hover::after{ transform:scaleX(1); }
+  .nav-cta{ display:flex; align-items:center; gap:28px; }
+  .nav-burger{
+    display:none; flex-direction:column; justify-content:center; gap:5px;
+    width:36px; height:36px; border:none; background:none; cursor:pointer; padding:0;
+  }
+  .nav-burger span{ display:block; width:22px; height:1px; background:var(--ink); transition:transform .3s var(--ease), opacity .3s var(--ease); }
+  .nav-burger.open span:nth-child(1){ transform:translateY(6px) rotate(45deg); }
+  .nav-burger.open span:nth-child(2){ opacity:0; }
+  .nav-burger.open span:nth-child(3){ transform:translateY(-6px) rotate(-45deg); }
+
+  .mobile-menu{
+    position:fixed; inset:0; z-index:399; background:var(--bg);
+    display:flex; flex-direction:column; justify-content:center; padding:0 var(--gutter);
+    opacity:0; visibility:hidden; transform:translateY(-8px);
+    transition:opacity .35s var(--ease), transform .35s var(--ease), visibility 0s linear .35s;
+  }
+  .mobile-menu.open{ opacity:1; visibility:visible; transform:translateY(0); transition:opacity .35s var(--ease), transform .35s var(--ease); }
+  .mobile-menu ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; }
+  .mobile-menu a{ font-family:var(--f-display); font-style:italic; font-size:clamp(32px,9vw,48px); color:var(--ink); padding:14px 0; border-bottom:1px solid var(--line); }
+  .mobile-menu .btn{ margin-top:34px; align-self:flex-start; }
+
+  @media (max-width: 860px){
+    .nav-links{ display:none; }
+    .nav-cta .btn-ghost{ display:none; }
+    .nav-burger{ display:flex; }
+  }
+
+  /* ================= HERO ================= */
+  .hero{
+    position:relative; min-height:100svh; display:flex; align-items:center;
+    padding-top:120px; padding-bottom:60px; overflow:hidden;
+  }
+  .hero-grid{
+    position:absolute; inset:0; z-index:0; opacity:0.5;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 84px 84px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 55% 40%, black 20%, transparent 75%);
+    mask-image: radial-gradient(ellipse 80% 60% at 55% 40%, black 20%, transparent 75%);
+  }
+  .hero-inner{
+    position:relative; z-index:2; width:100%;
+    display:grid; grid-template-columns: 1.1fr 1fr; gap:20px; align-items:center;
+  }
+  .hero-copy{ position:relative; z-index:3; }
+  .hero-copy .eyebrow{ margin-bottom:26px; }
+  .hero-copy h1{ color:var(--ink); }
+  .hero-copy h1 i{ font-style:italic; color:var(--ink-dim); }
+  .hero-sub{ margin-top:28px; }
+  .hero-actions{ margin-top:44px; display:flex; gap:16px; flex-wrap:wrap; align-items:center; }
+  .hero-meta{
+    margin-top:56px; display:flex; gap:36px; padding-top:22px; border-top:1px solid var(--line);
+    max-width:520px;
+  }
+  .hero-meta div{ display:flex; flex-direction:column; gap:4px; }
+  .hero-meta .n{ font-family:var(--f-display); font-style:italic; font-size:22px; color:var(--ink); }
+  .hero-meta .l{ font-size:11.5px; color:var(--ink-faint); letter-spacing:0.03em; }
+
+  .hero-system{
+    position:relative; z-index:2; height:clamp(420px, 52vw, 640px);
+  }
+  .hero-system svg{ width:100%; height:100%; overflow:visible; }
+
+  .node-label{
+    font-family:var(--f-body); font-size:10.5px; font-weight:600;
+    letter-spacing:0.04em; fill:var(--ink-dim);
+  }
+  .node-circ{ fill:var(--bg-raised); stroke:var(--line-strong); stroke-width:1; transition:stroke .3s ease, fill .3s ease; }
+  .node.active .node-circ{ stroke:var(--accent-bright); fill:var(--bg-raised-2); }
+  .node.active .node-label{ fill:var(--ink); }
+  .core-ring{ fill:none; stroke:var(--line-strong); stroke-width:1; }
+  .core-mark{ fill:var(--ink); }
+  .link-line{ stroke:var(--line); stroke-width:1; fill:none; }
+  .pulse-dot{ fill:var(--accent-bright); }
+
+  @media (max-width: 980px){
+    .hero-inner{ grid-template-columns:1fr; }
+    .hero-system{ height:380px; order:-1; margin-bottom:8px; }
+    .hero-meta{ gap:26px; flex-wrap:wrap; }
+  }
+
+  /* ================= SECTION SHELL ================= */
+  section{ position:relative; padding:130px 0; }
+  section.tight{ padding:100px 0; }
+  .section-alt{ background:var(--bg-raised); }
+  .reveal{ opacity:0; transform:translateY(22px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
+  .reveal.is-in{ opacity:1; transform:translateY(0); }
+
+  .head-row{
+    display:flex; justify-content:space-between; align-items:flex-end; gap:40px;
+    margin-bottom:64px; flex-wrap:wrap;
+  }
+
+  /* ---------- positioning ---------- */
+  .positioning-statement{
+    font-family:var(--f-display); font-style:italic; font-weight:400;
+    font-size:clamp(28px, 3.6vw, 46px); line-height:1.28; color:var(--ink);
+    max-width:20ch;
+  }
+  .positioning-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:60px; align-items:start; }
+  .positioning-detail{ display:flex; flex-direction:column; gap:28px; padding-top:8px; }
+  .positioning-detail .body{ max-width:none; }
+  @media (max-width:900px){ .positioning-grid{ grid-template-columns:1fr; gap:36px; } }
+
+  /* ---------- capabilities ---------- */
+  .cap-system{ display:grid; grid-template-columns: 0.9fr 1.1fr; gap:0; border-top:1px solid var(--line); }
+  .cap-list{ border-right:1px solid var(--line); }
+  .cap-item{
+    display:flex; align-items:baseline; gap:18px; padding:26px 28px 26px 0;
+    border-bottom:1px solid var(--line); cursor:pointer; transition:padding .3s var(--ease);
+  }
+  .cap-item .idx{ font-size:12px; color:var(--ink-faint); font-variant-numeric:tabular-nums; }
+  .cap-item h3{ font-family:var(--f-body); font-weight:600; font-size:19px; color:var(--ink-dim); transition:color .3s ease; }
+  .cap-item.active{ padding-left:14px; }
+  .cap-item.active h3{ color:var(--ink); }
+  .cap-item.active .idx{ color:var(--accent-bright); }
+  .cap-detail{ padding:8px 8px 8px 48px; display:flex; flex-direction:column; justify-content:center; min-height:340px; }
+  .cap-panel{ display:none; }
+  .cap-panel.active{ display:block; }
+  .cap-panel .body-lg{ margin-top:18px; margin-bottom:26px; }
+  .cap-tags{ display:flex; flex-wrap:wrap; gap:10px; }
+  .cap-tags span{
+    font-size:12px; color:var(--ink-dim); border:1px solid var(--line-strong);
+    padding:6px 12px; border-radius:100px;
+  }
+  @media (max-width:860px){
+    .cap-system{ grid-template-columns:1fr; }
+    .cap-list{ border-right:none; }
+    .cap-detail{ padding:28px 0 0 0; min-height:auto; }
+  }
+
+  /* ---------- edge system (sequence) ---------- */
+  .flow{ display:flex; flex-direction:column; border-top:1px solid var(--line); }
+  .flow-step{
+    display:grid; grid-template-columns:80px 1fr 1fr; gap:24px; align-items:center;
+    padding:34px 0; border-bottom:1px solid var(--line);
+  }
+  .flow-step .fn{ font-family:var(--f-display); font-style:italic; font-size:28px; color:var(--ink-faint); }
+  .flow-step h3{ font-family:var(--f-body); font-weight:700; font-size:18px; color:var(--ink); }
+  .flow-step .body{ max-width:52ch; }
+  .flow-step:hover .fn{ color:var(--accent-bright); }
+  @media (max-width:760px){
+    .flow-step{ grid-template-columns:44px 1fr; }
+    .flow-step .body{ grid-column:2/3; }
+  }
+
+  /* ---------- case studies ---------- */
+  .case{ border-top:1px solid var(--line); padding:80px 0; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+  .case:last-child{ border-bottom:1px solid var(--line); }
+  .case-visual{
+    aspect-ratio:4/3; border:1px solid var(--line-strong); border-radius:var(--radius);
+    background:
+      linear-gradient(160deg, var(--bg-raised) 0%, var(--bg-raised-2) 100%);
+    position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:26px;
+  }
+  .case-visual::before{
+    content:''; position:absolute; inset:0;
+    background-image: repeating-linear-gradient(115deg, transparent 0 38px, var(--line) 38px 39px);
+    opacity:.5;
+  }
+  .case-visual .tag{ position:relative; font-family:var(--f-display); font-style:italic; font-size:15px; color:var(--ink-dim); }
+  .case-meta{ display:flex; gap:14px; margin-bottom:18px; }
+  .case-meta span{ font-size:11.5px; letter-spacing:0.05em; text-transform:uppercase; color:var(--ink-faint); }
+  .case h3{ font-size:clamp(26px,2.6vw,36px); color:var(--ink); margin-bottom:20px; }
+  .case-row{ display:flex; gap:36px; margin-top:26px; padding-top:22px; border-top:1px solid var(--line); }
+  .case-row div{ display:flex; flex-direction:column; gap:4px; }
+  .case-row .n{ font-family:var(--f-display); font-style:italic; font-size:26px; color:var(--accent-bright); }
+  .case-row .l{ font-size:11px; color:var(--ink-faint); }
+  @media (max-width:900px){ .case{ grid-template-columns:1fr; gap:30px; } }
+  .case:nth-child(even) .case-visual{ order:2; }
+
+  /* ---------- products ---------- */
+  .product-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+  .product-cell{ background:var(--bg); padding:38px 32px; min-height:260px; display:flex; flex-direction:column; justify-content:space-between; transition:background .3s ease; }
+  .product-cell:hover{ background:var(--bg-raised); }
+  .product-cell h3{ font-family:var(--f-body); font-weight:700; font-size:19px; color:var(--ink); margin-top:22px; }
+  .product-cell .body{ margin-top:12px; max-width:none; font-size:14.5px; }
+  .product-mark{ width:34px; height:34px; border:1px solid var(--line-strong); border-radius:50%; display:flex; align-items:center; justify-content:center; }
+  .product-mark span{ width:7px; height:7px; background:var(--accent-bright); border-radius:50%; }
+  @media (max-width:860px){ .product-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- proof ---------- */
+  .proof-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:40px; border-top:1px solid var(--line); padding-top:56px; }
+  .proof-item .num{ font-family:var(--f-display); font-style:italic; font-weight:400; font-size:clamp(42px,4.6vw,64px); color:var(--ink); }
+  .proof-item .num span{ color:var(--accent-bright); }
+  .proof-item .l{ margin-top:10px; font-size:13.5px; color:var(--ink-dim); }
+  @media (max-width:860px){ .proof-grid{ grid-template-columns:1fr 1fr; row-gap:44px; } }
+
+  /* ---------- testimonials ---------- */
+  .testi-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .testi{ background:var(--bg); padding:8px 34px 34px 0; display:flex; flex-direction:column; justify-content:space-between; gap:32px; min-height:260px; }
+  .testi:not(:first-child){ padding-left:34px; }
+  .testi-quote{ font-family:var(--f-display); font-style:italic; font-weight:400; font-size:clamp(19px,1.7vw,22px); line-height:1.42; color:var(--ink); }
+  .testi-attr{ display:flex; flex-direction:column; gap:3px; padding-top:18px; border-top:1px solid var(--line); }
+  .testi-attr .n{ font-size:14px; font-weight:600; color:var(--ink); }
+  .testi-attr .l{ font-size:12px; color:var(--ink-faint); }
+  @media (max-width:860px){
+    .testi-grid{ grid-template-columns:1fr; }
+    .testi{ padding:8px 0 34px 0 !important; }
+  }
+
+  /* ---------- faq ---------- */
+  .faq-list{ border-top:1px solid var(--line); max-width:820px; }
+  .faq-item{ border-bottom:1px solid var(--line); padding:26px 0; }
+  .faq-item summary{
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+    font-family:var(--f-body); font-weight:600; font-size:17px; color:var(--ink);
+    cursor:pointer; list-style:none;
+  }
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-icon{ position:relative; flex:0 0 auto; width:16px; height:16px; }
+  .faq-icon::before,.faq-icon::after{
+    content:''; position:absolute; top:50%; left:50%; background:var(--ink-dim);
+    transition:transform .3s var(--ease), background .3s ease;
+  }
+  .faq-icon::before{ width:16px; height:1px; transform:translate(-50%,-50%); }
+  .faq-icon::after{ width:1px; height:16px; transform:translate(-50%,-50%); }
+  .faq-item[open] .faq-icon::after{ transform:translate(-50%,-50%) rotate(90deg); opacity:0; }
+  .faq-item[open] summary{ color:var(--accent-bright); }
+  .faq-item .body{ max-width:64ch; margin-top:18px; }
+
+  /* ---------- insight ---------- */
+  .insight-row{ display:grid; grid-template-columns: 1fr 1fr; gap:60px; align-items:start; }
+  .insight-list{ display:flex; flex-direction:column; }
+  .insight-item{ padding:26px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:24px; align-items:baseline; }
+  .insight-item h4{ font-family:var(--f-body); font-weight:600; font-size:16px; color:var(--ink); max-width:34ch; }
+  .insight-item .l{ font-size:12px; color:var(--ink-faint); white-space:nowrap; }
+  @media (max-width:900px){ .insight-row{ grid-template-columns:1fr; gap:30px; } }
+
+  /* ---------- final cta ---------- */
+  .final-cta{ text-align:left; padding-top:150px; padding-bottom:150px; }
+  .final-cta .display-xl{ color:var(--ink); }
+  .final-cta .display-xl i{ font-style:italic; color:var(--accent-bright); }
+  .final-cta-row{ display:flex; justify-content:space-between; align-items:flex-end; gap:40px; margin-top:56px; flex-wrap:wrap; }
+  .final-contact{ display:flex; flex-direction:column; gap:6px; }
+  .final-contact a{ color:var(--ink-dim); font-size:14.5px; transition:color .25s ease; }
+  .final-contact a:hover{ color:var(--ink); }
+
+  /* ---------- footer ---------- */
+  footer{ border-top:1px solid var(--line); padding:44px 0; }
+  .footer-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+  .footer-row .body{ font-size:13px; color:var(--ink-faint); max-width:none; }
+  .footer-links{ display:flex; gap:26px; list-style:none; margin:0; padding:0; }
+  .footer-links a{ font-size:13px; color:var(--ink-faint); }
+  .footer-links a:hover{ color:var(--ink); }
+
+  .container-lines{ position:relative; }
+  .container-lines::before,.container-lines::after{
+    content:''; position:absolute; top:0; bottom:0; width:1px; background:var(--line);
+  }
+
+  /* ================= ACCESSIBILITY: FOCUS ================= */
+  a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-visible{
+    outline: 2px solid var(--accent-bright); outline-offset: 3px; border-radius: 2px;
+  }
+  .skip-link{
+    position:absolute; left:16px; top:-60px; z-index:1000;
+    background:var(--ink); color:var(--bg); padding:12px 20px; font-size:14px; font-weight:600;
+    border-radius:6px; transition:top .25s var(--ease);
+  }
+  .skip-link:focus{ top:16px; }
+
+  /* ================= SCROLL PROGRESS ================= */
+  .scroll-progress{
+    position:fixed; top:0; left:0; height:2px; width:0%; z-index:600;
+    background:var(--accent-bright); transform-origin:left; will-change:width;
+  }
+
+  /* ================= PRELOADER ================= */
+  .preloader{
+    position:fixed; inset:0; z-index:900; display:flex;
+    background:var(--bg); pointer-events:none;
+  }
+  .preloader-panel{
+    position:absolute; top:0; bottom:0; width:50%; background:var(--bg);
+    display:flex; align-items:center; justify-content:center; overflow:hidden;
+    transition: transform 0.9s cubic-bezier(.76,0,.24,1);
+  }
+  .preloader-panel.left{ left:0; }
+  .preloader-panel.right{ right:0; }
+  .preloader-panel::after{
+    content:''; position:absolute; inset:0;
+    background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:56px 56px; opacity:0.4;
+  }
+  .preloader-mark{
+    position:relative; z-index:2; font-family:var(--f-display); font-style:italic; font-weight:400;
+    font-size:clamp(28px,3.6vw,40px); color:var(--ink); opacity:0; transform:translateY(10px);
+    transition:opacity .5s var(--ease) .15s, transform .5s var(--ease) .15s;
+  }
+  .preloader-mark b{ font-style:normal; font-weight:600; }
+  .preloader.is-ready .preloader-mark{ opacity:1; transform:translateY(0); }
+  .preloader-count{
+    position:absolute; bottom:44px; left:0; right:0; text-align:center; z-index:2;
+    font-family:var(--f-body); font-size:12px; letter-spacing:0.1em; color:var(--ink-faint);
+    font-variant-numeric:tabular-nums;
+  }
+  .preloader.opening .preloader-panel.left{ transform:translateX(-100%); }
+  .preloader.opening .preloader-panel.right{ transform:translateX(100%); }
+  .preloader.done{ visibility:hidden; }
+  @media (prefers-reduced-motion: reduce){
+    .preloader{ display:none; }
+  }
+
+  /* ================= CUSTOM CURSOR ================= */
+  .cursor-dot, .cursor-ring{
+    position:fixed; top:0; left:0; z-index:700; pointer-events:none;
+    border-radius:50%; will-change:transform; transform:translate(-50%,-50%);
+  }
+  .cursor-dot{ width:6px; height:6px; background:var(--ink); }
+  .cursor-ring{
+    width:38px; height:38px; border:1px solid var(--line-strong);
+    display:flex; align-items:center; justify-content:center;
+    transition:width .25s var(--ease), height .25s var(--ease), border-color .25s ease, background .25s ease;
+  }
+  .cursor-ring .cursor-label{
+    font-family:var(--f-body); font-size:10px; font-weight:700; letter-spacing:0.08em;
+    color:var(--ink); opacity:0; transition:opacity .2s ease;
+  }
+  .cursor-ring.hover{ width:74px; height:74px; background:var(--accent); border-color:var(--accent); }
+  .cursor-ring.hover .cursor-label{ opacity:1; }
+  .cursor-ring.hidden, .cursor-dot.hidden{ opacity:0; }
+  html.has-custom-cursor, html.has-custom-cursor a, html.has-custom-cursor button{ cursor:none; }
+  @media (pointer:coarse){
+    .cursor-dot, .cursor-ring{ display:none !important; }
+  }
+
+  /* ---------- service detail page ---------- */
+  .svc-detail-hero{ padding-top:150px; padding-bottom:70px; border-bottom:1px solid var(--line); }
+  .svc-detail-hero h1{ color:var(--ink); max-width:16ch; }
+  .breadcrumb{ display:flex; gap:8px; align-items:center; font-size:12.5px; color:var(--ink-faint); margin-bottom:28px; }
+  .breadcrumb a{ color:var(--ink-faint); }
+  .breadcrumb a:hover{ color:var(--ink); }
+
+  .detail-block{ padding:80px 0; border-bottom:1px solid var(--line); }
+  .detail-block-grid{ display:grid; grid-template-columns:0.8fr 1.2fr; gap:60px; align-items:start; }
+  .detail-block .eyebrow{ margin-bottom:18px; }
+  .detail-block h2{ font-size:clamp(28px,3vw,40px); color:var(--ink); }
+  @media (max-width:900px){ .detail-block-grid{ grid-template-columns:1fr; gap:28px; } }
+
+  .problem-solution{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line); }
+  .ps-cell{ background:var(--bg); padding:38px 34px; }
+  .ps-cell h3{ font-family:var(--f-display); font-style:italic; font-weight:400; font-size:20px; color:var(--ink); margin-bottom:14px; }
+  @media (max-width:760px){ .problem-solution{ grid-template-columns:1fr; } }
+
+  .capability-list{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border-top:1px solid var(--line); }
+  .cap-cell{ background:var(--bg); padding:28px 30px; }
+  .cap-cell h4{ font-family:var(--f-body); font-weight:600; font-size:16px; color:var(--ink); margin-bottom:8px; }
+  .cap-cell p{ font-size:13.5px; color:var(--ink-faint); }
+  @media (max-width:760px){ .capability-list{ grid-template-columns:1fr; } }
+
+  .process-list{ border-top:1px solid var(--line); }
+  .process-step{ display:grid; grid-template-columns:70px 1fr; gap:22px; padding:28px 0; border-bottom:1px solid var(--line); }
+  .process-step .pn{ font-family:var(--f-display); font-style:italic; font-size:24px; color:var(--ink-faint); }
+  .process-step h4{ font-size:16.5px; color:var(--ink); margin-bottom:6px; }
+
+  .use-case-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+  .use-case{ background:var(--bg); padding:30px 26px; }
+  .use-case h4{ font-size:15px; color:var(--ink); margin-bottom:10px; }
+  .use-case p{ font-size:13px; color:var(--ink-faint); }
+  @media (max-width:860px){ .use-case-grid{ grid-template-columns:1fr; } }
+
+  .tech-tags{ display:flex; flex-wrap:wrap; gap:10px; }
+  .tech-tags span{ font-size:13px; color:var(--ink-dim); border:1px solid var(--line-strong); padding:8px 16px; border-radius:100px; }
+
+  .outcomes-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:40px; }
+  .outcome-item .num{ font-family:var(--f-display); font-style:italic; font-size:clamp(36px,4vw,52px); color:var(--ink); }
+  .outcome-item .num span{ color:var(--accent-bright); }
+  .outcome-item .l{ font-size:13px; color:var(--ink-dim); margin-top:8px; }
+  @media (max-width:760px){ .outcomes-grid{ grid-template-columns:1fr 1fr; row-gap:34px; } }
+
+  /* ================= DISCOVERY MODAL ================= */
+  .discovery-overlay{
+    position:fixed; inset:0; z-index:800; background:rgba(11,10,12,0.82);
+    backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+    display:flex; align-items:center; justify-content:center; padding:24px;
+    opacity:0; visibility:hidden; transition:opacity .3s var(--ease), visibility 0s linear .3s;
+  }
+  .discovery-overlay.open{ opacity:1; visibility:visible; transition:opacity .3s var(--ease); }
+  .discovery-modal{
+    position:relative; width:100%; max-width:640px; max-height:88vh; overflow-y:auto;
+    background:var(--bg-raised); border:1px solid var(--line-strong); border-radius:4px;
+    padding:44px; transform:translateY(16px); transition:transform .35s var(--ease);
+  }
+  .discovery-overlay.open .discovery-modal{ transform:translateY(0); }
+  .discovery-close{
+    position:absolute; top:20px; right:20px; width:36px; height:36px; border-radius:50%;
+    border:1px solid var(--line-strong); background:none; color:var(--ink); cursor:pointer;
+    display:flex; align-items:center; justify-content:center; font-size:18px; line-height:1;
+    transition:border-color .25s ease, transform .25s ease;
+  }
+  .discovery-close:hover{ border-color:var(--ink); transform:rotate(90deg); }
+  .discovery-progress{ display:flex; gap:6px; margin-bottom:32px; }
+  .discovery-progress span{ height:2px; flex:1; background:var(--line); border-radius:2px; transition:background .3s ease; }
+  .discovery-progress span.done{ background:var(--accent-bright); }
+  .discovery-step{ display:none; }
+  .discovery-step.active{ display:block; animation:dstepIn .4s var(--ease); }
+  @keyframes dstepIn{ from{ opacity:0; transform:translateY(8px); } to{ opacity:1; transform:translateY(0); } }
+  .discovery-eyebrow{ font-size:12px; letter-spacing:0.08em; color:var(--ink-faint); margin-bottom:10px; }
+  .discovery-q{ font-family:var(--f-display); font-style:italic; font-weight:400; font-size:clamp(22px,2.6vw,28px); color:var(--ink); margin:0 0 26px; }
+  .discovery-options{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .discovery-opt{
+    padding:16px 18px; border:1px solid var(--line-strong); border-radius:3px; background:none;
+    color:var(--ink-dim); font-family:var(--f-body); font-size:14.5px; font-weight:600; text-align:left;
+    cursor:pointer; transition:border-color .2s ease, color .2s ease, background .2s ease;
+  }
+  .discovery-opt:hover{ border-color:var(--ink); color:var(--ink); }
+  .discovery-opt.selected{ border-color:var(--accent-bright); background:rgba(178,58,87,0.1); color:var(--ink); }
+  .discovery-textarea, .discovery-input{
+    width:100%; background:none; border:1px solid var(--line-strong); border-radius:3px;
+    padding:14px 16px; color:var(--ink); font-family:var(--f-body); font-size:15px;
+    transition:border-color .2s ease;
+  }
+  .discovery-textarea{ min-height:130px; resize:vertical; }
+  .discovery-input:focus, .discovery-textarea:focus{ outline:none; border-color:var(--accent-bright); }
+  .discovery-field{ margin-bottom:16px; }
+  .discovery-field label{ display:block; font-size:12.5px; color:var(--ink-faint); margin-bottom:7px; }
+  .discovery-error{ color:var(--accent-bright); font-size:12.5px; margin-top:6px; display:none; }
+  .discovery-error.show{ display:block; }
+  .discovery-nav{ display:flex; justify-content:space-between; align-items:center; margin-top:32px; gap:16px; }
+  .discovery-back{ background:none; border:none; color:var(--ink-faint); font-size:13.5px; cursor:pointer; padding:10px 0; }
+  .discovery-back:hover{ color:var(--ink); }
+  .discovery-back:disabled{ opacity:0; pointer-events:none; }
+  .discovery-success{ text-align:center; padding:20px 0; }
+  .discovery-success .display-md{ margin-bottom:14px; }
+  @media (max-width:560px){
+    .discovery-modal{ padding:30px 22px; }
+    .discovery-options{ grid-template-columns:1fr; }
+  }
+
+</style>
+</head>
+<body>
+
+<a href="#top" class="skip-link">Skip to content</a>
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-panel left"><span class="preloader-mark"><em>Edge</em><b>Web</b></span></div>
+  <div class="preloader-panel right"></div>
+  <div class="preloader-count" id="preloaderCount">00</div>
+</div>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"><span class="cursor-label" id="cursorLabel"></span></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="grain"></div>
+
+<header id="siteHeader">
+  <div class="wrap">
+    <nav>
+      <a href="../../index.html#top" class="logo"><em>Edge</em><b>Web</b></a>
+      <ul class="nav-links">
+        <li><a href="../../index.html#about">About</a></li>
+        <li><a href="../index.html">Services</a></li>
+        <li><a href="../../index.html#work">Clients</a></li>
+        <li><a href="../../index.html#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="../../contact/index.html" class="btn btn-ghost magnetic" data-track="cta_nav_start_project">Start a Project</a>
+        <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="../../index.html#about" class="mm-link">About</a></li>
+    <li><a href="../index.html" class="mm-link">Services</a></li>
+    <li><a href="../../index.html#work" class="mm-link">Clients</a></li>
+    <li><a href="../../index.html#faq" class="mm-link">FAQ</a></li>
+  </ul>
+  <a href="../../contact/index.html" class="btn btn-primary mm-link" data-track="cta_mobile_start_project">Start a Project</a>
+</div>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="svc-detail-hero">
+    <div class="wrap">
+      <div class="breadcrumb">
+        <a href="../../index.html#top">Home</a><span>/</span><a href="../index.html">Services</a><span>/</span><span>AI &amp; Automation</span>
+      </div>
+      <p class="eyebrow">EdgeWeb / AI &amp; Automation</p>
+      <h1 class="display-xl" style="margin-top:26px;">Automate what<br>slows you <i>down.</i></h1>
+      <p class="body-lg" style="margin-top:26px;">AI agents, chatbots and workflow automation scoped to one measurable job at a time — document processing, lead routing, support triage, WhatsApp workflows — not AI bolted on as a feature.</p>
+      <div class="hero-actions" style="margin-top:40px;">
+        <a href="../../contact/index.html?service=AI%20%26%20Automation" class="btn btn-primary magnetic" data-cursor="Open" data-track="cta_ai_hero">Automate My Business
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#discovery" data-open-discovery="AI Solution" data-track="cta_ai_not_sure" class="btn btn-ghost magnetic">Not Sure What You Need?</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEM / SOLUTION ============ -->
+  <section class="detail-block">
+    <div class="wrap">
+      <p class="eyebrow reveal">The Problem &amp; The Approach</p>
+      <div class="problem-solution reveal" style="margin-top:32px;">
+        <div class="ps-cell">
+          <h3>The problem</h3>
+          <p class="body">Someone on your team spends hours a week doing something a computer should be doing: re-typing data between two systems, reading every inbound lead before routing it, reviewing documents line by line before approval. It doesn't scale, and it's the first thing that breaks when volume goes up.</p>
+        </div>
+        <div class="ps-cell">
+          <h3>The approach</h3>
+          <p class="body">We start with the highest-volume, highest-friction manual step — not the most impressive-sounding AI use case — and automate that first. Each system ships with a way to see what it did and why, so it's trusted enough to expand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CAPABILITIES ============ -->
+  <section class="detail-block section-alt">
+    <div class="wrap">
+      <p class="eyebrow reveal">Capabilities</p>
+      <h2 class="reveal" style="margin-top:14px;">What we actually build.</h2>
+      <div class="capability-list reveal" style="margin-top:36px;">
+        <div class="cap-cell"><h4>AI Agents &amp; Chatbots</h4><p>Task-specific agents for support, internal Q&amp;A, or lead qualification — not a general-purpose chatbot with no job.</p></div>
+        <div class="cap-cell"><h4>Document AI</h4><p>Extraction, classification and pre-screening for onboarding, compliance and invoice processing.</p></div>
+        <div class="cap-cell"><h4>Workflow &amp; Process Automation</h4><p>Replacing manual handoffs between systems with logic that runs on its own and flags exceptions.</p></div>
+        <div class="cap-cell"><h4>CRM &amp; Lead Automation</h4><p>Automatic lead scoring, routing and follow-up sequencing tied to your actual sales process.</p></div>
+        <div class="cap-cell"><h4>WhatsApp Automation</h4><p>Automated responses, qualification and handoff-to-human flows on WhatsApp Business.</p></div>
+        <div class="cap-cell"><h4>Data Automation</h4><p>Pipelines that keep multiple systems in sync without a person copying numbers between tabs.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="detail-block">
+    <div class="wrap">
+      <p class="eyebrow reveal">Process</p>
+      <h2 class="reveal" style="margin-top:14px;">From manual process to running system.</h2>
+      <div class="process-list reveal" style="margin-top:20px;">
+        <div class="process-step"><span class="pn">01</span><div><h4>Map the process</h4><p class="body">We document the manual workflow as it actually happens today, including the exceptions — not the ideal-case version.</p></div></div>
+        <div class="process-step"><span class="pn">02</span><div><h4>Identify the automation boundary</h4><p class="body">What the system should decide on its own, and where a human should stay in the loop, get defined before any building starts.</p></div></div>
+        <div class="process-step"><span class="pn">03</span><div><h4>Build &amp; integrate</h4><p class="body">The automation is built against your real systems and data, not a demo environment.</p></div></div>
+        <div class="process-step"><span class="pn">04</span><div><h4>Run in parallel</h4><p class="body">The new system runs alongside the manual process first, so you can compare results before fully switching over.</p></div></div>
+        <div class="process-step"><span class="pn">05</span><div><h4>Monitor &amp; expand</h4><p class="body">Once trusted, the same pattern extends to the next highest-friction process.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ USE CASES ============ -->
+  <section class="detail-block section-alt">
+    <div class="wrap">
+      <p class="eyebrow reveal">Use Cases</p>
+      <h2 class="reveal" style="margin-top:14px;">Where this earns its keep.</h2>
+      <div class="use-case-grid reveal" style="margin-top:36px;">
+        <div class="use-case"><h4>Customer onboarding</h4><p>Pre-screening submitted documents so a human only reviews the ones that need judgment.</p></div>
+        <div class="use-case"><h4>Inbound lead handling</h4><p>Scoring and routing leads to the right rep within minutes instead of hours.</p></div>
+        <div class="use-case"><h4>Support triage</h4><p>Classifying and routing tickets so simple requests resolve without waiting in a general queue.</p></div>
+        <div class="use-case"><h4>Inventory reconciliation</h4><p>Syncing stock data across locations automatically instead of a nightly manual count.</p></div>
+        <div class="use-case"><h4>WhatsApp enquiries</h4><p>Qualifying and answering common questions before handing off to a human for anything nuanced.</p></div>
+        <div class="use-case"><h4>Internal reporting</h4><p>Pulling numbers from multiple systems into one place automatically instead of a weekly manual roll-up.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECHNOLOGY ============ -->
+  <section class="detail-block">
+    <div class="wrap">
+      <p class="eyebrow reveal">Technology</p>
+      <h2 class="reveal" style="margin-top:14px;">Chosen for the problem, not our preferences.</h2>
+      <div class="tech-tags reveal" style="margin-top:28px;">
+        <span>OpenAI / Anthropic APIs</span><span>LangChain</span><span>Python</span><span>Node.js</span>
+        <span>n8n / Zapier</span><span>WhatsApp Business API</span><span>Vector Databases</span>
+        <span>AWS / GCP</span><span>REST &amp; Webhook APIs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASE STUDY ============ -->
+  <section class="detail-block section-alt">
+    <div class="wrap">
+      <p class="eyebrow reveal">Case Study</p>
+      <div class="case reveal" style="border-top:none; padding-top:36px;">
+        <div class="case-visual" data-cursor="View"><span class="tag">Fintech / Onboarding Engine</span></div>
+        <div>
+          <div class="case-meta"><span>Financial Services</span><span>Application + AI</span></div>
+          <h3>An onboarding flow that reads documents for you</h3>
+          <p class="body">Customer onboarding required manual document review at every step. EdgeWeb built a verification pipeline using document AI to pre-screen submissions, cutting review time without loosening compliance.</p>
+          <div class="case-row">
+            <div><span class="n">71%</span><span class="l">Faster onboarding</span></div>
+            <div><span class="n">0</span><span class="l">Compliance checks skipped</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUTCOMES ============ -->
+  <section class="detail-block">
+    <div class="wrap">
+      <p class="eyebrow reveal">Outcomes</p>
+      <div class="outcomes-grid reveal" style="margin-top:32px;">
+        <div class="outcome-item"><div class="num">71<span>%</span></div><div class="l">Faster onboarding on the fintech case above</div></div>
+        <div class="outcome-item"><div class="num">340<span>+</span></div><div class="l">Workflows automated across EdgeWeb clients</div></div>
+        <div class="outcome-item"><div class="num">38<span>%</span></div><div class="l">Average reduction in manual operational hours</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="detail-block section-alt">
+    <div class="wrap">
+      <p class="eyebrow reveal">FAQ</p>
+      <div class="faq-list reveal" style="margin-top:28px;">
+        <details class="faq-item" open>
+          <summary>Do we need our data to be "AI-ready" before starting?<span class="faq-icon"></span></summary>
+          <p class="body">No. Most engagements start by working with the data and systems you already have. Part of the first phase is identifying what's usable as-is and what needs light cleanup before automation can run on it.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Will AI replace our team's judgment on important decisions?<span class="faq-icon"></span></summary>
+          <p class="body">Not by default. Most systems we build are scoped to a specific, bounded task — classification, drafting, triage — with a human reviewing anything above a risk or confidence threshold you set.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do you decide what to automate first?<span class="faq-icon"></span></summary>
+          <p class="body">By volume and pain: the manual step that happens most often and causes the most delay or error usually gets automated first, since that's where the return is fastest to see.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can this integrate with the CRM/ERP we already use?<span class="faq-icon"></span></summary>
+          <p class="body">In most cases, yes, through the platform's API or, where no API exists, through a lighter-weight integration approach we scope during the architecture phase.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section id="contact" class="section-alt final-cta">
+    <div class="wrap">
+      <p class="eyebrow reveal" style="margin-bottom:30px;">Start a Conversation</p>
+      <h2 class="display-xl reveal">Automate what's<br><i>slowing you down.</i></h2>
+      <div class="final-cta-row reveal">
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="../../contact/index.html?service=AI%20%26%20Automation" class="btn btn-primary magnetic" data-cursor="Open" data-track="cta_ai_final">Automate My Business
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="https://wa.me/919625209081?text=Hi%20EdgeWeb%2C%20I%27m%20interested%20in%20AI%20automation%20for%20my%20business." class="btn btn-ghost magnetic" target="_blank" rel="noopener" data-track="cta_whatsapp_ai">Prefer WhatsApp? Chat with EdgeWeb →</a>
+        </div>
+        <div class="final-contact">
+          <a href="mailto:infoedgeweb@gmail.com">infoedgeweb@gmail.com</a>
+          <a href="tel:+919625209081">+91 96252 09081</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap mega-footer">
+    <div class="mega-footer-top">
+      <div class="mega-col mega-col-brand">
+        <a href="../../index.html#top" class="logo"><em>Edge</em><b>Web</b></a>
+        <p>A technology, automation and growth partner — building the systems businesses run on, from India, for anywhere.</p>
+        <div class="social-row">
+          <a href="https://www.linkedin.com/company/edgeweb/" target="_blank" rel="noopener" aria-label="EdgeWeb on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+          <a href="mailto:infoedgeweb@gmail.com" aria-label="Email EdgeWeb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+          <a href="https://wa.me/919625209081?text=Hi%20EdgeWeb%2C%20I%27m%20interested%20in%20discussing%20a%20project." target="_blank" rel="noopener" aria-label="WhatsApp EdgeWeb">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2C6.5 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.08-1.33A9.96 9.96 0 0 0 12.01 22C17.52 22 22 17.52 22 12S17.52 2 12.01 2zm5.4 14.15c-.23.64-1.32 1.22-1.82 1.28-.47.06-1.02.09-1.65-.1-.38-.12-.87-.28-1.5-.55-2.63-1.14-4.35-3.8-4.48-3.98-.13-.18-1.07-1.42-1.07-2.71 0-1.29.68-1.92.92-2.19.23-.26.5-.32.67-.32.17 0 .34 0 .48.01.16.01.36-.06.57.43.23.55.77 1.9.84 2.03.07.14.11.3.02.48-.09.18-.14.29-.27.44-.14.16-.29.35-.41.47-.14.14-.28.29-.12.56.16.28.71 1.16 1.52 1.88 1.05.93 1.93 1.22 2.21 1.36.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.18-.28.36-.23.6-.14.25.09 1.58.75 1.85.88.28.14.46.2.53.32.07.12.07.68-.16 1.32z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="mega-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="../../index.html#top">Home</a></li>
+          <li><a href="../../index.html#about">About</a></li>
+          <li><a href="../index.html">Services</a></li>
+          <li><a href="../../index.html#work">Case Studies</a></li>
+          <li><a href="../../index.html#faq">FAQ</a></li>
+          <li><a href="../../contact/index.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="mega-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../index.html#web-development">Web Development</a></li>
+          <li><a href="../index.html#app-development">App Development</a></li>
+          <li><a href="../index.html#custom-software">Custom Software</a></li>
+          <li><a href="../index.html#digital-marketing">Digital Marketing</a></li>
+          <li><a href="../index.html#branding-ui-ux">Branding &amp; UI/UX</a></li>
+          <li><a href="../index.html#custom-solutions">Custom Solutions</a></li>
+        </ul>
+      </div>
+      <div class="mega-col mega-col-cta">
+        <p class="mega-cta-title">Have an idea?<br>Let's build it.</p>
+        <a href="../../contact/index.html" class="btn btn-primary magnetic" data-track="cta_footer_start_project">Start a Project →</a>
+        <ul style="margin-top:20px;">
+          <li><a href="tel:+919625209081">+91 96252 09081</a></li>
+          <li><a href="mailto:infoedgeweb@gmail.com">infoedgeweb@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mega-footer-bottom">
+      <p class="body">© 2026 EdgeWeb Infotech LLP. Engineered in India.</p>
+      <ul class="footer-links"><li><a href="../../index.html#top">Privacy</a></li><li><a href="../../index.html#top">Terms</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta-desktop" id="stickyDesktop">
+  <span>Have a project in mind?</span>
+  <a href="../../contact/index.html" class="btn btn-primary" data-track="cta_sticky_desktop">Start a Conversation →</a>
+</div>
+<div class="sticky-bar-mobile" id="stickyMobile">
+  <div class="sticky-bar-mobile-row">
+    <a href="https://wa.me/919625209081?text=Hi%20EdgeWeb%2C%20I%27m%20interested%20in%20discussing%20a%20project." target="_blank" rel="noopener" data-track="cta_sticky_whatsapp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2C6.5 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.08-1.33A9.96 9.96 0 0 0 12.01 22C17.52 22 22 17.52 22 12S17.52 2 12.01 2z"/></svg>
+      WhatsApp
+    </a>
+    <a href="tel:+919625209081" data-track="cta_sticky_call">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+      Call
+    </a>
+    <a href="../../contact/index.html" class="primary" data-track="cta_sticky_start_project">Start Project</a>
+  </div>
+</div>
+<div class="discovery-overlay" id="discoveryOverlay" role="dialog" aria-modal="true" aria-labelledby="discoveryTitle">
+  <div class="discovery-modal">
+    <button class="discovery-close" id="discoveryClose" aria-label="Close">&times;</button>
+    <div class="discovery-progress" id="discoveryProgress">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <h2 id="discoveryTitle" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0);">Project discovery form</h2>
+
+    <form id="discoveryForm" novalidate>
+      <div class="discovery-step active" data-step="1">
+        <p class="discovery-eyebrow">Step 1 of 6</p>
+        <p class="discovery-q">What are you looking to build?</p>
+        <div class="discovery-options" data-field="buildType">
+          <button type="button" class="discovery-opt">Website</button>
+          <button type="button" class="discovery-opt">Mobile App</button>
+          <button type="button" class="discovery-opt">Software</button>
+          <button type="button" class="discovery-opt">AI Solution</button>
+          <button type="button" class="discovery-opt">Automation</button>
+          <button type="button" class="discovery-opt">Marketing</button>
+          <button type="button" class="discovery-opt">Branding</button>
+          <button type="button" class="discovery-opt">Something else</button>
+        </div>
+        <p class="discovery-error" data-error-for="buildType">Pick one to continue.</p>
+      </div>
+
+      <div class="discovery-step" data-step="2">
+        <p class="discovery-eyebrow">Step 2 of 6</p>
+        <p class="discovery-q">What's the main goal?</p>
+        <div class="discovery-options" data-field="goal">
+          <button type="button" class="discovery-opt">Generate leads</button>
+          <button type="button" class="discovery-opt">Increase sales</button>
+          <button type="button" class="discovery-opt">Automate operations</button>
+          <button type="button" class="discovery-opt">Launch a new product</button>
+          <button type="button" class="discovery-opt">Improve existing system</button>
+          <button type="button" class="discovery-opt">Improve brand presence</button>
+          <button type="button" class="discovery-opt">Reduce manual work</button>
+          <button type="button" class="discovery-opt">Other</button>
+        </div>
+        <p class="discovery-error" data-error-for="goal">Pick one to continue.</p>
+      </div>
+
+      <div class="discovery-step" data-step="3">
+        <p class="discovery-eyebrow">Step 3 of 6</p>
+        <p class="discovery-q">Tell us about the project.</p>
+        <div class="discovery-field">
+          <textarea class="discovery-textarea" name="details" placeholder="What are you trying to do, and what's not working today?"></textarea>
+        </div>
+        <p class="discovery-error" data-error-for="details">A few sentences helps us reply with something useful.</p>
+      </div>
+
+      <div class="discovery-step" data-step="4">
+        <p class="discovery-eyebrow">Step 4 of 6</p>
+        <p class="discovery-q">Budget</p>
+        <div class="discovery-options" data-field="budget">
+          <button type="button" class="discovery-opt">Under &#8377;50K</button>
+          <button type="button" class="discovery-opt">&#8377;50K&ndash;&#8377;1L</button>
+          <button type="button" class="discovery-opt">&#8377;1L&ndash;&#8377;3L</button>
+          <button type="button" class="discovery-opt">&#8377;3L&ndash;&#8377;5L</button>
+          <button type="button" class="discovery-opt">&#8377;5L&ndash;&#8377;10L</button>
+          <button type="button" class="discovery-opt">&#8377;10L+</button>
+          <button type="button" class="discovery-opt">Not sure yet</button>
+        </div>
+        <p class="discovery-error" data-error-for="budget">Pick one to continue.</p>
+      </div>
+
+      <div class="discovery-step" data-step="5">
+        <p class="discovery-eyebrow">Step 5 of 6</p>
+        <p class="discovery-q">Timeline</p>
+        <div class="discovery-options" data-field="timeline">
+          <button type="button" class="discovery-opt">ASAP</button>
+          <button type="button" class="discovery-opt">1&ndash;2 months</button>
+          <button type="button" class="discovery-opt">3&ndash;6 months</button>
+          <button type="button" class="discovery-opt">6+ months</button>
+          <button type="button" class="discovery-opt">Flexible</button>
+        </div>
+        <p class="discovery-error" data-error-for="timeline">Pick one to continue.</p>
+      </div>
+
+      <div class="discovery-step" data-step="6">
+        <p class="discovery-eyebrow">Step 6 of 6</p>
+        <p class="discovery-q">Contact details</p>
+        <div class="discovery-field">
+          <label for="dName">Name *</label>
+          <input class="discovery-input" type="text" id="dName" name="name" required>
+        </div>
+        <div class="discovery-field">
+          <label for="dCompany">Company</label>
+          <input class="discovery-input" type="text" id="dCompany" name="company">
+        </div>
+        <div class="discovery-field">
+          <label for="dEmail">Work Email *</label>
+          <input class="discovery-input" type="email" id="dEmail" name="email" required>
+        </div>
+        <div class="discovery-field">
+          <label for="dPhone">Phone / WhatsApp</label>
+          <input class="discovery-input" type="tel" id="dPhone" name="phone">
+        </div>
+        <p class="discovery-error" data-error-for="contact">Please fill in your name and a valid work email.</p>
+        <input type="hidden" name="utm_source" id="dUtmSource">
+        <input type="hidden" name="utm_medium" id="dUtmMedium">
+        <input type="hidden" name="utm_campaign" id="dUtmCampaign">
+        <input type="hidden" name="landing_page" id="dLandingPage">
+        <input type="hidden" name="referrer" id="dReferrer">
+      </div>
+
+      <div class="discovery-step" data-step="success">
+        <div class="discovery-success">
+          <p class="eyebrow" style="justify-content:center;">Request received</p>
+          <h2 class="display-md">Thanks &mdash; we've got it.</h2>
+          <p class="body" style="max-width:44ch; margin:18px auto 0;">We've received your requirement. We'll get back to you shortly with the next steps. If it's urgent, WhatsApp us directly.</p>
+          <div style="display:flex; gap:14px; justify-content:center; margin-top:28px; flex-wrap:wrap;">
+            <a href="https://wa.me/919625209081?text=Hi%20EdgeWeb%2C%20I%20just%20submitted%20a%20project%20enquiry%20and%20wanted%20to%20follow%20up." class="btn btn-ghost" target="_blank" rel="noopener">Message us on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="discovery-nav" id="discoveryNav">
+        <button type="button" class="discovery-back" id="discoveryBack">&larr; Back</button>
+        <button type="button" class="btn btn-primary magnetic" id="discoveryNext" data-track="discovery_step_next">Continue &rarr;</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* ---------- preloader ---------- */
+  const preloader = document.getElementById('preloader');
+  const preloaderCount = document.getElementById('preloaderCount');
+  if(reduceMotion || !preloader){
+    if(preloader) preloader.remove();
+  } else {
+    document.body.style.overflow = 'hidden';
+    let n = 0;
+    const countInterval = setInterval(()=>{
+      n = Math.min(n + Math.round(8 + Math.random()*14), 99);
+      preloaderCount.textContent = String(n).padStart(2,'0');
+      if(n >= 99) clearInterval(countInterval);
+    }, 90);
+    requestAnimationFrame(()=> preloader.classList.add('is-ready'));
+    window.addEventListener('load', ()=>{
+      setTimeout(()=>{
+        clearInterval(countInterval);
+        preloaderCount.textContent = '100';
+        preloader.classList.add('opening');
+        document.body.style.overflow = '';
+        setTimeout(()=>{ preloader.classList.add('done'); preloader.remove(); }, 950);
+      }, 550);
+    });
+    // safety fallback in case load event is delayed
+    setTimeout(()=>{
+      if(preloader.isConnected && !preloader.classList.contains('opening')){
+        clearInterval(countInterval);
+        preloader.classList.add('opening');
+        document.body.style.overflow = '';
+        setTimeout(()=>{ preloader.classList.add('done'); preloader.remove(); }, 950);
+      }
+    }, 3200);
+  }
+
+  /* ---------- scroll progress ---------- */
+  const scrollProgress = document.getElementById('scrollProgress');
+  const updateProgress = () => {
+    const h = document.documentElement;
+    const scrolled = h.scrollTop;
+    const height = h.scrollHeight - h.clientHeight;
+    scrollProgress.style.width = (height > 0 ? (scrolled/height)*100 : 0) + '%';
+  };
+  document.addEventListener('scroll', updateProgress, { passive:true });
+  updateProgress();
+
+  /* ---------- custom cursor ---------- */
+  const isFinePointer = matchMedia('(pointer:fine)').matches;
+  if(!reduceMotion && isFinePointer){
+    document.documentElement.classList.add('has-custom-cursor');
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    const label = document.getElementById('cursorLabel');
+    let mx = -100, my = -100, rx = -100, ry = -100;
+    window.addEventListener('mousemove', (e)=>{
+      mx = e.clientX; my = e.clientY;
+      dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%,-50%)`;
+    });
+    (function loop(){
+      rx += (mx - rx) * 0.18; ry += (my - ry) * 0.18;
+      ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%,-50%)`;
+      requestAnimationFrame(loop);
+    })();
+    document.addEventListener('mouseleave', ()=>{ dot.classList.add('hidden'); ring.classList.add('hidden'); });
+    document.addEventListener('mouseenter', ()=>{ dot.classList.remove('hidden'); ring.classList.remove('hidden'); });
+
+    const setHover = (on, text) => {
+      ring.classList.toggle('hover', on);
+      label.textContent = on && text ? text : '';
+    };
+    document.addEventListener('mouseover', (e)=>{
+      const target = e.target.closest('a, button, summary, [data-cursor]');
+      if(target){ setHover(true, target.dataset.cursor || ''); }
+    });
+    document.addEventListener('mouseout', (e)=>{
+      const target = e.target.closest('a, button, summary, [data-cursor]');
+      const related = e.relatedTarget && e.relatedTarget.closest ? e.relatedTarget.closest('a, button, summary, [data-cursor]') : null;
+      if(target && target !== related){ setHover(false); }
+    });
+  }
+
+  /* ---------- event tracking (GA4-ready) ---------- */
+  window.edgewebEvents = window.edgewebEvents || [];
+  function trackEvent(name, params){
+    window.edgewebEvents.push({ name, params, t: Date.now() });
+    if(typeof window.gtag === 'function'){ window.gtag('event', name, params || {}); }
+  }
+  document.querySelectorAll('[data-track]').forEach(el=>{
+    el.addEventListener('click', ()=> trackEvent(el.dataset.track, { link_text: el.textContent.trim() }));
+  });
+
+  /* ---------- mobile menu ---------- */
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const closeMenu = () => {
+    burger.classList.remove('open'); burger.setAttribute('aria-expanded','false');
+    mobileMenu.classList.remove('open'); document.body.style.overflow = '';
+  };
+  burger.addEventListener('click', ()=>{
+    const isOpen = mobileMenu.classList.toggle('open');
+    burger.classList.toggle('open', isOpen);
+    burger.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('.mm-link').forEach(a => a.addEventListener('click', closeMenu));
+
+  /* ---------- header solid-on-scroll ---------- */
+  const header = document.getElementById('siteHeader');
+  const onScroll = () => header.classList.toggle('solid', window.scrollY > 40);
+  document.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+
+  /* ---------- scroll reveals ---------- */
+  const revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduceMotion){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
+      });
+    }, { threshold:0.14, rootMargin:'0px 0px -60px 0px' });
+    revealEls.forEach(el=>io.observe(el));
+  } else {
+    revealEls.forEach(el=>el.classList.add('is-in'));
+  }
+
+  /* ---------- magnetic buttons ---------- */
+  if(!reduceMotion && matchMedia('(pointer:fine)').matches){
+    document.querySelectorAll('.magnetic').forEach(el=>{
+      el.addEventListener('mousemove', (e)=>{
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width/2) * 0.28;
+        const y = (e.clientY - r.top - r.height/2) * 0.5;
+        el.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      el.addEventListener('mouseleave', ()=>{ el.style.transform = 'translate(0,0)'; });
+    });
+  }
+
+  /* ---------- proof counters ---------- */
+  const counters = document.querySelectorAll('.num[data-count]');
+  const animateCount = (el)=>{
+    const target = parseInt(el.dataset.count, 10);
+    const suffix = el.querySelector('span');
+    const suffixHTML = suffix ? suffix.outerHTML : '';
+    const dur = 1400;
+    const start = performance.now();
+    const step = (now)=>{
+      const p = Math.min((now-start)/dur, 1);
+      const eased = 1 - Math.pow(1-p, 3);
+      el.innerHTML = Math.round(eased*target) + suffixHTML;
+      if(p<1) requestAnimationFrame(step);
+    };
+    if(reduceMotion){ el.innerHTML = target + suffixHTML; }
+    else requestAnimationFrame(step);
+  };
+  if('IntersectionObserver' in window){
+    const cio = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ animateCount(e.target); cio.unobserve(e.target); } });
+    }, { threshold:0.5 });
+    counters.forEach(c=>cio.observe(c));
+  }
+  /* ---------- sticky conversion bar ---------- */
+  const stickyDesktop = document.getElementById('stickyDesktop');
+  if(stickyDesktop){
+    const heroEl = document.querySelector('.hero');
+    const onStickyScroll = () => {
+      const past = !heroEl || window.scrollY > heroEl.offsetHeight * 0.8;
+      const nearBottom = (window.innerHeight + window.scrollY) > (document.documentElement.scrollHeight - 200);
+      stickyDesktop.classList.toggle('show', past && !nearBottom);
+    };
+    document.addEventListener('scroll', onStickyScroll, { passive:true });
+    onStickyScroll();
+  }
+  /* ---------- discovery modal ---------- */
+  (function(){
+    const overlay = document.getElementById('discoveryOverlay');
+    if(!overlay) return;
+    const closeBtn = document.getElementById('discoveryClose');
+    const form = document.getElementById('discoveryForm');
+    const steps = Array.from(form.querySelectorAll('.discovery-step'));
+    const progressEl = document.getElementById('discoveryProgress');
+    const progressDots = Array.from(progressEl.querySelectorAll('span'));
+    const backBtn = document.getElementById('discoveryBack');
+    const nextBtn = document.getElementById('discoveryNext');
+    const answers = { buildType:null, goal:null, details:'', budget:null, timeline:null, name:'', company:'', email:'', phone:'' };
+    let stepIndex = 0; // 0-5 = questions, 6 = success
+    const totalSteps = 6;
+
+    function openModal(prefill){
+      if(prefill && prefill.buildType) selectOption('buildType', prefill.buildType, true);
+      document.getElementById('dUtmSource').value = new URLSearchParams(location.search).get('utm_source') || '';
+      document.getElementById('dUtmMedium').value = new URLSearchParams(location.search).get('utm_medium') || '';
+      document.getElementById('dUtmCampaign').value = new URLSearchParams(location.search).get('utm_campaign') || '';
+      document.getElementById('dLandingPage').value = location.pathname;
+      document.getElementById('dReferrer').value = document.referrer || '';
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      trackEvent && trackEvent('discovery_open', {});
+    }
+    function closeModal(){
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', (e)=>{
+      const trigger = e.target.closest('[data-open-discovery]');
+      if(trigger){
+        e.preventDefault();
+        openModal(trigger.dataset.openDiscovery ? { buildType: trigger.dataset.openDiscovery } : null);
+      }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', (e)=>{ if(e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && overlay.classList.contains('open')) closeModal(); });
+
+    function renderProgress(){
+      progressDots.forEach((d,i)=> d.classList.toggle('done', i <= stepIndex));
+    }
+    function showStep(idx){
+      steps.forEach(s => s.classList.remove('active'));
+      const target = idx === totalSteps ? form.querySelector('[data-step="success"]') : steps[idx];
+      target.classList.add('active');
+      const nav = document.getElementById('discoveryNav');
+      nav.style.display = idx === totalSteps ? 'none' : 'flex';
+      backBtn.disabled = idx === 0;
+      nextBtn.textContent = idx === totalSteps - 1 ? "Let's Build It →" : 'Continue →';
+      renderProgress();
+    }
+
+    function selectOption(field, value, silent){
+      answers[field] = value;
+      const group = form.querySelector(`.discovery-options[data-field="${field}"]`);
+      if(group){
+        Array.from(group.children).forEach(btn => btn.classList.toggle('selected', btn.textContent.trim() === value || btn.textContent.replace(/\s+/g,' ').trim() === value));
+      }
+      if(!silent) hideError(field);
+    }
+    form.querySelectorAll('.discovery-options').forEach(group=>{
+      const field = group.dataset.field;
+      Array.from(group.children).forEach(btn=>{
+        btn.addEventListener('click', ()=> selectOption(field, btn.textContent.replace(/\s+/g,' ').trim()));
+      });
+    });
+
+    function showError(field){
+      const el = form.querySelector(`[data-error-for="${field}"]`);
+      if(el) el.classList.add('show');
+    }
+    function hideError(field){
+      const el = form.querySelector(`[data-error-for="${field}"]`);
+      if(el) el.classList.remove('show');
+    }
+
+    function validateCurrentStep(){
+      const fieldMap = { 0:'buildType', 1:'goal', 3:'budget', 4:'timeline' };
+      if(fieldMap[stepIndex]){
+        const f = fieldMap[stepIndex];
+        if(!answers[f]){ showError(f); return false; }
+        return true;
+      }
+      if(stepIndex === 2){
+        const val = form.querySelector('textarea[name="details"]').value.trim();
+        if(val.length < 3){ showError('details'); return false; }
+        answers.details = val;
+        return true;
+      }
+      if(stepIndex === 5){
+        const name = document.getElementById('dName').value.trim();
+        const email = document.getElementById('dEmail').value.trim();
+        const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        if(!name || !emailOk){ showError('contact'); return false; }
+        answers.name = name; answers.email = email;
+        answers.company = document.getElementById('dCompany').value.trim();
+        answers.phone = document.getElementById('dPhone').value.trim();
+        return true;
+      }
+      return true;
+    }
+
+    nextBtn.addEventListener('click', ()=>{
+      if(!validateCurrentStep()) return;
+      if(stepIndex === totalSteps - 1){
+        submitLead();
+        return;
+      }
+      stepIndex++;
+      showStep(stepIndex);
+      trackEvent && trackEvent('discovery_step_view', { step: stepIndex + 1 });
+    });
+    backBtn.addEventListener('click', ()=>{
+      if(stepIndex === 0) return;
+      stepIndex--;
+      showStep(stepIndex);
+    });
+
+    function submitLead(){
+      const lead = {
+        ...answers,
+        utm_source: document.getElementById('dUtmSource').value,
+        utm_medium: document.getElementById('dUtmMedium').value,
+        utm_campaign: document.getElementById('dUtmCampaign').value,
+        landing_page: document.getElementById('dLandingPage').value,
+        referrer: document.getElementById('dReferrer').value,
+        submitted_at: new Date().toISOString()
+      };
+      // No backend/CRM connected yet — this is the exact shape a future API call would POST.
+      // Example: fetch('/api/leads', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(lead) })
+      window.edgewebLeads = window.edgewebLeads || [];
+      window.edgewebLeads.push(lead);
+      trackEvent && trackEvent('discovery_submit', { build_type: lead.buildType, goal: lead.goal, budget: lead.budget });
+      stepIndex = totalSteps;
+      showStep(stepIndex);
+    }
+
+    window.edgewebOpenDiscovery = openModal;
+  })();
+
+})();
+</script>
+
+</body>
+</html>
