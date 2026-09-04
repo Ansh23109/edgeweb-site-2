@@ -1034,6 +1034,7 @@
 <script>
 (function(){
   /* ---------- preloader ---------- */
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const preloader = document.getElementById('preloader');
   const preloaderCount = document.getElementById('preloaderCount');
   if(reduceMotion || !preloader){
