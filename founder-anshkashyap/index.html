@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ansh Kashyap — Founder & Director of EdgeWeb</title>
+    <meta
+      name="description"
+      content="Meet Ansh Kashyap, Founder & Director of EdgeWeb. Building digital products, business systems, automation and technology solutions around real business problems."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://edgeweb.co/founder-anshkashyap" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://edgeweb.co/founder-anshkashyap" />
+    <meta property="og:title" content="Ansh Kashyap — Founder & Director of EdgeWeb" />
+    <meta
+      property="og:description"
+      content="I build digital systems around real business problems. Founder & Director at EdgeWeb."
+    />
+    <meta property="og:image" content="https://edgeweb.co/founder-anshkashyap/og-image.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ansh Kashyap — Founder & Director of EdgeWeb" />
+    <meta
+      name="twitter:description"
+      content="I build digital systems around real business problems. Founder & Director at EdgeWeb."
+    />
+    <meta name="twitter:image" content="https://edgeweb.co/founder-anshkashyap/og-image.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #090a0d;
+        --bg-strong: #111315;
+        --panel: #12161b;
+        --panel-soft: #171c20;
+        --line: rgba(255,255,255,0.09);
+        --line-strong: rgba(255,255,255,0.16);
+        --ink: #f5f2ec;
+        --ink-soft: #d8d1c9;
+        --ink-muted: #a7a09b;
+        --accent: #d1a26d;
+        --accent-soft: rgba(209, 162, 109, 0.18);
+        --accent-strong: #e8bf82;
+        --danger: #e5a57a;
+        --shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+        --display: "Fraunces", serif;
+        --body: "Plus Jakarta Sans", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at top left, rgba(209, 162, 109, 0.08), transparent 30%),
+          linear-gradient(180deg, #090a0d 0%, #0d1014 100%);
+        color: var(--ink);
+        font-family: var(--body);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img { max-width: 100%; display: block; }
+      a { color: inherit; text-decoration: none; }
+      p, h1, h2, h3, h4 { margin: 0; }
+      .wrap {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+        font-weight: 600;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 18px;
+        height: 1px;
+        background: var(--accent);
+      }
+
+      .display-xl {
+        font-family: var(--display);
+        font-weight: 400;
+        font-size: clamp(52px, 7vw, 120px);
+        line-height: 0.92;
+        letter-spacing: -0.05em;
+      }
+      .display-lg {
+        font-family: var(--display);
+        font-size: clamp(38px, 4.6vw, 66px);
+        line-height: 0.96;
+        letter-spacing: -0.04em;
+      }
+      .display-md {
+        font-family: var(--display);
+        font-size: clamp(30px, 3vw, 46px);
+        line-height: 1.06;
+        letter-spacing: -0.035em;
+      }
+      .body-lg {
+        font-size: clamp(17px, 2vw, 20px);
+        color: var(--ink-soft);
+      }
+      .body {
+        font-size: 16px;
+        color: var(--ink-soft);
+      }
+      .muted { color: var(--ink-muted); }
+      .accent { color: var(--accent-strong); }
+      .brand {
+        font-family: var(--display);
+        font-weight: 400;
+        font-style: italic;
+        letter-spacing: -0.03em;
+      }
+
+      .site-topbar {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        backdrop-filter: blur(12px);
+        background: rgba(9, 10, 13, 0.7);
+        border-bottom: 1px solid var(--line);
+      }
+      .site-topbar .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 76px;
+      }
+      .top-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 17px;
+        color: var(--ink);
+      }
+      .top-brand .brand-mark {
+        display: inline-flex;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #f5d8a8, #b06f38);
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.1);
+      }
+      .top-meta {
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+      }
+      .top-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 0 20px;
+        border: 1px solid var(--line-strong);
+        border-radius: 99px;
+        color: var(--ink);
+        font-size: 13px;
+        letter-spacing: 0.04em;
+        transition: transform 0.25s ease, border-color 0.25s ease;
+      }
+      .top-action:hover {
+        transform: translateY(-1px);
+        border-color: rgba(255,255,255,0.28);
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 72px 0 80px;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto auto 50%;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, rgba(255,255,255,0.06), transparent);
+        transform: translateX(-50%);
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 52px;
+        align-items: center;
+      }
+      .hero-copy {
+        max-width: 690px;
+      }
+      .hero-copy .eyebrow { margin-bottom: 26px; }
+      .hero-copy h1 {
+        font-family: var(--display);
+        font-size: clamp(56px, 7vw, 128px);
+        line-height: 0.9;
+        letter-spacing: -0.065em;
+        margin-bottom: 22px;
+      }
+      .hero-copy h1 .soft {
+        color: var(--ink-soft);
+        font-style: italic;
+      }
+      .hero-copy .lede {
+        max-width: 660px;
+        font-size: clamp(18px, 1.8vw, 22px);
+        line-height: 1.65;
+        color: var(--ink-soft);
+      }
+      .hero-actions {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 50px;
+        padding: 0 24px;
+        border-radius: 999px;
+        border: 1px solid var(--line-strong);
+        font-weight: 600;
+        transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+      }
+      .btn:hover { transform: translateY(-1px); }
+      .btn.primary {
+        background: var(--ink);
+        color: var(--bg);
+        border-color: var(--ink);
+      }
+      .btn.primary:hover {
+        background: var(--accent-strong);
+        border-color: var(--accent-strong);
+      }
+      .btn.secondary {
+        background: rgba(255,255,255,0.01);
+        color: var(--ink);
+      }
+      .btn.secondary:hover { border-color: rgba(255,255,255,0.25); }
+
+      .hero-meta {
+        display: flex;
+        gap: 28px;
+        flex-wrap: wrap;
+        margin-top: 38px;
+      }
+      .hero-meta .item {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .hero-meta .value {
+        font-family: var(--display);
+        font-size: clamp(26px, 2.8vw, 36px);
+        letter-spacing: -0.04em;
+        color: var(--ink);
+      }
+      .hero-meta .label {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+      }
+
+      .portrait-wrap {
+        display: flex;
+        justify-content: center;
+      }
+      .portrait-frame {
+        position: relative;
+        width: min(490px, 100%);
+        background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.01));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        padding: 16px 16px 0;
+        overflow: hidden;
+      }
+      .portrait-frame::before {
+        content: "";
+        position: absolute;
+        inset: 18px auto auto 18px;
+        width: 120px;
+        height: 120px;
+        border-left: 1px solid rgba(255,255,255,0.08);
+        border-top: 1px solid rgba(255,255,255,0.08);
+        border-radius: 20px;
+      }
+      .portrait-frame::after {
+        content: "";
+        position: absolute;
+        right: 18px;
+        bottom: 18px;
+        width: 140px;
+        height: 140px;
+        border-right: 1px solid rgba(255,255,255,0.06);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        border-radius: 20px;
+      }
+      .portrait-image {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        min-height: 720px;
+        border-radius: 24px 24px 0 0;
+        background:
+          linear-gradient(180deg, rgba(18, 22, 27, 0.18), rgba(9, 10, 13, 0.48)),
+          radial-gradient(circle at top, rgba(209, 162, 109, 0.18), transparent 42%),
+          #101417;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .portrait-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        filter: saturate(0.95) contrast(1.04);
+      }
+      .portrait-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255,255,255,0.78);
+        font-size: 72px;
+        letter-spacing: 0.14em;
+        font-weight: 600;
+        background: radial-gradient(circle at 50% 28%, rgba(209,162,109,0.16), transparent 30%), linear-gradient(180deg, #171b1d, #0a0d10);
+      }
+      .portrait-note {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 18px 20px;
+        border-top: 1px solid var(--line);
+        background: rgba(12,14,17,0.74);
+      }
+      .portrait-note strong {
+        display: block;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+      }
+      .portrait-note span {
+        font-size: 13px;
+        color: var(--ink);
+      }
+
+      .section {
+        padding: 110px 0;
+      }
+      .section-shell {
+        border-top: 1px solid var(--line);
+        padding-top: 52px;
+      }
+      .intro-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 42px;
+        align-items: start;
+      }
+      .quote-box {
+        padding: 30px 0 0;
+      }
+      .quote-box p {
+        font-family: var(--display);
+        font-size: clamp(28px, 2.8vw, 40px);
+        line-height: 1.2;
+        letter-spacing: -0.04em;
+        color: var(--ink);
+      }
+      .text-block {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .text-block p {
+        color: var(--ink-soft);
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      .story-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 34px;
+      }
+      .story-panel {
+        background: rgba(255,255,255,0.01);
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        padding: 28px;
+        min-height: 290px;
+      }
+      .story-panel .label {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--ink-muted);
+      }
+      .story-panel h3 {
+        margin-top: 18px;
+        font-size: clamp(28px, 3vw, 42px);
+        line-height: 1;
+        letter-spacing: -0.05em;
+        font-family: var(--display);
+        color: var(--ink);
+      }
+      .story-panel p {
+        margin-top: 18px;
+        color: var(--ink-soft);
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      .capability-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 42px;
+      }
+      .capability-card {
+        position: relative;
+        padding: 28px 24px 24px;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+        min-height: 240px;
+      }
+      .capability-card .index {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--accent-soft);
+        border: 1px solid rgba(209,162,109,0.22);
+        color: var(--accent-strong);
+        font-size: 11px;
+        font-weight: 700;
+      }
+      .capability-card h3 {
+        margin-top: 18px;
+        font-size: 22px;
+        font-weight: 700;
+      }
+      .capability-card p {
+        margin-top: 12px;
+        color: var(--ink-soft);
+        line-height: 1.7;
+      }
+
+      .principles {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 42px;
+      }
+      .principle {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px 18px 16px;
+        background: rgba(255,255,255,0.01);
+      }
+      .principle .num {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent-strong);
+      }
+      .principle h3 {
+        margin-top: 18px;
+        font-size: 25px;
+        font-family: var(--display);
+        letter-spacing: -0.04em;
+      }
+
+      .philosophy {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 42px;
+      }
+      .phase {
+        padding: 22px 18px 20px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(255,255,255,0.015);
+      }
+      .phase .phase-number {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent-strong);
+      }
+      .phase h3 {
+        margin-top: 16px;
+        font-size: 22px;
+      }
+      .phase p {
+        margin-top: 10px;
+        color: var(--ink-soft);
+        line-height: 1.7;
+        font-size: 14.5px;
+      }
+
+      .intersection-wrap {
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 28px;
+        align-items: stretch;
+        margin-top: 40px;
+      }
+      .intersection-box {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        background: rgba(255,255,255,0.015);
+        padding: 18px;
+      }
+      .intersection-item {
+        padding: 24px 20px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.01);
+      }
+      .intersection-item .label {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+      }
+      .intersection-item h3 {
+        margin-top: 16px;
+        font-size: clamp(22px, 2vw, 30px);
+      }
+      .intersection-note {
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        background: linear-gradient(180deg, rgba(209,162,109,0.06), rgba(255,255,255,0.02));
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .intersection-note p {
+        color: var(--ink-soft);
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      .cta-panel {
+        background: linear-gradient(180deg, rgba(209, 162, 109, 0.06), rgba(255,255,255,0.01));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: clamp(28px, 5vw, 62px);
+      }
+      .cta-panel .eyebrow { margin-bottom: 20px; }
+      .cta-panel h2 {
+        font-size: clamp(40px, 5vw, 68px);
+        line-height: 0.94;
+        letter-spacing: -0.06em;
+        font-family: var(--display);
+      }
+      .cta-panel .cta-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+        margin-top: 28px;
+      }
+      .cta-row .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .meta-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .meta-list a {
+        color: var(--ink-soft);
+      }
+      .meta-list a:hover { color: var(--ink); }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 36px 0 48px;
+      }
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .footer-inner p {
+        color: var(--ink-muted);
+        font-size: 13px;
+      }
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .footer-links a {
+        color: var(--ink-soft);
+        font-size: 13px;
+      }
+      .footer-links a:hover { color: var(--ink); }
+
+      @media (max-width: 980px) {
+        .hero-grid,
+        .intro-grid,
+        .story-grid,
+        .intersection-wrap {
+          grid-template-columns: 1fr;
+        }
+
+        .capability-grid,
+        .principles,
+        .philosophy {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 640px) {
+        .site-topbar .wrap {
+          gap: 12px;
+          justify-content: space-between;
+          padding: 14px 0;
+        }
+        .top-meta { display: none; }
+        .hero { padding-top: 48px; }
+        .portrait-image {
+          min-height: 540px;
+        }
+        .capability-grid,
+        .principles,
+        .philosophy {
+          grid-template-columns: 1fr;
+        }
+        .hero-actions,
+        .cta-row .actions {
+          width: 100%;
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-topbar">
+      <div class="wrap">
+        <div class="top-brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand">EdgeWeb</span>
+        </div>
+        <div class="top-meta">Founder Digital Footprint</div>
+        <a class="top-action" href="https://edgeweb.co/" aria-label="Visit EdgeWeb homepage">Visit EdgeWeb</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Founder & Director — EdgeWeb</p>
+            <h1>
+              I build digital <span class="soft">systems</span><br />
+              around real <span class="soft">business problems.</span>
+            </h1>
+            <p class="lede">
+              I'm Ansh Kashyap — Founder & Director at EdgeWeb. I work across technology, design,
+              automation and digital products to help businesses turn ideas into systems that actually work.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="https://edgeweb.co/contact/">Work with EdgeWeb</a>
+              <a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener">Connect with Ansh</a>
+            </div>
+
+            <div class="hero-meta" aria-label="Core founder metrics">
+              <div class="item">
+                <span class="value">5+</span>
+                <span class="label">years building</span>
+              </div>
+              <div class="item">
+                <span class="value">Business</span>
+                <span class="label">problem-first</span>
+              </div>
+              <div class="item">
+                <span class="value">Tech</span>
+                <span class="label">made useful</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="portrait-wrap">
+            <div class="portrait-frame" aria-label="Ansh Kashyap portrait">
+              <div class="portrait-image">
+                <img
+                  src="/images/ansh-kashyap-founder.jpg"
+                  alt="Ansh Kashyap, Founder & Director of EdgeWeb"
+                  onerror="this.style.display='none'; this.parentNode.innerHTML='<div class=\'portrait-placeholder\'>AK</div>';"
+                />
+              </div>
+              <div class="portrait-note">
+                <div>
+                  <strong>Founder profile</strong>
+                  <span>Ansh Kashyap</span>
+                </div>
+                <span>EdgeWeb</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap section-shell">
+          <div class="intro-grid">
+            <div class="eyebrow">A little about me</div>
+            <div class="quote-box">
+              <p>“I’ve spent the last 5+ years working around technology and digital products — building, solving, testing and refining what actually works.”</p>
+            </div>
+          </div>
+
+          <div class="intro-grid" style="margin-top: 40px;">
+            <div></div>
+            <div class="text-block">
+              <p>
+                I’ve spent the last 5+ years working around technology and digital products — building websites,
+                solving technical problems, working with teams, and figuring out how technology can make businesses
+                operate better.
+              </p>
+              <p>
+                Over time, I became less interested in simply building websites and more interested in understanding
+                the business behind them. That thinking eventually shaped EdgeWeb.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap section-shell">
+          <div class="eyebrow">Why I built EdgeWeb</div>
+          <div class="story-grid" style="margin-top: 28px;">
+            <div class="story-panel">
+              <div class="label">The problem</div>
+              <h3>Businesses don’t need more technology.</h3>
+              <p>
+                They need the right technology. The kind that supports growth, reduces friction, clears operational bottlenecks,
+                and makes the business easier to run.
+              </p>
+            </div>
+
+            <div class="story-panel">
+              <div class="label">The idea</div>
+              <h3>Technology should solve something.</h3>
+              <p>
+                A website should generate business. An application should reduce manual work. Automation should save time.
+                Design should make people’s decisions clearer. That is the thinking behind EdgeWeb.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap section-shell">
+          <div class="eyebrow">What I actually work on</div>
+          <div class="capability-grid">
+            <article class="capability-card">
+              <div class="index">01</div>
+              <h3>Digital Products</h3>
+              <p>Websites, platforms and digital experiences built around how a business actually works.</p>
+            </article>
+            <article class="capability-card">
+              <div class="index">02</div>
+              <h3>Business Applications</h3>
+              <p>Internal tools, dashboards, workflows and custom business systems that reduce operational drag.</p>
+            </article>
+            <article class="capability-card">
+              <div class="index">03</div>
+              <h3>Automation & AI</h3>
+              <p>Automating repetitive work and using AI where it genuinely improves efficiency and decision-making.</p>
+            </article>
+            <article class="capability-card">
+              <div class="index">04</div>
+              <h3>Design</h3>
+              <p>Interfaces and experiences that are clear, intuitive, and designed with use in mind.</p>
+            </article>
+            <article class="capability-card">
+              <div class="index">05</div>
+              <h3>Branding & Growth</h3>
+              <p>Helping businesses communicate value better and build a stronger digital presence.</p>
+            </article>
+            <article class="capability-card">
+              <div class="index">06</div>
+              <h3>Custom Technology</h3>
+              <p>When the right tools don’t exist, build the system that fits the problem properly.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap section-shell">
+          <div class="eyebrow">How I approach problems</div>
+          <div class="philosophy">
+            <div class="phase">
+              <div class="phase-number">01 — Understand</div>
+              <h3>Understand</h3>
+              <p>Before technology, understand the real problem.</p>
+            </div>
+            <div class="phase">
+              <div class="phase-number">02 — Simplify</div>
+              <h3>Simplify</h3>
+              <p>Remove unnecessary complexity and focus on what matters.</p>
+            </div>
+            <div class="phase">
+              <div class="phase-number">03 — Design</div>
+              <h3>Design</h3>
+              <p>Create experiences people can actually understand and use.</p>
+            </div>
+            <div class="phase">
+              <div class="phase-number">04 — Build</div>
+              <h3>Build</h3>
+              <p>Choose the right technology and build for reliability and scale.</p>
+            </div>
+            <div class="phase">
+              <div class="phase-number">05 — Improve</div>
+              <h3>Improve</h3>
+              <p>Launch, learn and continuously refine the system.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap section-shell">
+          <div class="eyebrow">The EdgeWeb approach</div>
+          <div class="intersection-wrap">
+            <div class="intersection-box">
+              <div class="intersection-item">
+                <div class="label">Technology</div>
+                <h3>Systems that work</h3>
+              </div>
+              <div class="intersection-item">
+                <div class="label">Design</div>
+                <h3>Experiences that feel clear</h3>
+              </div>
+              <div class="intersection-item">
+                <div class="label">Business</div>
+                <h3>Decisions that create value</h3>
+              </div>
+              <div class="intersection-item">
+                <div class="label">Automation</div>
+                <h3>Efficiency that scales</h3>
+              </div>
+            </div>
+
+            <div class="intersection-note">
+              <div class="eyebrow">The idea</div>
+              <p>
+                A website shouldn’t just look good. A business application shouldn’t just function. An automation
+                shouldn’t just run. The best digital solutions connect business clarity, user experience and technology
+                into one working system.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap section-shell">
+          <div class="eyebrow">What I'm interested in building next</div>
+          <div class="story-grid" style="margin-top: 28px;">
+            <div class="story-panel">
+              <div class="label">Direction</div>
+              <h3>AI-powered business systems</h3>
+              <p>Workflow tools, internal systems and operational intelligence that reduce friction and improve decision quality.</p>
+            </div>
+            <div class="story-panel">
+              <div class="label">Direction</div>
+              <h3>Smarter digital infrastructure</h3>
+              <p>Scalable products, better business processes, automation and systems that grow with the company instead of slowing it down.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap section-shell">
+          <div class="eyebrow">Still figuring things out</div>
+          <div class="story-grid" style="margin-top: 28px;">
+            <div class="story-panel" style="min-height: 220px;">
+              <div class="label">The reality</div>
+              <h3>Building a company means learning constantly.</h3>
+            </div>
+            <div class="story-panel" style="min-height: 220px;">
+              <div class="label">What that means</div>
+              <p>
+                About technology, people, businesses, leadership and the uncomfortable space between having an idea and making it work.
+                The learning never really stops.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap section-shell">
+          <div class="eyebrow">Founder principles</div>
+          <div class="principles">
+            <div class="principle">
+              <div class="num">01</div>
+              <h3>Build useful things.</h3>
+            </div>
+            <div class="principle">
+              <div class="num">02</div>
+              <h3>Clarity beats complexity.</h3>
+            </div>
+            <div class="principle">
+              <div class="num">03</div>
+              <h3>Technology should solve a problem.</h3>
+            </div>
+            <div class="principle">
+              <div class="num">04</div>
+              <h3>Good design should feel obvious.</h3>
+            </div>
+            <div class="principle">
+              <div class="num">05</div>
+              <h3>Keep learning. Keep building.</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap section-shell">
+          <div class="eyebrow">This is what became EdgeWeb</div>
+          <div class="story-grid" style="margin-top: 28px;">
+            <div class="story-panel">
+              <div class="label">EdgeWeb</div>
+              <h3>Technology, design and business thinking together.</h3>
+              <p>
+                EdgeWeb is a technology and digital solutions company built on one simple idea: businesses deserve digital solutions designed around their actual problems.
+              </p>
+            </div>
+            <div class="story-panel">
+              <div class="label">What it includes</div>
+              <p>
+                Technology — scalable, reliable systems. Design — clear user experiences. Branding & growth — stronger communication.
+                Automation & AI — smarter operations. Custom solutions — tools built around the specific business challenge.
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-top: 36px;">
+            <a class="btn primary" href="https://edgeweb.co/">Explore EdgeWeb</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap section-shell">
+          <div class="cta-panel">
+            <p class="eyebrow">Connect</p>
+            <h2>Have a problem worth solving?</h2>
+            <div class="cta-row">
+              <div class="actions">
+                <a class="btn primary" href="https://edgeweb.co/contact/">Start a conversation</a>
+                <a class="btn secondary" href="https://www.linkedin.com/" rel="noopener" target="_blank">Connect on LinkedIn</a>
+              </div>
+              <div class="meta-list">
+                <a href="https://edgeweb.co/">Visit EdgeWeb</a>
+                <a href="https://www.linkedin.com/" rel="noopener" target="_blank">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-inner">
+        <p>© <span id="year"></span> EdgeWeb — built around real business problems.</p>
+        <div class="footer-links">
+          <a href="https://edgeweb.co/">EdgeWeb</a>
+          <a href="https://edgeweb.co/contact/">Contact</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
