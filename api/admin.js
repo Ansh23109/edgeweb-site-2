@@ -1,0 +1,107 @@
+const { kv } = require('@vercel/kv');
+const bcrypt = require('bcryptjs');
+
+const ADMIN_PATH = '/admin';
+
+const defaultConfig = {
+  siteName: 'EdgeWeb',
+  pageTitle: 'EdgeWeb | IT Solutions, Web & App Development, Automation | India',
+  metaDescription: 'EdgeWeb builds custom web and mobile applications, process automation, cloud infrastructure and digital marketing for growing businesses. Based in India, working worldwide.',
+  heroHeading: 'Build what moves your business.',
+  heroSubheading: 'We design and build the systems companies actually run on — custom software, AI workflows, web platforms, and growth automation that work together instead of fighting each other.',
+  heroBadge: 'EdgeWeb / Digital Engineering',
+  contactEmail: 'info@edgeweb.co',
+  phone: '+91-96252-09081',
+  favicon: '/favicon.svg',
+  logoText: 'EdgeWeb',
+  heroImage: '/images/hero.jpg',
+  socialImage: '/images/og-image.jpg',
+  footerText: 'We help businesses turn ideas into systems that keep growing.'
+};
+
+function escapeHtml(str = '') {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/\"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+async function getSiteData() {
+  try {
+    const data = await kv.get('edgeweb-site-config');
+    return data || defaultConfig;
+  } catch (error) {
+    return defaultConfig;
+  }
+}
+
+async function saveSiteData(data) {
+  await kv.set('edgeweb-site-config', data);
+}
+
+async function isAuthenticated(req) {
+  const cookie = req.headers.cookie || '';
+  return cookie.includes('edgeweb_admin_auth=true');
+}
+
+function setAuthCookie(res) {
+  res.setHeader('Set-Cookie', 'edgeweb_admin_auth=true; HttpOnly; Path=/; Max-Age=43200; SameSite=Lax');
+}
+
+async function isValidPassword(password) {
+  const plain = process.env.ADMIN_PASSWORD || 'edgewebadmin';
+  const hash = process.env.ADMIN_PASSWORD_HASH || '';
+
+  if (hash) {
+    return bcrypt.compare(password, hash);
+  }
+
+  return password === plain;
+}
+
+module.exports = async function handler(req, res) {
+  const url = new URL(req.url, 'https://edgeweb.co');
+
+  if (req.method === 'GET' && url.pathname === '/admin' || url.pathname === '/admin/') {
+    const authed = await isAuthenticated(req);
+    if (!authed) {
+      const html = `<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>EdgeWeb Admin Login</title><style>body{margin:0;background:#0d0d12;color:#fff;font-family:Arial,sans-serif;display:grid;place-items:center;min-height:100vh} .card{width:min(420px,90vw);background:#171b23;border:1px solid #2f3744;border-radius:16px;padding:28px;box-shadow:0 12px 35px rgba(0,0,0,.25)} input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #374151;background:#0f1218;color:white;margin:12px 0 18px} button{width:100%;border:none;background:linear-gradient(135deg,#d24545,#ff7a59);color:white;font-weight:700;border-radius:10px;padding:12px;cursor:pointer}</style></head><body><div class='card'><h1>EdgeWeb Admin</h1><form method='POST' action='/admin'><input type='password' name='password' placeholder='Admin password' required><button type='submit'>Login</button></form></div></body></html>`;
+      return res.status(200).send(html);
+    }
+
+    const content = await getSiteData();
+    const html = `<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>EdgeWeb CMS</title><style>body{margin:0;font-family:Arial,sans-serif;background:#0c0d12;color:#f5f5f5} .wrap{max-width:1100px;margin:auto;padding:30px 20px 60px} .box{background:#171b23;border:1px solid #2d3543;border-radius:16px;padding:22px;margin-bottom:20px} h2{margin-top:0} form{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px} .full{grid-column:1 / -1} label{display:flex;flex-direction:column;gap:8px;font-size:13px;color:#d7e1ec} input,textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #374151;background:#0f1218;color:white} textarea{min-height:120px;resize:vertical} button{background:linear-gradient(135deg,#d24545,#ff7a59);color:white;border:none;padding:12px 18px;border-radius:10px;font-weight:700;cursor:pointer}.small{font-size:12px;color:#aeb8c3}.logout{color:#fff;text-decoration:none}.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}</style></head><body><div class='wrap'><div class='topbar'><h1>EdgeWeb CMS</h1><a class='logout' href='/admin/logout'>Logout</a></div><div class='box'><h2>Site content</h2><form method='POST' action='/admin/update'><label class='full'><span>Site name</span><input name='siteName' value='${escapeHtml(content.siteName || '')}' /></label><label class='full'><span>Page title</span><input name='pageTitle' value='${escapeHtml(content.pageTitle || '')}' /></label><label class='full'><span>Meta description</span><textarea name='metaDescription'>${escapeHtml(content.metaDescription || '')}</textarea></label><label class='full'><span>Hero badge</span><input name='heroBadge' value='${escapeHtml(content.heroBadge || '')}' /></label><label class='full'><span>Hero heading</span><input name='heroHeading' value='${escapeHtml(content.heroHeading || '')}' /></label><label class='full'><span>Hero subheading</span><textarea name='heroSubheading'>${escapeHtml(content.heroSubheading || '')}</textarea></label><label><span>Contact email</span><input name='contactEmail' value='${escapeHtml(content.contactEmail || '')}' /></label><label><span>Phone</span><input name='phone' value='${escapeHtml(content.phone || '')}' /></label><label><span>Logo text</span><input name='logoText' value='${escapeHtml(content.logoText || '')}' /></label><label><span>Favicon URL</span><input name='favicon' value='${escapeHtml(content.favicon || '')}' /></label><label><span>Hero image URL</span><input name='heroImage' value='${escapeHtml(content.heroImage || '')}' /></label><label><span>Social image URL</span><input name='socialImage' value='${escapeHtml(content.socialImage || '')}' /></label><label class='full'><span>Footer text</span><input name='footerText' value='${escapeHtml(content.footerText || '')}' /></label><div class='full'><button type='submit'>Save changes</button></div></form></div></div></body></html>`;
+    return res.status(200).send(html);
+  }
+
+  if (req.method === 'POST' && url.pathname === '/admin') {
+    const password = (req.body && req.body.password) || '';
+    const valid = await isValidPassword(password);
+    if (!valid) return res.status(403).send('Invalid password');
+    setAuthCookie(res);
+    return res.writeHead(302, { Location: '/admin' }).end();
+  }
+
+  if (req.method === 'POST' && url.pathname === '/admin/update') {
+    const authed = await isAuthenticated(req);
+    if (!authed) return res.status(401).send('Unauthorized');
+    const payload = req.body || {};
+    const current = await getSiteData();
+    await saveSiteData({ ...current, ...payload });
+    return res.writeHead(302, { Location: '/admin' }).end();
+  }
+
+  if (req.method === 'GET' && url.pathname === '/admin/logout') {
+    res.setHeader('Set-Cookie', 'edgeweb_admin_auth=; Max-Age=0; Path=/; SameSite=Lax');
+    return res.writeHead(302, { Location: '/admin' }).end();
+  }
+
+  if (req.method === 'GET' && url.pathname === '/api/site') {
+    const data = await getSiteData();
+    return res.status(200).json(data);
+  }
+
+  return res.status(404).json({ ok: false, message: 'Not found' });
+};

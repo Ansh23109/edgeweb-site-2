@@ -10,8 +10,8 @@
 <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), interest-cohort=()">
 <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
 <title>EdgeWeb | IT Solutions, Web &amp; App Development, Automation | India</title>
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="shortcut icon" href="/favicon.svg">
+<link id="site-favicon" rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link id="site-shortcut-favicon" rel="shortcut icon" href="/favicon.svg">
 <meta name="description" content="EdgeWeb builds custom web and mobile applications, process automation, cloud infrastructure and digital marketing for growing businesses. Based in India, working worldwide.">
 <link rel="canonical" href="https://edgeweb.co/">
 <meta name="robots" content="index, follow">
@@ -1034,9 +1034,9 @@
   <section class="hero">
     <div class="wrap hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">EdgeWeb / Digital Engineering</p>
-        <h1 class="display-xl">Build what<br>moves your<br><i>business.</i></h1>
-        <p class="body-lg hero-sub">We design and build the systems companies actually run on — custom software, AI workflows, web platforms, and growth automation that work together instead of fighting each other.</p>
+        <p id="site-hero-badge" class="eyebrow">EdgeWeb / Digital Engineering</p>
+        <h1 id="site-hero-heading" class="display-xl">Build what<br>moves your<br><i>business.</i></h1>
+        <p id="site-hero-subheading" class="body-lg hero-sub">We design and build the systems companies actually run on — custom software, AI workflows, web platforms, and growth automation that work together instead of fighting each other.</p>
 
         <div class="hero-actions">
           <a href="#services" class="btn btn-primary magnetic" data-cursor="View" data-track="cta_hero_explore">Explore EdgeWeb
@@ -1125,6 +1125,37 @@
       </div>
     </div>
   </section>
+
+  <script>
+    async function loadSiteConfig() {
+      try {
+        const response = await fetch('/api/site');
+        if (!response.ok) return;
+        const data = await response.json();
+
+        const heroBadge = document.getElementById('site-hero-badge');
+        const heroHeading = document.getElementById('site-hero-heading');
+        const heroSubHeading = document.getElementById('site-hero-subheading');
+        const favicon = document.getElementById('site-favicon');
+        const shortcut = document.getElementById('site-shortcut-favicon');
+
+        if (data.heroBadge && heroBadge) heroBadge.textContent = data.heroBadge;
+        if (data.heroHeading && heroHeading) heroHeading.innerHTML = data.heroHeading.replace(/\n/g, '<br>');
+        if (data.heroSubheading && heroSubHeading) heroSubHeading.textContent = data.heroSubheading;
+        if (data.favicon) {
+          if (favicon) favicon.href = data.favicon;
+          if (shortcut) shortcut.href = data.favicon;
+        }
+        if (data.pageTitle) document.title = data.pageTitle;
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc && data.metaDescription) metaDesc.setAttribute('content', data.metaDescription);
+      } catch (error) {
+        console.warn('Could not load CMS config', error);
+      }
+    }
+
+    loadSiteConfig();
+  </script>
 
   <!-- ============ ABOUT ============ -->
   <section id="about" class="tight">
