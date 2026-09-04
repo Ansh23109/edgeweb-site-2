@@ -417,17 +417,22 @@
   }
   .hero-inner{
     position:relative; z-index:2; width:100%;
-    display:grid; grid-template-columns: 0.96fr 1.04fr; gap:42px; align-items:center;
+    display:flex; align-items:center; justify-content:center;
   }
-  .hero-copy{ position:relative; z-index:3; }
-  .hero-copy .eyebrow{ margin-bottom:26px; }
+  .hero-copy{
+    position:relative; z-index:3; width:min(980px, 100%); text-align:center;
+    margin:0 auto;
+  }
+  .hero-copy .eyebrow{ margin:0 auto 26px; justify-content:center; }
   .hero-copy h1{ color:var(--ink); }
   .hero-copy h1 i{ font-style:italic; color:var(--ink-dim); }
-  .hero-sub{ margin-top:28px; max-width:38rem; }
-  .hero-actions{ margin-top:44px; display:flex; gap:16px; flex-wrap:wrap; align-items:center; }
+  .hero-sub{ margin:28px auto 0; max-width:46rem; }
+  .hero-actions{ margin-top:44px; display:flex; gap:16px; flex-wrap:wrap; align-items:center; justify-content:center; }
+  .hero-trust{ justify-content:center; text-align:center; }
+  .hero-trust-list{ justify-content:center; }
   .hero-meta{
-    margin-top:52px; display:flex; gap:36px; padding-top:22px; border-top:1px solid var(--line);
-    max-width:540px; flex-wrap:wrap;
+    margin:52px auto 0; display:flex; gap:36px; padding-top:22px; border-top:1px solid var(--line);
+    max-width:640px; flex-wrap:wrap; justify-content:center; text-align:center;
   }
   .hero-meta div{ display:flex; flex-direction:column; gap:4px; }
   .hero-meta .n{ font-family:var(--f-display); font-style:italic; font-size:22px; color:var(--ink); }
@@ -516,79 +521,14 @@
   .hero-quote-card p{ margin:0; font-size:14px; line-height:1.5; color:var(--ink); }
 
   @media (max-width: 980px){
-    .hero-inner{ grid-template-columns:1fr; }
-    .hero-copy{ order:1; }
-    .hero-media-shell{ order:2; min-height:500px; }
-    .hero-media{ min-height:500px; }
+    .hero-inner{ justify-content:center; }
+    .hero-copy{ width:min(760px, 100%); }
+    .hero-meta{ gap:20px; }
   }
   @media (max-width: 560px){
     .hero{ padding-top:110px; }
     .hero-copy h1{ font-size:clamp(42px, 16vw, 72px); }
     .hero-actions{ margin-top:26px; }
-    .hero-meta{ gap:20px; }
-    .hero-media-shell{ min-height:420px; }
-    .hero-media{ min-height:420px; border-radius:22px; }
-    .hero-metric-card{ left:16px; bottom:16px; width:150px; }
-    .hero-bullet-card{ right:16px; top:18px; width:170px; }
-    .hero-quote-card{ right:16px; bottom:18px; width:170px; }
-  }
-
-  .hero-media-shell{
-    position:relative; min-height:620px; display:flex; align-items:stretch;
-    padding:12px 0;
-  }
-  .hero-media{
-    position:relative; width:100%; min-height:620px; border-radius:30px; overflow:hidden;
-    border:1px solid rgba(255,255,255,0.12); background:
-      linear-gradient(180deg, rgba(10,12,14,0.05), rgba(10,12,14,0.62)),
-      url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-    box-shadow: 0 24px 80px rgba(0,0,0,0.38);
-    isolation:isolate;
-  }
-  .hero-media video{
-    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
-    display:block; filter:saturate(0.85) contrast(1.08) brightness(0.72);
-    transform:scale(1.08);
-  }
-  .hero-media::before{
-    content:''; position:absolute; inset:0; z-index:1;
-    background:linear-gradient(120deg, rgba(17,17,19,0.55), rgba(17,17,19,0.12) 38%, rgba(17,17,19,0.7));
-  }
-  .hero-media::after{
-    content:''; position:absolute; inset:0; z-index:1;
-    background:radial-gradient(circle at top left, rgba(112,220,255,0.18), transparent 30%),
-      linear-gradient(180deg, rgba(255,255,255,0.06), transparent 30%, rgba(10,12,14,0.14));
-  }
-  .hero-bullet-card,
-  .hero-metric-card,
-  .hero-quote-card{
-    position:absolute; z-index:2; backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
-    background:rgba(10,12,14,0.52); border:1px solid rgba(255,255,255,0.12);
-    border-radius:18px; box-shadow:0 18px 45px rgba(0,0,0,0.22);
-  }
-  .hero-bullet-card{
-    left:28px; bottom:26px; padding:18px 18px 16px; max-width:230px;
-  }
-  .hero-bullet-card .label{ display:block; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-faint); }
-  .hero-bullet-card strong{ display:block; font-family:var(--f-display); font-weight:400; font-style:italic; font-size:32px; line-height:1; margin-top:6px; color:var(--ink); }
-  .hero-bullet-card p{ margin-top:8px; font-size:12px; color:var(--ink-dim); }
-  .hero-metric-card{
-    right:24px; top:32px; padding:14px 16px; min-width:160px;
-  }
-  .hero-metric-card .tiny{ display:block; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-faint); }
-  .hero-metric-card strong{ display:block; margin-top:8px; font-weight:700; font-size:26px; }
-  .hero-metric-card span{ display:block; font-size:11px; color:var(--ink-dim); margin-top:4px; }
-  .hero-quote-card{
-    right:26px; bottom:32px; padding:14px 16px; max-width:220px;
-  }
-  .hero-quote-card .mini{ font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-faint); }
-  .hero-quote-card p{ margin-top:8px; font-size:12px; line-height:1.5; color:var(--ink); }
-
-  @media (max-width: 980px){
-    .hero-inner{ grid-template-columns:1fr; }
-    .hero-media-shell{ min-height:440px; }
-    .hero-media{ min-height:440px; }
-    .hero-meta{ gap:20px; }
   }
 
   /* ================= SECTION SHELL ================= */
@@ -1099,30 +1039,6 @@
         </div>
       </div>
 
-      <div class="hero-media-shell" aria-label="Digital systems and automation workspace">
-        <div class="hero-media">
-          <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" aria-hidden="true">
-            <source src="https://cdn.coverr.co/videos/coverr-working-on-laptop-1562518768604/1080p.mp4" type="video/mp4">
-          </video>
-
-          <div class="hero-metric-card">
-            <span class="tiny">Operational gain</span>
-            <strong>38%</strong>
-            <span>Average reduction in manual work</span>
-          </div>
-
-          <div class="hero-bullet-card">
-            <span class="label">Systems delivered</span>
-            <strong>120+</strong>
-            <p>Business-critical platforms and digital systems across growth stages.</p>
-          </div>
-
-          <div class="hero-quote-card">
-            <span class="mini">Client outcome</span>
-            <p>"The right architecture changed how the business runs — not just the website."</p>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
