@@ -517,6 +517,9 @@
     nextBtn.addEventListener('click', ()=>{
       if(!validateCurrentStep()) return;
       if(stepIndex === totalSteps - 1){
+        hideError('submit');
+        nextBtn.disabled = true;
+        nextBtn.textContent = 'Sending…';
         submitLead();
         return;
       }
@@ -555,15 +558,18 @@
         if (!response.ok) {
           throw new Error('Request failed');
         }
+
+        window.edgewebLeads = window.edgewebLeads || [];
+        window.edgewebLeads.push(lead);
+        trackEvent && trackEvent('discovery_submit', { build_type: lead.buildType, goal: lead.goal, budget: lead.budget });
+        stepIndex = totalSteps;
+        showStep(stepIndex);
       } catch (error) {
         console.error('Discovery form email submission failed:', error);
+        nextBtn.disabled = false;
+        nextBtn.textContent = "Let's Build It →";
+        showError('submit');
       }
-
-      window.edgewebLeads = window.edgewebLeads || [];
-      window.edgewebLeads.push(lead);
-      trackEvent && trackEvent('discovery_submit', { build_type: lead.buildType, goal: lead.goal, budget: lead.budget });
-      stepIndex = totalSteps;
-      showStep(stepIndex);
     }
 
     window.edgewebOpenDiscovery = openModal;

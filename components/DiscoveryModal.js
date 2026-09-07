@@ -97,6 +97,9 @@ export default function DiscoveryModal() {
               <input className="discovery-input" type="tel" id="dPhone" name="phone" />
             </div>
             <p className="discovery-error" data-error-for="contact">Please fill in your name and a valid work email.</p>
+            <p className="discovery-error" data-error-for="submit">
+              Something went wrong sending this — please try again, or message us on WhatsApp instead.
+            </p>
             <input type="hidden" name="utm_source" id="dUtmSource" />
             <input type="hidden" name="utm_medium" id="dUtmMedium" />
             <input type="hidden" name="utm_campaign" id="dUtmCampaign" />
