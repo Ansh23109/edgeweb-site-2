@@ -1,4 +1,3 @@
-<script>
 (function(){
   /* ---------- preloader ---------- */
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
