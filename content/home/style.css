@@ -567,7 +567,7 @@
 
   /* ================= CUSTOM CURSOR ================= */
   .cursor-dot, .cursor-ring{
-    position:fixed; top:0; left:0; z-index:700; pointer-events:none;
+    position:fixed; top:0; left:0; z-index:950; pointer-events:none;
     border-radius:50%; will-change:transform; transform:translate(-50%,-50%);
   }
   .cursor-dot{ width:8px; height:8px; background:rgba(255,255,255,0.8); box-shadow:0 0 16px rgba(255,255,255,0.2); }

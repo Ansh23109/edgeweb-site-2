@@ -461,7 +461,7 @@
 
   /* ================= CUSTOM CURSOR ================= */
   .cursor-dot, .cursor-ring{
-    position:fixed; top:0; left:0; z-index:700; pointer-events:none;
+    position:fixed; top:0; left:0; z-index:950; pointer-events:none;
     border-radius:50%; will-change:transform; transform:translate(-50%,-50%);
   }
   .cursor-dot{ width:6px; height:6px; background:var(--ink); }
