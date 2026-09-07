@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import StickyCtas from '../components/StickyCtas';
 import DiscoveryModal from '../components/DiscoveryModal';
 import ChromeEffects from '../components/ChromeEffects';
+import HeroVortex from '../components/HeroVortex';
 import JsonLd from '../components/JsonLd';
 import { readContent } from '../lib/content';
 import { websiteSchema, faqSchema, HOME_FAQS } from '../lib/schema';
@@ -38,6 +39,7 @@ export const metadata = {
 };
 
 const css = readContent('home/style.css');
+const heroInnerHtml = readContent('home/hero-inner.html');
 const mainHtml = readContent('home/main.html');
 const script = readContent('home/script.js');
 
@@ -51,7 +53,15 @@ export default function HomePage() {
       <Header />
       <MobileMenu />
 
-      <main id="top" dangerouslySetInnerHTML={{ __html: mainHtml }} />
+      <main id="top">
+        <section className="hero">
+          <HeroVortex />
+          <div className="hero-vignette" aria-hidden="true" />
+          <div className="wrap hero-inner" dangerouslySetInnerHTML={{ __html: heroInnerHtml }} />
+        </section>
+
+        <div dangerouslySetInnerHTML={{ __html: mainHtml }} />
+      </main>
 
       <Footer showGoodfirmsBadge />
       <StickyCtas />
