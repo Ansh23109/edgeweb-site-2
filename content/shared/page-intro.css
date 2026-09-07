@@ -8,5 +8,10 @@
 .page-intro-breadcrumb a{ color:var(--ink-faint); text-decoration:none; }
 .page-intro-breadcrumb a:hover{ color:var(--ink); }
 .page-intro-breadcrumb span{ color:var(--ink-faint); }
-.page-intro{ padding:180px 0 40px; }
+.page-intro{ position:relative; overflow:hidden; padding:180px 0 40px; }
+.page-intro > .hero-vignette{
+  position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:radial-gradient(circle at 50% 42%, transparent 0%, rgba(11,10,12,0.35) 55%, rgba(11,10,12,0.85) 100%);
+}
+.page-intro > .wrap{ position:relative; z-index:2; }
 .page-intro .eyebrow{ margin-bottom:22px; }

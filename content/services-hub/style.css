@@ -512,7 +512,14 @@
   }
 
   /* ---------- services hub hero ---------- */
-  .svc-hero{ padding-top:150px; padding-bottom:80px; border-bottom:1px solid var(--line); }
+  .svc-hero{ position:relative; overflow:hidden; padding-top:150px; padding-bottom:80px; border-bottom:1px solid var(--line); }
+  /* HeroVortex canvas (z-index:0) + vignette (z-index:1); hero copy below has no
+     z-index of its own here, so it also needs lifting above them. */
+  .svc-hero > .hero-vignette{
+    position:absolute; inset:0; z-index:1; pointer-events:none;
+    background:radial-gradient(circle at 50% 42%, transparent 0%, rgba(11,10,12,0.35) 55%, rgba(11,10,12,0.85) 100%);
+  }
+  .svc-hero > .wrap{ position:relative; z-index:2; }
   .svc-hero .eyebrow{ margin-bottom:26px; }
   .svc-hero h1{ color:var(--ink); }
   .svc-hero-sub{ margin-top:26px; }

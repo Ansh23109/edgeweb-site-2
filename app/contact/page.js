@@ -5,6 +5,7 @@ import Footer from '../../components/Footer';
 import StickyCtas from '../../components/StickyCtas';
 import DiscoveryModal from '../../components/DiscoveryModal';
 import ChromeEffects from '../../components/ChromeEffects';
+import HeroVortex from '../../components/HeroVortex';
 import JsonLd from '../../components/JsonLd';
 import { readContent } from '../../lib/content';
 import { breadcrumbSchema } from '../../lib/schema';
@@ -27,7 +28,7 @@ export const metadata = {
 };
 
 const css = readContent('contact/style.css');
-const mainHtml = readContent('contact/main.html');
+const heroInnerHtml = readContent('contact/hero-inner.html');
 const script = readContent('contact/script.js');
 
 export default function ContactPage() {
@@ -40,7 +41,13 @@ export default function ContactPage() {
       <Header />
       <MobileMenu />
 
-      <main id="top" dangerouslySetInnerHTML={{ __html: mainHtml }} />
+      <main id="top">
+        <section className="contact-split">
+          <HeroVortex />
+          <div className="hero-vignette" aria-hidden="true" />
+          <div className="contact-hero-content" dangerouslySetInnerHTML={{ __html: heroInnerHtml }} />
+        </section>
+      </main>
 
       <Footer />
       <StickyCtas />

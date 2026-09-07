@@ -5,6 +5,7 @@ import Footer from '../../components/Footer';
 import StickyCtas from '../../components/StickyCtas';
 import DiscoveryModal from '../../components/DiscoveryModal';
 import ChromeEffects from '../../components/ChromeEffects';
+import HeroVortex from '../../components/HeroVortex';
 import JsonLd from '../../components/JsonLd';
 import { readContent } from '../../lib/content';
 import { breadcrumbSchema } from '../../lib/schema';
@@ -32,6 +33,7 @@ export const metadata = {
 };
 
 const css = readContent('services-hub/style.css');
+const heroInnerHtml = readContent('services-hub/hero-inner.html');
 const mainHtml = readContent('services-hub/main.html');
 const script = readContent('services-hub/script.js');
 
@@ -45,7 +47,15 @@ export default function ServicesHubPage() {
       <Header />
       <MobileMenu />
 
-      <main id="top" dangerouslySetInnerHTML={{ __html: mainHtml }} />
+      <main id="top">
+        <section className="svc-hero">
+          <HeroVortex />
+          <div className="hero-vignette" aria-hidden="true" />
+          <div className="wrap" dangerouslySetInnerHTML={{ __html: heroInnerHtml }} />
+        </section>
+
+        <div dangerouslySetInnerHTML={{ __html: mainHtml }} />
+      </main>
 
       <Footer />
       <StickyCtas />

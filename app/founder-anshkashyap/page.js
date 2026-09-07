@@ -1,3 +1,4 @@
+import HeroVortex from '../../components/HeroVortex';
 import { readContent } from '../../lib/content';
 import { absoluteUrl } from '../../lib/site';
 
@@ -22,16 +23,31 @@ export const metadata = {
 };
 
 const css = readContent('founder/style.css');
-const bodyHtmlRaw = readContent('founder/body.html');
+const headerHtml = readContent('founder/before-hero.html');
+const heroInnerHtml = readContent('founder/hero-inner.html');
+const mainRestHtml = readContent('founder/main-rest.html');
+const footerHtmlRaw = readContent('founder/footer.html');
 
 export default function FounderPage() {
   const year = new Date().getFullYear();
-  const bodyHtml = bodyHtmlRaw.replace('<span id="year"></span>', `<span id="year">${year}</span>`);
+  const footerHtml = footerHtmlRaw.replace('<span id="year"></span>', `<span id="year">${year}</span>`);
 
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: css }} />
-      <div dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+      <div dangerouslySetInnerHTML={{ __html: headerHtml }} />
+
+      <main>
+        <section className="hero">
+          <HeroVortex />
+          <div className="hero-vignette" aria-hidden="true" />
+          <div className="wrap hero-grid" dangerouslySetInnerHTML={{ __html: heroInnerHtml }} />
+        </section>
+
+        <div dangerouslySetInnerHTML={{ __html: mainRestHtml }} />
+      </main>
+
+      <div dangerouslySetInnerHTML={{ __html: footerHtml }} />
     </>
   );
 }

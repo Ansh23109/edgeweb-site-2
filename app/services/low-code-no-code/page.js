@@ -5,6 +5,7 @@ import Footer from '../../../components/Footer';
 import StickyCtas from '../../../components/StickyCtas';
 import DiscoveryModal from '../../../components/DiscoveryModal';
 import ChromeEffects from '../../../components/ChromeEffects';
+import HeroVortex from '../../../components/HeroVortex';
 import JsonLd from '../../../components/JsonLd';
 import { readContent } from '../../../lib/content';
 import { breadcrumbSchema, serviceSchema, faqSchema } from '../../../lib/schema';
@@ -29,6 +30,7 @@ export const metadata = {
 };
 
 const css = readContent('services-detail/style.css');
+const heroInnerHtml = readContent(`services-detail/${SLUG}/hero-inner.html`);
 const mainHtml = readContent(`services-detail/${SLUG}/main.html`);
 const script = readContent('services-detail/script.js');
 
@@ -55,7 +57,15 @@ export default function LowCodeNoCodePage() {
       <Header />
       <MobileMenu />
 
-      <main id="top" dangerouslySetInnerHTML={{ __html: mainHtml }} />
+      <main id="top">
+        <section className="svc-detail-hero">
+          <HeroVortex />
+          <div className="hero-vignette" aria-hidden="true" />
+          <div className="wrap" dangerouslySetInnerHTML={{ __html: heroInnerHtml }} />
+        </section>
+
+        <div dangerouslySetInnerHTML={{ __html: mainHtml }} />
+      </main>
 
       <Footer />
       <StickyCtas />

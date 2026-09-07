@@ -454,7 +454,12 @@
   }
 
   /* ---------- service detail page ---------- */
-  .svc-detail-hero{ padding-top:150px; padding-bottom:70px; border-bottom:1px solid var(--line); }
+  .svc-detail-hero{ position:relative; overflow:hidden; padding-top:150px; padding-bottom:70px; border-bottom:1px solid var(--line); }
+  .svc-detail-hero > .hero-vignette{
+    position:absolute; inset:0; z-index:1; pointer-events:none;
+    background:radial-gradient(circle at 50% 42%, transparent 0%, rgba(11,10,12,0.35) 55%, rgba(11,10,12,0.85) 100%);
+  }
+  .svc-detail-hero > .wrap{ position:relative; z-index:2; }
   .svc-detail-hero h1{ color:var(--ink); max-width:16ch; }
   .breadcrumb{ display:flex; gap:8px; align-items:center; font-size:12.5px; color:var(--ink-faint); margin-bottom:28px; }
   .breadcrumb a{ color:var(--ink-faint); }

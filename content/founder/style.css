@@ -158,7 +158,13 @@
         background: linear-gradient(180deg, transparent, rgba(255,255,255,0.06), transparent);
         transform: translateX(-50%);
       }
+      .hero > .hero-vignette{
+        position: absolute; inset: 0; z-index: 1; pointer-events: none;
+        background: radial-gradient(circle at 50% 42%, transparent 0%, rgba(11,10,12,0.35) 55%, rgba(11,10,12,0.85) 100%);
+      }
       .hero-grid {
+        position: relative;
+        z-index: 2;
         display: grid;
         grid-template-columns: 1.1fr 0.9fr;
         gap: 52px;
