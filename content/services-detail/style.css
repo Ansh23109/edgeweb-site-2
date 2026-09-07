@@ -365,12 +365,73 @@
   .final-contact a:hover{ color:var(--ink); }
 
   /* ---------- footer ---------- */
-  footer{ border-top:1px solid var(--line); padding:44px 0; }
-  .footer-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
-  .footer-row .body{ font-size:13px; color:var(--ink-faint); max-width:none; }
+  /* Matches the shared <Footer/> component's actual markup (.mega-footer,
+     .social-row, etc.) — this file was missing the whole block, which left
+     Footer's social icons rendering at their unstyled native SVG size and
+     the column layout unstyled on every service-detail page. */
+  .mega-footer{ border-top:1px solid var(--line); padding:80px 0 0; }
+  .mega-footer-top{ display:grid; grid-template-columns:1.3fr 1fr 1fr 1.2fr; gap:40px; padding-bottom:64px; }
+  .mega-col h4{ font-size:12px; letter-spacing:0.06em; color:var(--ink-faint); margin:0 0 20px; font-weight:600; }
+  .mega-col ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:13px; }
+  .mega-col a{ font-size:14.5px; color:var(--ink-dim); transition:color .2s ease; }
+  .mega-col a:hover{ color:var(--ink); }
+  .mega-col-brand .logo{ display:inline-block; margin-bottom:16px; }
+  .mega-col-brand p{ font-size:13.5px; color:var(--ink-faint); max-width:32ch; line-height:1.6; }
+  .mega-cta-title{ font-family:var(--f-display); font-style:italic; font-size:24px; color:var(--ink); margin:0 0 18px; }
+  .mega-col-cta .btn{ margin-bottom:16px; }
+  .social-row{ display:flex; gap:12px; margin-top:8px; }
+  .social-row a{
+    width:36px; height:36px; border:1px solid var(--line-strong); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; transition:border-color .2s ease, color .2s ease;
+  }
+  .social-row a:hover{ border-color:var(--ink); color:var(--ink); }
+  .social-row svg{ width:16px; height:16px; display:block; }
+  .mega-footer-bottom{
+    border-top:1px solid var(--line); padding:26px 0; display:flex; justify-content:space-between;
+    align-items:center; flex-wrap:wrap; gap:14px;
+  }
   .footer-links{ display:flex; gap:26px; list-style:none; margin:0; padding:0; }
   .footer-links a{ font-size:13px; color:var(--ink-faint); }
   .footer-links a:hover{ color:var(--ink); }
+  @media (max-width:900px){
+    .mega-footer-top{ grid-template-columns:1fr 1fr; row-gap:44px; }
+  }
+  @media (max-width:560px){
+    .mega-footer-top{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- sticky conversion ---------- */
+  /* Also entirely missing from this file — same symptom as the footer
+     above: .sticky-bar-mobile had no `display:none` default, so it
+     rendered inline in normal document flow (always visible, not fixed)
+     with its icons at unstyled native SVG size. */
+  .sticky-cta-desktop{
+    position:fixed; right:28px; bottom:28px; z-index:350;
+    display:flex; align-items:center; gap:14px; background:var(--bg-raised);
+    border:1px solid var(--line-strong); border-radius:100px; padding:10px 10px 10px 22px;
+    opacity:0; visibility:hidden; transform:translateY(10px);
+    transition:opacity .35s var(--ease), transform .35s var(--ease), visibility 0s linear .35s;
+  }
+  .sticky-cta-desktop.show{ opacity:1; visibility:visible; transform:translateY(0); transition:opacity .35s var(--ease), transform .35s var(--ease); }
+  .sticky-cta-desktop span{ font-size:13.5px; color:var(--ink-dim); white-space:nowrap; }
+  .sticky-cta-desktop .btn{ padding:11px 20px; font-size:13px; white-space:nowrap; }
+  @media (max-width:760px){ .sticky-cta-desktop{ display:none; } }
+
+  .sticky-bar-mobile{
+    display:none; position:fixed; left:0; right:0; bottom:0; z-index:350;
+    background:rgba(20,18,22,0.92); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    border-top:1px solid var(--line); padding:10px calc(var(--gutter) * 0.6);
+    padding-bottom:calc(10px + env(safe-area-inset-bottom));
+  }
+  .sticky-bar-mobile-row{ display:grid; grid-template-columns:1fr 1fr 1.3fr; gap:8px; }
+  .sticky-bar-mobile a{
+    display:flex; align-items:center; justify-content:center; gap:7px;
+    font-size:12.5px; font-weight:600; color:var(--ink-dim); padding:12px 6px;
+    border:1px solid var(--line-strong); border-radius:8px; transition:border-color .2s ease, color .2s ease;
+  }
+  .sticky-bar-mobile a.primary{ background:var(--ink); color:var(--bg); border-color:var(--ink); }
+  .sticky-bar-mobile svg{ width:15px; height:15px; flex:0 0 auto; }
+  @media (max-width:760px){ .sticky-bar-mobile{ display:block; } body{ padding-bottom:70px; } }
 
   .container-lines{ position:relative; }
   .container-lines::before,.container-lines::after{

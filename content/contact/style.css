@@ -401,6 +401,38 @@
     .mega-footer-top{ grid-template-columns:1fr; }
   }
 
+  /* ---------- sticky conversion ---------- */
+  /* Missing from this file entirely — .sticky-bar-mobile had no
+     `display:none` default, so it rendered inline in normal document flow
+     (always visible, not fixed) with its icons at unstyled native SVG size. */
+  .sticky-cta-desktop{
+    position:fixed; right:28px; bottom:28px; z-index:350;
+    display:flex; align-items:center; gap:14px; background:var(--bg-raised);
+    border:1px solid var(--line-strong); border-radius:100px; padding:10px 10px 10px 22px;
+    opacity:0; visibility:hidden; transform:translateY(10px);
+    transition:opacity .35s var(--ease), transform .35s var(--ease), visibility 0s linear .35s;
+  }
+  .sticky-cta-desktop.show{ opacity:1; visibility:visible; transform:translateY(0); transition:opacity .35s var(--ease), transform .35s var(--ease); }
+  .sticky-cta-desktop span{ font-size:13.5px; color:var(--ink-dim); white-space:nowrap; }
+  .sticky-cta-desktop .btn{ padding:11px 20px; font-size:13px; white-space:nowrap; }
+  @media (max-width:760px){ .sticky-cta-desktop{ display:none; } }
+
+  .sticky-bar-mobile{
+    display:none; position:fixed; left:0; right:0; bottom:0; z-index:350;
+    background:rgba(20,18,22,0.92); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    border-top:1px solid var(--line); padding:10px calc(var(--gutter) * 0.6);
+    padding-bottom:calc(10px + env(safe-area-inset-bottom));
+  }
+  .sticky-bar-mobile-row{ display:grid; grid-template-columns:1fr 1fr 1.3fr; gap:8px; }
+  .sticky-bar-mobile a{
+    display:flex; align-items:center; justify-content:center; gap:7px;
+    font-size:12.5px; font-weight:600; color:var(--ink-dim); padding:12px 6px;
+    border:1px solid var(--line-strong); border-radius:8px; transition:border-color .2s ease, color .2s ease;
+  }
+  .sticky-bar-mobile a.primary{ background:var(--ink); color:var(--bg); border-color:var(--ink); }
+  .sticky-bar-mobile svg{ width:15px; height:15px; flex:0 0 auto; }
+  @media (max-width:760px){ .sticky-bar-mobile{ display:block; } body{ padding-bottom:70px; } }
+
   .container-lines{ position:relative; }
   .container-lines::before,.container-lines::after{
     content:''; position:absolute; top:0; bottom:0; width:1px; background:var(--line);
