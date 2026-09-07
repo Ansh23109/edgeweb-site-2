@@ -1,18 +1,19 @@
 import nodemailer from 'nodemailer';
 import { NextResponse } from 'next/server';
 
-function buildHtmlBody(data) {
+function buildHtmlBody(data, service) {
   const entries = [
     ['Name', data.name || '-'],
     ['Email', data.email || '-'],
     ['Phone', data.phone || '-'],
     ['Company', data.company || '-'],
     ['Website', data.website || '-'],
-    ['Service', data.service || '-'],
+    ['Service', service || '-'],
     ['Budget', data.budget || '-'],
     ['Timeline', data.timeline || '-'],
     ['Heard about us', data.hearAbout || '-'],
-    ['Source', data.utm_source || '-'],
+    ['Goal', data.goal || '-'],
+    ['Source', data.source || data.utm_source || '-'],
     ['Medium', data.utm_medium || '-'],
     ['Campaign', data.utm_campaign || '-'],
     ['Landing page', data.landing_page || '-'],
@@ -38,6 +39,18 @@ function buildHtmlBody(data) {
   `;
 }
 
+function buildThankYouHtml(name, service) {
+  const firstName = String(name || '').trim().split(/\s+/)[0] || 'there';
+  return `
+    <div style="font-family:Arial,sans-serif; color:#1a1a1a; max-width:560px;">
+      <h2 style="margin-bottom:4px;">Thanks, ${firstName} — we've got it.</h2>
+      <p>We've received your enquiry${service ? ` about <strong>${service}</strong>` : ''} and will get back to you shortly with real next steps — not a sales script.</p>
+      <p>If it's urgent, message us directly on WhatsApp: <a href="https://wa.me/919266726490">+91 92667 26490</a>.</p>
+      <p style="margin-top:24px; color:#555;">— The EdgeWeb team<br/>info@edgeweb.co</p>
+    </div>
+  `;
+}
+
 export async function POST(request) {
   let payload;
   try {
@@ -48,7 +61,9 @@ export async function POST(request) {
 
   const name = String(payload.name || '').trim();
   const email = String(payload.email || '').trim();
-  const service = String(payload.service || '').trim();
+  // The contact page sends `service`; the discovery-popup sends `buildType`
+  // instead — accept either so popup submissions don't get rejected.
+  const service = String(payload.service || payload.buildType || '').trim();
   const details = String(payload.details || '').trim();
 
   if (!name || !email || !service || !details) {
@@ -70,15 +85,15 @@ export async function POST(request) {
     );
   }
 
-  try {
-    const transporter = nodemailer.createTransport({
-      host: smtpHost,
-      port: Number(process.env.SMTP_PORT || 587),
-      secure: String(process.env.SMTP_SECURE || 'false') === 'true',
-      auth: { user: smtpUser, pass: smtpPass },
-      tls: { rejectUnauthorized: false },
-    });
+  const transporter = nodemailer.createTransport({
+    host: smtpHost,
+    port: Number(process.env.SMTP_PORT || 587),
+    secure: String(process.env.SMTP_SECURE || 'false') === 'true',
+    auth: { user: smtpUser, pass: smtpPass },
+    tls: { rejectUnauthorized: false },
+  });
 
+  try {
     await transporter.sendMail({
       from: process.env.SMTP_FROM || smtpUser,
       to: recipientEmail,
@@ -98,10 +113,8 @@ export async function POST(request) {
         'Project details:',
         details,
       ].join('\n'),
-      html: buildHtmlBody(payload),
+      html: buildHtmlBody(payload, service),
     });
-
-    return NextResponse.json({ ok: true, message: 'Email sent successfully' });
   } catch (error) {
     console.error('Contact form email error:', error);
     return NextResponse.json(
@@ -109,4 +122,22 @@ export async function POST(request) {
       { status: 500 }
     );
   }
+
+  // Best-effort confirmation email to the person who submitted the form —
+  // failing to send this shouldn't fail the whole request, since the
+  // notification to EdgeWeb above already succeeded.
+  try {
+    await transporter.sendMail({
+      from: process.env.SMTP_FROM || smtpUser,
+      to: email,
+      replyTo: recipientEmail,
+      subject: "Thanks — EdgeWeb has your enquiry",
+      text: `Thanks, ${name.split(/\s+/)[0]} — we've received your enquiry about ${service} and will get back to you shortly. If it's urgent, WhatsApp us at +91 92667 26490.`,
+      html: buildThankYouHtml(name, service),
+    });
+  } catch (error) {
+    console.error('Contact form thank-you email error:', error);
+  }
+
+  return NextResponse.json({ ok: true, message: 'Email sent successfully' });
 }
