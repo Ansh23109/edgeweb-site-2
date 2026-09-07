@@ -1,0 +1,122 @@
+  <section class="contact-split">
+    <div class="contact-left">
+      <div>
+        <p class="eyebrow">EdgeWeb / Contact</p>
+        <h1 class="display-lg" style="margin-top:26px;">Let's build something that matters.</h1>
+        <p class="body-lg" style="margin-top:22px;">Tell us what you're working on. We reply with real next steps — what's possible, roughly what it takes, and how we'd start — not a sales pitch.</p>
+        <div class="contact-left-info">
+          <div class="contact-info-row"><span class="l">Email</span><a href="mailto:info@edgeweb.co">info@edgeweb.co</a></div>
+          <div class="contact-info-row"><span class="l">Phone / WhatsApp</span><a href="tel:+919266726490">+91 92667 26490</a></div>
+          <div class="contact-info-row"><span class="l">Location</span><span>India · working with clients worldwide</span></div>
+          <div class="contact-info-row"><span class="l">LinkedIn</span><a href="https://www.linkedin.com/company/edgeweb/" target="_blank" rel="noopener">linkedin.com/company/edgeweb</a></div>
+        </div>
+      </div>
+      <div style="margin-top:60px;">
+        <a href="https://wa.me/919266726490?text=Hi%20EdgeWeb%2C%20I%27m%20interested%20in%20discussing%20a%20project." class="btn btn-ghost magnetic" target="_blank" rel="noopener" data-track="cta_whatsapp_contact_page">Prefer WhatsApp? Chat with EdgeWeb →</a>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <div id="formWrap">
+        <p class="eyebrow" style="margin-bottom:30px;">Project Enquiry</p>
+        <form id="contactForm" novalidate>
+          <div class="contact-form-grid">
+            <div class="form-field">
+              <label for="cfName">Full Name <span class="req">*</span></label>
+              <input class="form-input" type="text" id="cfName" name="name" required>
+              <p class="form-error" data-error-for="name">Please enter your name.</p>
+            </div>
+            <div class="form-field">
+              <label for="cfEmail">Work Email <span class="req">*</span></label>
+              <input class="form-input" type="email" id="cfEmail" name="email" required>
+              <p class="form-error" data-error-for="email">Please enter a valid email address.</p>
+            </div>
+            <div class="form-field">
+              <label for="cfPhone">Phone / WhatsApp</label>
+              <input class="form-input" type="tel" id="cfPhone" name="phone">
+            </div>
+            <div class="form-field">
+              <label for="cfCompany">Company</label>
+              <input class="form-input" type="text" id="cfCompany" name="company">
+            </div>
+            <div class="form-field">
+              <label for="cfWebsite">Website (optional)</label>
+              <input class="form-input" type="text" id="cfWebsite" name="website" placeholder="yourcompany.com">
+            </div>
+            <div class="form-field">
+              <label for="cfService">Service Required <span class="req">*</span></label>
+              <select class="form-select" id="cfService" name="service" required>
+                <option value="">Select a service</option>
+                <option>Web Development</option>
+                <option>App Development</option>
+                <option>Custom Software</option>
+                <option>AI &amp; Automation</option>
+                <option>Digital Marketing</option>
+                <option>Branding &amp; UI/UX</option>
+                <option>Low-Code / No-Code</option>
+                <option>Custom Solutions</option>
+                <option>Not sure yet</option>
+              </select>
+              <p class="form-error" data-error-for="service">Please select a service.</p>
+            </div>
+            <div class="form-field">
+              <label for="cfBudget">Project Budget</label>
+              <select class="form-select" id="cfBudget" name="budget">
+                <option value="">Select a range</option>
+                <option>Under &#8377;50K</option>
+                <option>&#8377;50K&ndash;&#8377;1L</option>
+                <option>&#8377;1L&ndash;&#8377;3L</option>
+                <option>&#8377;3L&ndash;&#8377;5L</option>
+                <option>&#8377;5L&ndash;&#8377;10L</option>
+                <option>&#8377;10L+</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="cfTimeline">Timeline</label>
+              <select class="form-select" id="cfTimeline" name="timeline">
+                <option value="">Select a timeline</option>
+                <option>ASAP</option>
+                <option>1&ndash;2 months</option>
+                <option>3&ndash;6 months</option>
+                <option>6+ months</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label for="cfDetails">Project Details <span class="req">*</span></label>
+              <textarea class="form-textarea" id="cfDetails" name="details" placeholder="What are you building, and what's the outcome you need?"></textarea>
+              <p class="form-error" data-error-for="details">Tell us a little about the project.</p>
+            </div>
+            <div class="form-field full">
+              <label for="cfSource">How did you hear about us?</label>
+              <select class="form-select" id="cfSource" name="hearAbout">
+                <option value="">Select an option</option>
+                <option>Google Search</option>
+                <option>LinkedIn</option>
+                <option>Referral</option>
+                <option>Existing Client</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <input type="hidden" name="utm_source" id="cfUtmSource">
+          <input type="hidden" name="utm_medium" id="cfUtmMedium">
+          <input type="hidden" name="utm_campaign" id="cfUtmCampaign">
+          <input type="hidden" name="landing_page" id="cfLandingPage">
+          <input type="hidden" name="referrer" id="cfReferrer">
+
+          <button type="submit" class="btn btn-primary magnetic" id="cfSubmit" data-track="cta_contact_form_submit">Start the Conversation →</button>
+          <p class="form-status" id="cfStatus">Sending your enquiry…</p>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <p class="eyebrow">Message sent</p>
+          <h2 class="display-md" style="margin-top:16px;">Thanks — we've received your enquiry.</h2>
+          <p class="body" style="margin-top:16px; max-width:48ch;">We'll get back to you shortly with next steps. If it's urgent, WhatsApp us directly and we'll reply faster.</p>
+          <a href="https://wa.me/919266726490?text=Hi%20EdgeWeb%2C%20I%20just%20submitted%20an%20enquiry%20on%20your%20site." class="btn btn-ghost magnetic" style="margin-top:24px;" target="_blank" rel="noopener">Message us on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>

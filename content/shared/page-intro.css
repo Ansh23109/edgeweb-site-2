@@ -1,0 +1,12 @@
+/* Minimal intro-hero + breadcrumb styles for standalone pages (About, Case
+   Studies, FAQ) that reuse the homepage's design system but need their own
+   H1 above the shared section content. */
+.page-intro-breadcrumb{
+  display:flex; align-items:center; gap:8px; font-size:13px; color:var(--ink-faint);
+  margin-bottom:28px; flex-wrap:wrap;
+}
+.page-intro-breadcrumb a{ color:var(--ink-faint); text-decoration:none; }
+.page-intro-breadcrumb a:hover{ color:var(--ink); }
+.page-intro-breadcrumb span{ color:var(--ink-faint); }
+.page-intro{ padding:180px 0 40px; }
+.page-intro .eyebrow{ margin-bottom:22px; }

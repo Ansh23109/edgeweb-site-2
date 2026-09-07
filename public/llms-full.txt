@@ -1,0 +1,95 @@
+# EdgeWeb — Full Company & Service Reference
+
+## Company Overview
+
+EdgeWeb (legal name: EdgeWeb Infotech LLP) is a full-stack technology solutions company founded in 2019 and based in India, operating remote-first for clients in the United States, Europe, Australia and India. EdgeWeb's positioning statement is: "Technology should remove complexity — not relocate it." The company positions itself as a single full-stack partner rather than a fragmented vendor stack, serving both early-stage teams that need one product built well and established businesses that need system integration or replacement.
+
+Contact: info@edgeweb.co | +91 92667 26490 (also WhatsApp) | linkedin.com/company/edgeweb
+
+## How EdgeWeb Works (process)
+
+EdgeWeb describes a six-stage engagement process:
+
+1. Identify the actual business challenge (not a feature list)
+2. Architecture planning before any code is written
+3. Technology selection appropriate to the problem
+4. Implementation, including automation where useful
+5. AI integration where it adds real value
+6. Measuring business outcomes, not just delivery
+
+Typical engagement length is 6–16 weeks depending on scope, delivered in phases so clients see a working system early rather than a single release at the end. Most clients maintain a support or iteration arrangement after launch.
+
+## Services
+
+### Web Development
+Corporate and high-performance websites, custom web applications, and CRM/ERP portals and dashboards. For businesses that need more than a template site — systems that integrate with existing business processes.
+https://www.edgeweb.co/services/web-development
+
+### App Development
+iOS, Android, cross-platform and React Native app development, covering both business/internal apps and customer-facing apps, from MVP through full product, including app UI/UX.
+https://www.edgeweb.co/services/app-development
+
+### Custom Software Development
+Enterprise applications, SaaS platforms, internal business platforms, CRM/ERP solutions, portals, dashboards, APIs, and legacy system modernization for businesses outgrowing off-the-shelf tools.
+https://www.edgeweb.co/services/custom-software
+
+### AI & Automation
+AI agents and chatbots, workflow and business process automation, CRM/lead/WhatsApp automation, and data pipelines with API integrations — aimed at removing manual, repetitive work from a business.
+https://www.edgeweb.co/services/ai-automation
+
+### Digital Marketing
+SEO, technical SEO and local SEO, performance marketing and Google Ads, social media and content marketing, conversion rate optimization, lead generation and marketing automation.
+https://www.edgeweb.co/services/digital-marketing
+
+### Branding & UI/UX
+Brand strategy, logo and visual identity, UI/UX and product design, design systems, and motion design.
+https://www.edgeweb.co/services/branding-ui-ux
+
+### Low-Code / No-Code
+Business applications and workflow systems, rapid MVPs, internal tools, automation platforms and CRM solutions built on low-code/no-code platforms for faster delivery.
+https://www.edgeweb.co/services/low-code-no-code
+
+### Custom Solutions
+Custom dashboards, booking systems, portals, CRM/ERP systems, and data platforms built around a specific operational need.
+https://www.edgeweb.co/services/custom-solutions
+
+## Industries served
+
+Retail & Distribution, Financial Services, Healthcare — evidenced by delivered projects (see Case Studies below). EdgeWeb also serves early-stage/startup teams across other sectors building a first product.
+
+## Case Studies
+
+- Retail: built an inventory management platform for a multi-location retailer. https://www.edgeweb.co/case-studies
+- Fintech: built a client onboarding engine using document AI for a financial services company. https://www.edgeweb.co/case-studies
+- Healthcare: built scheduling infrastructure for a clinic network, achieving 99.9% uptime. https://www.edgeweb.co/case-studies
+
+## Frequently Asked Questions
+
+Q: What does EdgeWeb actually build?
+A: Custom web and mobile applications, process automation, applied AI, cloud infrastructure and the data layer connecting them — plus the digital marketing to bring the right traffic once it's live.
+
+Q: How does a project usually start?
+A: Projects begin with discussions about actual business problems rather than feature lists, followed by architecture planning before coding begins.
+
+Q: Do you work with early-stage businesses, or only established ones?
+A: EdgeWeb serves both early-stage teams needing a single product built well and established businesses requiring system integration or replacement.
+
+Q: What's the typical engagement length?
+A: Most builds run 6–16 weeks depending on scope, scoped in phases so a working system ships early.
+
+Q: Do you offer support after launch?
+A: Yes — most clients maintain a support or iteration arrangement post-launch.
+
+Q: Where is EdgeWeb based, and do you work with clients outside India?
+A: EdgeWeb operates from India but serves both local and international clients through remote-first delivery.
+
+Full FAQ: https://www.edgeweb.co/faq
+
+## Company
+
+About: https://www.edgeweb.co/about
+Founder — Ansh Kashyap: https://www.edgeweb.co/founder-anshkashyap
+
+## Contact & Next Steps
+
+To start a project: email info@edgeweb.co, message on WhatsApp at +91 92667 26490, or submit the project enquiry form at https://www.edgeweb.co/contact, which asks for the service needed, budget range, and timeline.

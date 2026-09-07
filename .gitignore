@@ -1,0 +1,22 @@
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+
+# dependencies
+/node_modules/
+
+# env
+.env
+.env*.local
+
+# misc
+.DS_Store
+**/.DS_Store
+*.log
+npm-debug.log*
+
+# local CMS data (admin-edited site config)
+/data/site-config.json
+.vercel
+.env*

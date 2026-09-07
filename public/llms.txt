@@ -1,0 +1,27 @@
+# EdgeWeb
+
+> EdgeWeb is a full-stack technology solutions company based in India, building custom websites, software, AI automation, and digital growth systems for businesses in the USA, Europe, Australia and India.
+
+EdgeWeb was founded in 2019 and works remote-first with early-stage teams and established businesses across retail, financial services and healthcare. Typical engagements run 6–16 weeks, delivered in phases so a working system ships early rather than one large release at the end.
+
+## Services
+
+- [Web Development](https://www.edgeweb.co/services/web-development): Corporate and high-performance websites, web applications, CRM/ERP portals and dashboards.
+- [App Development](https://www.edgeweb.co/services/app-development): iOS, Android, cross-platform and React Native apps, from MVP to full product.
+- [Custom Software Development](https://www.edgeweb.co/services/custom-software): Enterprise applications, SaaS platforms, internal tools, and legacy system modernization.
+- [AI & Automation](https://www.edgeweb.co/services/ai-automation): AI agents and chatbots, workflow automation, CRM/lead/WhatsApp automation, data pipelines and API integrations.
+- [Digital Marketing](https://www.edgeweb.co/services/digital-marketing): SEO, technical SEO, local SEO, performance marketing, content marketing, and conversion rate optimization.
+- [Branding & UI/UX](https://www.edgeweb.co/services/branding-ui-ux): Brand strategy, logo and visual identity, UI/UX and product design, design systems.
+- [Low-Code / No-Code](https://www.edgeweb.co/services/low-code-no-code): Rapid MVPs, internal tools, workflow systems and automation platforms.
+- [Custom Solutions](https://www.edgeweb.co/services/custom-solutions): Custom CRM/ERP, dashboards, booking systems, portals and data platforms.
+
+## Company
+
+- [About EdgeWeb](https://www.edgeweb.co/about): Company background, six-stage process, and philosophy.
+- [Case Studies](https://www.edgeweb.co/case-studies): Retail inventory platform, fintech onboarding engine, healthcare scheduling infrastructure.
+- [FAQ](https://www.edgeweb.co/faq): Answers about engagement process, timelines, and support.
+- [Contact](https://www.edgeweb.co/contact): Start a project — email, WhatsApp, or project enquiry form.
+
+## Optional
+
+- [Sitemap](https://www.edgeweb.co/sitemap.xml)
