@@ -8,7 +8,7 @@ import ChromeEffects from '../../components/ChromeEffects';
 import HeroVortex from '../../components/HeroVortex';
 import JsonLd from '../../components/JsonLd';
 import { readContent } from '../../lib/content';
-import { breadcrumbSchema } from '../../lib/schema';
+import { breadcrumbSchema, faqSchema } from '../../lib/schema';
 import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../lib/site';
 
 export const metadata = {
@@ -37,10 +37,22 @@ const heroInnerHtml = readContent('services-hub/hero-inner.html');
 const mainHtml = readContent('services-hub/main.html');
 const script = readContent('services-hub/script.js');
 
+const FAQS = [
+  { q: 'Do I need to pick one service, or can these work together?', a: "Most engagements combine two or three of these — a website that needs backend automation, or a platform that needs its own marketing engine. Pick whichever page matches your starting point and we'll scope the rest around it." },
+  { q: 'How do you decide which combination we actually need?', a: "We start with the business problem, not a service menu. A short conversation on what's actually breaking usually makes it clear whether you need one service done well or several working together." },
+  { q: 'Can we start with one service and add more later?', a: 'Yes — most clients start with one clear priority and add automation, marketing or a redesign once that first piece is live and proving out.' },
+  { q: 'Not sure where to start?', a: 'Use "Tell Us What You\'re Building" above, or just tell us what\'s not working today on a call — we\'ll point you to the right service, not just the most expensive one.' },
+];
+
 export default function ServicesHubPage() {
   return (
     <>
-      <JsonLd data={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }])} />
+      <JsonLd
+        data={[
+          breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }]),
+          faqSchema(FAQS),
+        ]}
+      />
       <style dangerouslySetInnerHTML={{ __html: css }} />
 
       <ChromeEffects />
