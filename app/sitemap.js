@@ -15,6 +15,8 @@ export default function sitemap() {
     { path: '/faq', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/contact', changeFrequency: 'yearly', priority: 0.7 },
     { path: '/founder-anshkashyap', changeFrequency: 'yearly', priority: 0.4 },
+    { path: '/privacy', changeFrequency: 'yearly', priority: 0.3 },
+    { path: '/terms', changeFrequency: 'yearly', priority: 0.3 },
   ];
 
   const serviceEntries = SERVICE_PAGES.map((s) => ({
