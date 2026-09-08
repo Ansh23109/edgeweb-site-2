@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import {
   FOOTER_EXPLORE_LINKS,
   FOOTER_SERVICE_LINKS,
@@ -7,6 +8,8 @@ import {
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_E164,
 } from '../lib/site';
+
+const DMCA_BADGE_ID = '2ec30c9c-ae6d-4303-a0ea-77fd66d28f07';
 
 export default function Footer({ showGoodfirmsBadge = false }) {
   const year = new Date().getFullYear();
@@ -100,12 +103,29 @@ export default function Footer({ showGoodfirmsBadge = false }) {
 
         <div className="mega-footer-bottom">
           <p className="body">© {year} EdgeWeb. Engineered in India.</p>
+          <a
+            href={`//www.dmca.com/Protection/Status.aspx?ID=${DMCA_BADGE_ID}`}
+            title="DMCA.com Protection Status"
+            className="dmca-badge"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src={`https://images.dmca.com/Badges/dmca-badge-w250-5x1-06.png?ID=${DMCA_BADGE_ID}`}
+              alt="DMCA.com Protection Status"
+              width={150}
+              height={30}
+              style={{ display: 'block' }}
+            />
+          </a>
           <ul className="footer-links">
             <li><a href="/privacy">Privacy</a></li>
             <li><a href="/terms">Terms</a></li>
           </ul>
         </div>
       </div>
+
+      <Script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js" strategy="lazyOnload" />
     </footer>
   );
 }
