@@ -209,8 +209,14 @@
     font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
     display:inline-flex; align-items:center; justify-content:center; min-width:86px; height:38px;
   }
-  .hero-brand-mark{ width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; }
-  .hero-brand-mark svg{ width:100%; height:100%; display:block; }
+  /* height-locked, width auto-sizes to each logo's own aspect ratio. Was
+     width:24px + flex-shrink's default of 1, which forced every brand's
+     wider override (52/58/174px) back down to fit a 24px box — harmless
+     for Google/Microsoft (near-square logos), but collapsed GoodFirms'
+     6:1-wide mark into an illegible sliver. flex-shrink:0 keeps that from
+     happening again regardless of container width. */
+  .hero-brand-mark{ height:24px; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .hero-brand-mark svg{ height:100%; width:auto; display:block; }
   .hero-brand-mark.google svg{ width:52px; }
   .hero-brand-mark.microsoft svg{ width:58px; }
   .hero-brand-mark.goodfirms svg{ width:174px; }
