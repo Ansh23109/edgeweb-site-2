@@ -28,30 +28,7 @@ export default function Footer({ showGoodfirmsBadge = false }) {
             </p>
             {showGoodfirmsBadge && (
               <div className="footer-goodfirms" aria-label="GoodFirms verified company badge">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 42" aria-label="Goodfirms" role="img">
-                  <defs>
-                    <linearGradient id="footerGoodfirmsGold" x1="0" x2="1">
-                      <stop offset="0%" stopColor="#f2d38a" />
-                      <stop offset="25%" stopColor="#d8b96b" />
-                      <stop offset="55%" stopColor="#c59d42" />
-                      <stop offset="100%" stopColor="#f2d38a" />
-                    </linearGradient>
-                    <linearGradient id="footerGoodfirmsEdge" x1="0" x2="1">
-                      <stop offset="0%" stopColor="#f5e6b7" />
-                      <stop offset="100%" stopColor="#b6852d" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M20 2.5c-10.5 0-18 7.5-18 18 0 9.1 6.1 16.7 14.8 18.4l.6.1c.8.1 1.4-.5 1.4-1.3V21.2c0-.8-.7-1.4-1.4-1.4h-2.3v-3.8c0-.8.7-1.4 1.4-1.4h2.8c.8 0 1.5-.7 1.5-1.5 0-.8-.7-1.5-1.5-1.5h-3.4C8.8 11.6 4 15.9 4 21.7c0 8.2 6.8 14.8 15.2 14.8 8.7 0 15.8-7 15.8-15.8 0-5.4-2.8-10.1-7.1-13.1-.7-.5-1.7-.2-2.1.5L19 11.7c-.2.4-.2.9 0 1.3l.5.8c.3.5 1 .7 1.6.4l1.3-.7c.7-.4 1.6-.2 2 .4l.7 1.1c.5.8.2 1.8-.6 2.3l-1.5.9c-.8.5-1.2 1.5-1 2.4l.4 1.8c.2.9 1.1 1.4 2 1.2l1.6-.4c1.1-.3 2.2 0 2.9.7l1.3 1.3c.4.4.9.6 1.4.6h1.4c.8 0 1.4-.6 1.4-1.4V21.2c0-9.4-7.5-17-17-17z"
-                    fill="url(#footerGoodfirmsGold)"
-                    stroke="url(#footerGoodfirmsEdge)"
-                    strokeWidth="1.3"
-                  />
-                  <path d="M22.6 12.6l2.3 4.5 5 .7-3.6 3.4 1 4.9-4.7-2.4-4.7 2.4 1-4.9-3.6-3.4 5-.7 2.3-4.5z" fill="#fff" />
-                  <text x="62" y="28" fontSize="23" fontWeight="700" fill="#f6f7f9" fontFamily="Arial, Helvetica, sans-serif" letterSpacing="-0.8">
-                    Goodfirms
-                  </text>
-                </svg>
+                <img src="/images/goodfirms-badge.png" alt="GoodFirms" />
               </div>
             )}
             <div className="social-row">

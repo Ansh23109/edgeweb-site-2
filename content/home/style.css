@@ -216,16 +216,15 @@
      6:1-wide mark into an illegible sliver. flex-shrink:0 keeps that from
      happening again regardless of container width. */
   .hero-brand-mark{ height:24px; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; }
-  .hero-brand-mark svg{ height:100%; width:auto; display:block; }
+  .hero-brand-mark svg, .hero-brand-mark img{ height:100%; width:auto; display:block; }
   .hero-brand-mark.google svg{ width:52px; }
   .hero-brand-mark.microsoft svg{ width:58px; }
-  .hero-brand-mark.goodfirms svg{ width:174px; }
 
   .footer-goodfirms{
     display:inline-flex; align-items:center; justify-content:flex-start;
-    margin-top:16px; width:max-content; max-width:220px;
+    margin-top:16px; width:max-content;
   }
-  .footer-goodfirms svg{ display:block; width:100%; height:auto; }
+  .footer-goodfirms img{ display:block; width:40px; height:auto; }
 
   .hero-media-shell{
     position:relative; min-height:620px; display:flex; align-items:stretch;
