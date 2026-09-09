@@ -1,0 +1,24 @@
+  <section class="detail-block">
+    <div class="wrap">
+      <p class="eyebrow reveal">The Problem &amp; The Approach</p>
+      <div class="problem-solution reveal" style="margin-top:32px;">
+        <div class="ps-cell"><h3>The problem</h3><p class="body">Every new account required a reviewer to manually check an ID photo against the application, confirm the document hadn't expired, and catch mismatches — a queue that grew faster than reviewers could clear it, and slowed down the honest majority of applicants to catch a small minority of problem ones.</p></div>
+        <div class="ps-cell"><h3>The approach</h3><p class="body">Build a pipeline that runs the same checks a reviewer would, in seconds: extract the data, validate it against a rule set, score the confidence, and only hand a person the submissions that actually need judgment — with the specific issue already highlighted, not a generic file to re-review from scratch.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-block section-alt">
+    <div class="wrap">
+      <p class="eyebrow reveal">Core System Logic</p>
+      <h2 class="reveal" style="margin-top:14px;">Five stages, every submission.</h2>
+      <div class="capability-list reveal" style="margin-top:36px;">
+        <div class="cap-cell"><h4>Document Ingestion &amp; OCR</h4><p>ID photos and address proof are parsed the moment they're uploaded, extracting names, numbers and dates without a human retyping anything from a scan.</p></div>
+<div class="cap-cell"><h4>Automated Validation Rules</h4><p>Extracted data runs against a rule set — does the ID match the name entered, is the document expired, does the address proof match — the exact first pass a reviewer used to do by eye.</p></div>
+<div class="cap-cell"><h4>Confidence Scoring</h4><p>Every check contributes to one confidence score per submission, instead of a binary pass/fail that hides how close a borderline case actually was.</p></div>
+<div class="cap-cell"><h4>Risk-Based Routing</h4><p>High-confidence submissions auto-approve in seconds. Borderline or flagged ones route straight to a reviewer with the specific failed check pre-highlighted — the live demo below shows exactly what that reviewer sees.</p></div>
+<div class="cap-cell"><h4>Full Audit Trail</h4><p>Every automated decision keeps the evidence and the rule that triggered it, since a compliance review needs to reconstruct exactly why an account was approved months later.</p></div>
+      </div>
+    </div>
+  </section>
+

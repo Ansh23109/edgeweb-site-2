@@ -1,0 +1,49 @@
+  <section class="detail-block">
+    <div class="wrap">
+      <p class="eyebrow reveal">Architecture</p>
+      <h2 class="reveal" style="margin-top:14px;">Built to hold up under real concurrent load.</h2>
+      <div class="tech-tags reveal" style="margin-top:28px;"><span>Node.js (event-driven)</span><span>PostgreSQL</span><span>Redis (distributed locks)</span><span>Auto-scaling cloud infrastructure</span><span>React scheduling UI</span><span>SMS / notification service</span><span>Monitoring &amp; alerting</span><span>AWS</span></div>
+    </div>
+  </section>
+
+  <section class="detail-block section-alt">
+    <div class="wrap">
+      <p class="eyebrow reveal">Outcomes</p>
+      <div class="outcomes-grid reveal" style="margin-top:32px;">
+        <div class="outcome-item"><div class="num">99.9<span>%</span></div><div class="l">Uptime since launch</div></div>
+        <div class="outcome-item"><div class="num">12</div><div class="l">Clinics on one system</div></div>
+        <div class="outcome-item"><div class="num">0</div><div class="l">Double-bookings since launch</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-block">
+    <div class="wrap">
+      <p class="eyebrow reveal">FAQ</p>
+      <div class="faq-list reveal" style="margin-top:28px;">
+        <details class="faq-item" open><summary>How exactly does the system prevent double-booking?<span class="faq-icon"></span></summary><p class="body">Booking a slot has to acquire a lock on that exact appointment before it's confirmed. If a second request arrives while the lock is held, it's rejected outright and offered the next open slot — it can never silently overwrite the first booking.</p></details>
+<details class="faq-item"><summary>Does this integrate with our existing EHR?</summary><p class="body">Typically yes — the scheduling layer is usually built to sync with the EHR system already in place rather than replace it outright.</p></details>
+<details class="faq-item"><summary>What happens during a genuine traffic spike?</summary><p class="body">Infrastructure scales out automatically ahead of known peak periods, and monitoring alerts the team if load moves outside the expected pattern — before patients experience it as downtime.</p></details>
+<details class="faq-item"><summary>How long did a project like this take?<span class="faq-icon"></span></summary><p class="body">Migrating a network of this size typically runs 10–14 weeks, phased clinic by clinic so no location loses scheduling access during the cutover.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-alt final-cta">
+    <div class="wrap">
+      <p class="eyebrow reveal" style="margin-bottom:30px;">Start a Conversation</p>
+      <h2 class="display-xl reveal">Let's talk about<br><i>your scheduling.</i></h2>
+      <div class="final-cta-row reveal">
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="/contact?service=Custom%20Software" class="btn btn-primary magnetic" data-cursor="Open" data-track="cta_healthcare_case_final">Start a conversation
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="https://wa.me/919266726490?text=Hi%20EdgeWeb%2C%20I%27m%20interested%20in%20a%20scheduling%20or%20booking%20platform." class="btn btn-ghost magnetic" target="_blank" rel="noopener" data-track="cta_whatsapp_healthcare_case">Prefer WhatsApp? Chat with EdgeWeb →</a>
+        </div>
+        <div class="final-contact">
+          <a href="mailto:info@edgeweb.co">info@edgeweb.co</a>
+          <a href="tel:+919266726490">+91 92667 26490</a>
+        </div>
+      </div>
+    </div>
+  </section>

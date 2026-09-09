@@ -1,0 +1,24 @@
+  <section class="detail-block">
+    <div class="wrap">
+      <p class="eyebrow reveal">The Problem &amp; The Approach</p>
+      <div class="problem-solution reveal" style="margin-top:32px;">
+        <div class="ps-cell"><h3>The problem</h3><p class="body">Every warehouse tracked its own stock in its own spreadsheet, reconciled by hand at close each night. By the time counts were compared, a product already showing "in stock" online had sometimes sold out at the only warehouse that actually had it — and a customer's order couldn't be fulfilled.</p></div>
+        <div class="ps-cell"><h3>The approach</h3><p class="body">Replace three spreadsheets with one live ledger. Every sale, receipt or transfer posts as an event the instant it happens, and every warehouse's on-hand count is a real-time projection of that event stream — not a batch import from the night before.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-block section-alt">
+    <div class="wrap">
+      <p class="eyebrow reveal">Core System Logic</p>
+      <h2 class="reveal" style="margin-top:14px;">Five pieces, one shared ledger.</h2>
+      <div class="capability-list reveal" style="margin-top:36px;">
+        <div class="cap-cell"><h4>Real-Time Stock Ledger</h4><p>Every sale, receipt and transfer posts an event to a central ledger. Each warehouse's on-hand count is a live projection of that stream, recalculated the instant an event lands — never a nightly import.</p></div>
+<div class="cap-cell"><h4>Network-Wide Availability</h4><p>Online and in-store checkouts check stock against the combined network total by default, not one warehouse's count, so a sale in one location can't oversell stock that only physically exists in another.</p></div>
+<div class="cap-cell"><h4>Automatic Transfer Suggestions</h4><p>When one location drops below its reorder threshold while another holds meaningful surplus of the same SKU, the system suggests an inter-warehouse transfer instead of a new purchase order. The live demo below runs this exact logic.</p></div>
+<div class="cap-cell"><h4>Low-Stock &amp; Anomaly Alerts</h4><p>Per-SKU, per-location thresholds trigger alerts before a shelf actually empties. A sudden, unusually large stock delta — a miscount, or worse — gets flagged for review instead of silently updating the ledger.</p></div>
+<div class="cap-cell"><h4>Reconciliation Audit Trail</h4><p>Every manual adjustment is logged with a reason code, replacing "nobody knows why the count changed" with a queryable history any location manager can search.</p></div>
+      </div>
+    </div>
+  </section>
+

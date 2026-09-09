@@ -1,0 +1,24 @@
+  <section class="detail-block">
+    <div class="wrap">
+      <p class="eyebrow reveal">The Problem &amp; The Approach</p>
+      <div class="problem-solution reveal" style="margin-top:32px;">
+        <div class="ps-cell"><h3>The problem</h3><p class="body">The booking system ran on infrastructure sized for average load, not peak load — and healthcare scheduling is almost never average: Monday mornings and the day after a holiday would reliably knock it over, right when patients and front-desk staff needed it most. Underneath that, the booking logic itself had no real protection against two people booking the same slot at once.</p></div>
+        <div class="ps-cell"><h3>The approach</h3><p class="body">Two separate fixes, done together: infrastructure that scales for the predictable peaks instead of falling over on them, and a booking flow that acquires an actual lock on a slot before confirming it — so "two patients holding the same appointment" becomes structurally impossible, not just unlikely.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-block section-alt">
+    <div class="wrap">
+      <p class="eyebrow reveal">Core System Logic</p>
+      <h2 class="reveal" style="margin-top:14px;">Five pieces, one reliable calendar.</h2>
+      <div class="capability-list reveal" style="margin-top:36px;">
+        <div class="cap-cell"><h4>Distributed Slot Locking</h4><p>Booking a slot acquires a short atomic lock on that exact appointment before confirming it. If two requests race for the same slot, only one wins — the live demo below runs this exact race.</p></div>
+<div class="cap-cell"><h4>Cross-Clinic Provider Availability</h4><p>A provider splitting time across multiple clinics has one real calendar, not a separate one per location that can silently drift out of sync and get double-booked across sites.</p></div>
+<div class="cap-cell"><h4>Load-Aware Infrastructure</h4><p>The system scales up ahead of predictable peaks — Monday mornings, the day after a holiday — instead of discovering the limit exactly when patients are trying to book.</p></div>
+<div class="cap-cell"><h4>Waitlist &amp; Auto-Fill</h4><p>A cancellation automatically offers the freed slot to the next matching waitlisted patient, instead of it sitting empty until someone notices.</p></div>
+<div class="cap-cell"><h4>Real-Time Monitoring</h4><p>Uptime, booking latency and error-rate dashboards alert the team before patients notice a problem, replacing "we found out from a complaint" with an actual early warning.</p></div>
+      </div>
+    </div>
+  </section>
+
