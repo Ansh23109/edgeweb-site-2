@@ -12,6 +12,7 @@ export default function sitemap() {
     { path: '/services', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/case-studies', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/case-studies/parking-management-system', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/faq', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/contact', changeFrequency: 'yearly', priority: 0.7 },
     { path: '/founder-anshkashyap', changeFrequency: 'yearly', priority: 0.4 },

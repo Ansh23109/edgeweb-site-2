@@ -1,0 +1,25 @@
+  <section class="detail-block">
+    <div class="wrap">
+      <p class="eyebrow reveal">The Problem &amp; The Approach</p>
+      <div class="problem-solution reveal" style="margin-top:32px;">
+        <div class="ps-cell"><h3>The problem</h3><p class="body">Every lot ran on its own logic: attendants collecting cash at a boom barrier, one flat rate no matter how full the lot was, and no shared view across locations. Prime spots sat empty while overflow lots turned cars away, entry queues backed up onto the street at peak hours, and underpaid or unpaid exits quietly leaked revenue every single day.</p></div>
+        <div class="ps-cell"><h3>The approach</h3><p class="body">Replace the attendant's judgment call with a system that actually knows, in real time, how full every lot is — then let that number drive the price, the barrier, and the bill automatically. One platform now runs pricing, entry, exit and billing across every location the operator has.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-block section-alt">
+    <div class="wrap">
+      <p class="eyebrow reveal">Core System Logic</p>
+      <h2 class="reveal" style="margin-top:14px;">Six pieces, one continuous loop.</h2>
+      <div class="capability-list reveal" style="margin-top:36px;">
+        <div class="cap-cell"><h4>Real-Time Occupancy Engine</h4><p>An ultrasonic sensor over every bay reports state changes over MQTT the instant a car arrives or leaves. A central occupancy service aggregates that into a per-lot, per-zone live count — the single source of truth everything else reads from.</p></div>
+<div class="cap-cell"><h4>Reservation &amp; Locking</h4><p>Reserving a bay through the app places a short-lived lock on that exact bay — typically 15 minutes. If the driver doesn't show, the lock expires and the bay silently returns to the available pool instead of sitting reserved-but-empty.</p></div>
+<div class="cap-cell"><h4>Dynamic Pricing Algorithm</h4><p>The hourly rate is the base rate multiplied by a demand tier computed from current occupancy — recalculated the moment a bay's status changes, not on a fixed schedule. The live simulator below runs the exact same tiers.</p></div>
+<div class="cap-cell"><h4>Automated Entry &amp; Exit (ANPR)</h4><p>A camera at each barrier reads the plate on approach. If it matches an active reservation or a stored payment profile, the barrier lifts with no ticket, no button, no attendant — on the way in or out.</p></div>
+<div class="cap-cell"><h4>Usage-Based Billing</h4><p>Exit closes the session, calculates duration × the rate that applied at each point in the stay, and charges the saved payment method automatically — or presents a pay-on-exit screen if none is on file. A receipt goes out either way.</p></div>
+<div class="cap-cell"><h4>Multi-Location Ops Dashboard</h4><p>Every lot's occupancy, revenue and sensor health on one live map, with an alert the moment a sensor goes offline or a bay reads "occupied" for implausibly long — usually a dead sensor, occasionally an abandoned vehicle worth checking on.</p></div>
+      </div>
+    </div>
+  </section>
+
