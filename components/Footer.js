@@ -7,6 +7,7 @@ import {
   CONTACT_EMAIL,
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_E164,
+  BUSINESS_ADDRESS_DISPLAY,
 } from '../lib/site';
 
 const DMCA_BADGE_ID = '2ec30c9c-ae6d-4303-a0ea-77fd66d28f07';
@@ -26,6 +27,7 @@ export default function Footer({ showGoodfirmsBadge = false }) {
               A technology, automation and growth partner — building the systems
               businesses run on, from India, for anywhere.
             </p>
+            <p style={{ fontSize: 12.5, color: 'var(--ink-faint)', marginTop: 10 }}>{BUSINESS_ADDRESS_DISPLAY}</p>
             {showGoodfirmsBadge && (
               <div className="footer-goodfirms" aria-label="GoodFirms verified company badge">
                 <img src="/images/goodfirms-badge.png" alt="GoodFirms" />

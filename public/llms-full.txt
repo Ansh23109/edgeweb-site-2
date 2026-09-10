@@ -2,9 +2,10 @@
 
 ## Company Overview
 
-EdgeWeb (legal name: EdgeWeb Infotech LLP) is a full-stack technology solutions company founded in 2019 and based in India, operating remote-first for clients in the United States, Europe, Australia and India. EdgeWeb's positioning statement is: "Technology should remove complexity — not relocate it." The company positions itself as a single full-stack partner rather than a fragmented vendor stack, serving both early-stage teams that need one product built well and established businesses that need system integration or replacement.
+EdgeWeb (legal name: EdgeWeb Infotech LLP) is a full-stack technology solutions company founded in 2019 and based in Vishwas Nagar, Delhi 110032, India, operating remote-first for clients in Delhi NCR (Delhi, Gurgaon, Noida, Faridabad, Ghaziabad), the United States, Europe, Australia and across India. EdgeWeb's positioning statement is: "Technology should remove complexity — not relocate it." The company positions itself as a single full-stack partner rather than a fragmented vendor stack, serving both early-stage teams that need one product built well and established businesses that need system integration or replacement.
 
 Contact: info@edgeweb.co | +91 92667 26490 (also WhatsApp) | linkedin.com/company/edgeweb
+Office: Vishwas Nagar, Delhi 110032, India
 
 ## How EdgeWeb Works (process)
 

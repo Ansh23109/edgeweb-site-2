@@ -1,6 +1,6 @@
 # EdgeWeb
 
-> EdgeWeb is a full-stack technology solutions company based in India, building custom websites, software, AI automation, and digital growth systems for businesses in the USA, Europe, Australia and India.
+> EdgeWeb is a full-stack technology solutions company based in Vishwas Nagar, Delhi, India, building custom websites, software, AI automation, and digital growth systems for businesses in Delhi NCR (Delhi, Gurgaon, Noida, Faridabad, Ghaziabad), the USA, Europe, Australia and across India.
 
 EdgeWeb was founded in 2019 and works remote-first with early-stage teams and established businesses across retail, financial services and healthcare. Typical engagements run 6–16 weeks, delivered in phases so a working system ships early rather than one large release at the end.
 
@@ -17,6 +17,7 @@ EdgeWeb was founded in 2019 and works remote-first with early-stage teams and es
 
 ## Company
 
+- [Delhi NCR](https://www.edgeweb.co/delhi-ncr): EdgeWeb's Delhi office (Vishwas Nagar, Delhi 110032) and the services offered locally across Delhi, Gurgaon, Noida, Faridabad and Ghaziabad.
 - [About EdgeWeb](https://www.edgeweb.co/about): Company background, six-stage process, and philosophy.
 - [Case Studies](https://www.edgeweb.co/case-studies): Retail inventory platform, fintech onboarding engine, healthcare scheduling infrastructure.
 - [FAQ](https://www.edgeweb.co/faq): Answers about engagement process, timelines, and support.
