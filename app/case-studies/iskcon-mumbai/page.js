@@ -12,14 +12,14 @@ import { breadcrumbSchema, faqSchema } from '../../../lib/schema';
 import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../../lib/site';
 
 export const metadata = {
-  title: 'ISKCON Mumbai Bureau Case Study — Web Platform & Learning Video Portal | EdgeWeb',
+  title: 'ISKCON Mumbai Bureau Case Study | EdgeWeb',
   description:
     'How EdgeWeb built a website and a MERN learning-video management portal for the Bureau of ISKCON Mumbai, delivered under NDA for its trustees.',
   alternates: { canonical: absoluteUrl('/case-studies/iskcon-mumbai') },
   openGraph: {
     type: 'article',
     siteName: 'EdgeWeb',
-    title: 'ISKCON Mumbai Bureau Case Study — Web Platform & Learning Video Portal | EdgeWeb',
+    title: 'ISKCON Mumbai Bureau Case Study | EdgeWeb',
     description: 'A website and a MERN learning-video management portal EdgeWeb built for the Bureau of ISKCON Mumbai, under NDA for its trustees.',
     url: absoluteUrl('/case-studies/iskcon-mumbai'),
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: 'EdgeWeb — ISKCON Mumbai Bureau case study' }],

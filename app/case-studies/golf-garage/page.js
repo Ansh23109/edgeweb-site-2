@@ -12,14 +12,14 @@ import { breadcrumbSchema, faqSchema } from '../../../lib/schema';
 import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../../lib/site';
 
 export const metadata = {
-  title: 'Golf Garage Case Study — Brand Identity, Packaging & Shopify | EdgeWeb',
+  title: 'Golf Garage Case Study: Brand & Shopify | EdgeWeb',
   description:
     'How EdgeWeb built the brand identity, packaging and Shopify storefront for Golf Garage, India’s pre-owned golf equipment marketplace founded by Rahul Bajaj.',
   alternates: { canonical: absoluteUrl('/case-studies/golf-garage') },
   openGraph: {
     type: 'article',
     siteName: 'EdgeWeb',
-    title: 'Golf Garage Case Study — Brand Identity, Packaging & Shopify | EdgeWeb',
+    title: 'Golf Garage Case Study: Brand & Shopify | EdgeWeb',
     description: 'Logo, colour system, typography, packaging and a full Shopify build — the brand EdgeWeb built for Golf Garage, live at golfgarage.in.',
     url: absoluteUrl('/case-studies/golf-garage'),
     images: [{ url: '/images/golf-garage/website-hero.jpg', width: 1200, height: 630, alt: 'Golf Garage brand identity and Shopify storefront by EdgeWeb' }],

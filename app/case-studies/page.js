@@ -12,16 +12,16 @@ import { breadcrumbSchema } from '../../lib/schema';
 import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../lib/site';
 
 export const metadata = {
-  title: 'Case Studies | Retail, Fintech & Healthcare Systems | EdgeWeb',
+  title: 'Case Studies: Golf Garage, Retail, Fintech & More | EdgeWeb',
   description:
-    'Real EdgeWeb projects in retail inventory platforms, fintech onboarding automation and healthcare scheduling infrastructure — with the outcomes that came from them.',
+    "Real EdgeWeb work — from Golf Garage's brand and Shopify build to retail, fintech and healthcare systems — with the outcomes that came from them.",
   alternates: { canonical: absoluteUrl('/case-studies') },
   openGraph: {
     type: 'website',
     siteName: 'EdgeWeb',
-    title: 'Case Studies | Retail, Fintech & Healthcare Systems',
+    title: 'Case Studies: Golf Garage, Retail, Fintech & More',
     description:
-      "Systems we've shipped for businesses in retail, financial services and healthcare.",
+      "Systems we've shipped for Golf Garage, retail, financial services, healthcare and more.",
     url: absoluteUrl('/case-studies'),
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: 'EdgeWeb case studies' }],
   },
