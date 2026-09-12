@@ -13,6 +13,7 @@ export default function sitemap() {
     { path: '/delhi-ncr', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/case-studies', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/case-studies/golf-garage', changeFrequency: 'monthly', priority: 0.65 },
     { path: '/case-studies/parking-management-system', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/case-studies/retail-inventory-platform', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/case-studies/fintech-onboarding-engine', changeFrequency: 'yearly', priority: 0.6 },

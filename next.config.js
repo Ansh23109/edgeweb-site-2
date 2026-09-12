@@ -15,7 +15,7 @@ const CSP = [
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com",
   "img-src 'self' data: https:",
   "font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com",
-  "connect-src 'self' https://www.googleapis.com https://www.google-analytics.com https://www.googletagmanager.com https://images.dmca.com https://www.dmca.com",
+  "connect-src 'self' https://www.googleapis.com https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.google.com https://www.googletagmanager.com https://images.dmca.com https://www.dmca.com",
   "media-src 'self'",
   "manifest-src 'self'",
   "worker-src 'self' blob:",

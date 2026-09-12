@@ -21,3 +21,6 @@ npm-debug.log*
 .vercel
 .env*
 !.env.example
+
+# large client source assets not meant for deployment/git (e.g. brand book PDFs)
+/brand-assets/
