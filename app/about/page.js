@@ -16,6 +16,8 @@ export const metadata = {
   description:
     'EdgeWeb is a full-stack technology solutions company founded in 2019, building custom software, web platforms and automation for businesses in the USA, Europe, Australia and India.',
   alternates: { canonical: absoluteUrl('/about') },
+  keywords:
+    'technology partner USA, software company Australia, IT solutions company Europe, technology company India, full-stack development agency',
   openGraph: {
     type: 'website',
     siteName: 'EdgeWeb',

@@ -16,6 +16,8 @@ export const metadata = {
   description:
     'Web, app & software development, AI automation and digital marketing — the same team behind 120+ delivered systems and 340+ automated workflows.',
   alternates: { canonical: absoluteUrl('/services') },
+  keywords:
+    'web and software development services USA, digital agency Australia, IT services company Europe, software development company India, custom software development services',
   openGraph: {
     type: 'website',
     siteName: 'EdgeWeb',

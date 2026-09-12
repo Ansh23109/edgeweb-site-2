@@ -18,6 +18,7 @@ export const metadata = {
   title: svc.title,
   description: svc.description,
   alternates: { canonical: absoluteUrl(`/services/${SLUG}`) },
+  keywords: svc.keywords,
   openGraph: {
     type: 'website',
     siteName: 'EdgeWeb',
