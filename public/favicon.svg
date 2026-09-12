@@ -1,15 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="EdgeWeb favicon">
   <rect width="512" height="512" fill="#0B0A0C"/>
   <text
-    x="256"
-    y="276"
+    x="266"
+    y="296"
     text-anchor="middle"
     dominant-baseline="middle"
     fill="#F5F1EC"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="175"
+    font-size="340"
     font-style="italic"
     font-weight="400"
-    letter-spacing="-8"
-  >EdgeWeb.</text>
+  >E</text>
 </svg>
