@@ -14,14 +14,14 @@ import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../lib/site';
 export const metadata = {
   title: 'Our Services: Web, App & Software Development | EdgeWeb',
   description:
-    "Web development, app development, custom software, AI automation, digital marketing and UI/UX — explore EdgeWeb's full-stack service lineup.",
+    'Web, app & software development, AI automation and digital marketing — the same team behind 120+ delivered systems and 340+ automated workflows.',
   alternates: { canonical: absoluteUrl('/services') },
   openGraph: {
     type: 'website',
     siteName: 'EdgeWeb',
     title: 'Our Services: Web, App & Software Development | EdgeWeb',
     description:
-      "Web development, app development, custom software, AI automation, digital marketing and UI/UX — explore EdgeWeb's full-stack service lineup.",
+      'Web, app & software development, AI automation and digital marketing — the same team behind 120+ delivered systems and 340+ automated workflows.',
     url: absoluteUrl('/services'),
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: 'EdgeWeb services' }],
   },

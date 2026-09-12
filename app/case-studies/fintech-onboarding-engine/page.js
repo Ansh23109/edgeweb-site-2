@@ -15,13 +15,13 @@ import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../../lib/site';
 export const metadata = {
   title: 'Fintech Onboarding Engine Case Study | EdgeWeb',
   description:
-    'How EdgeWeb built a document AI pipeline that reads, validates and scores customer onboarding submissions automatically for a USA-based financial services company — with a live decision-logic demo.',
+    '71% faster onboarding, 0 compliance checks skipped — how EdgeWeb built a document AI pipeline for a USA-based financial services company.',
   alternates: { canonical: absoluteUrl('/case-studies/fintech-onboarding-engine') },
   openGraph: {
     type: 'article',
     siteName: 'EdgeWeb',
     title: 'Fintech Onboarding Engine Case Study | EdgeWeb',
-    description: 'A document AI onboarding pipeline for a USA-based financial services company.',
+    description: '71% faster onboarding, 0 compliance checks skipped — a document AI pipeline for a USA-based financial services company.',
     url: absoluteUrl('/case-studies/fintech-onboarding-engine'),
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: 'EdgeWeb fintech onboarding engine case study' }],
   },

@@ -15,13 +15,13 @@ import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../../lib/site';
 export const metadata = {
   title: 'Healthcare Scheduling Platform Case Study | EdgeWeb',
   description:
-    'How EdgeWeb rebuilt a clinic network booking system on load-aware infrastructure with real distributed slot-locking, for a USA-based healthcare provider — with a live concurrent-booking demo.',
+    '99.9% uptime, 0 double-bookings since launch — how EdgeWeb rebuilt a clinic network scheduling system for a USA-based healthcare provider.',
   alternates: { canonical: absoluteUrl('/case-studies/healthcare-scheduling-platform') },
   openGraph: {
     type: 'article',
     siteName: 'EdgeWeb',
     title: 'Healthcare Scheduling Platform Case Study | EdgeWeb',
-    description: 'Load-aware infrastructure and real slot-locking for a USA-based clinic network.',
+    description: '99.9% uptime, 0 double-bookings since launch — a clinic network scheduling system for a USA-based healthcare provider.',
     url: absoluteUrl('/case-studies/healthcare-scheduling-platform'),
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: 'EdgeWeb healthcare scheduling platform case study' }],
   },

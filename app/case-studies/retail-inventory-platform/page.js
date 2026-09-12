@@ -15,13 +15,13 @@ import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../../lib/site';
 export const metadata = {
   title: 'Retail Inventory Platform Case Study | EdgeWeb',
   description:
-    'How EdgeWeb replaced nightly spreadsheet reconciliation with a real-time, multi-warehouse inventory ledger for a USA-based retailer — with a live transfer-logic demo.',
+    '6 hours of daily reconciliation removed, 0 overselling since launch — how EdgeWeb built a real-time inventory ledger for a USA-based retailer.',
   alternates: { canonical: absoluteUrl('/case-studies/retail-inventory-platform') },
   openGraph: {
     type: 'article',
     siteName: 'EdgeWeb',
     title: 'Retail Inventory Platform Case Study | EdgeWeb',
-    description: 'A real-time, multi-warehouse inventory ledger for a USA-based retailer.',
+    description: '6 hours of daily reconciliation removed, 0 overselling since launch — a real-time inventory ledger for a USA-based retailer.',
     url: absoluteUrl('/case-studies/retail-inventory-platform'),
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: 'EdgeWeb retail inventory platform case study' }],
   },

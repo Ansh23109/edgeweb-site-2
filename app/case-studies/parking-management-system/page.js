@@ -15,13 +15,13 @@ import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../../lib/site';
 export const metadata = {
   title: 'Parking Management System Case Study | EdgeWeb',
   description:
-    'How EdgeWeb built a real-time parking management platform — live occupancy detection, dynamic pricing, automated ANPR entry/exit — for a multi-location parking operator in the USA.',
+    '42% faster bay discovery, 19% more revenue from dynamic pricing — how EdgeWeb built a real-time parking management platform for a USA-based operator.',
   alternates: { canonical: absoluteUrl('/case-studies/parking-management-system') },
   openGraph: {
     type: 'article',
     siteName: 'EdgeWeb',
     title: 'Parking Management System Case Study | EdgeWeb',
-    description: 'Real-time occupancy, dynamic pricing and automated entry/exit for a multi-location USA parking operator.',
+    description: '42% faster bay discovery, 19% more revenue — real-time occupancy, dynamic pricing and automated entry/exit for a USA parking operator.',
     url: absoluteUrl('/case-studies/parking-management-system'),
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: 'EdgeWeb parking management system case study' }],
   },

@@ -102,6 +102,14 @@
     window.edgewebEvents.push({ name, params, t: Date.now() });
     if(typeof window.gtag === 'function'){ window.gtag('event', name, params || {}); }
   }
+  // Exposed on window because the discovery-modal IIFE further down is a
+  // separate top-level closure, not nested inside this one — a bare
+  // trackEvent reference there throws ReferenceError (undeclared
+  // identifier), it doesn't just evaluate falsy like a missing property
+  // would. This silently broke discovery_open/discovery_submit/exit_intent
+  // tracking on every page: the throw happened after the visible UI update
+  // already ran, so the modal still looked like it worked.
+  window.trackEvent = trackEvent;
   document.querySelectorAll('[data-track]').forEach(el=>{
     el.addEventListener('click', ()=> trackEvent(el.dataset.track, { link_text: el.textContent.trim() }));
   });
@@ -404,7 +412,7 @@
       overlay.dataset.intent = intent || 'default';
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
-      trackEvent && trackEvent('discovery_open', { intent: intent || 'default' });
+      window.trackEvent && window.trackEvent('discovery_open', { intent: intent || 'default' });
     }
     function closeModal(){
       overlay.classList.remove('open');
@@ -416,7 +424,7 @@
       if(exitIntentShown || overlay.classList.contains('open')) return;
       exitIntentShown = true;
       openModal({ buildType: 'Something else' }, 'exit');
-      trackEvent && trackEvent('exit_intent', { reason });
+      window.trackEvent && window.trackEvent('exit_intent', { reason });
     }
 
     document.addEventListener('click', (e)=>{
@@ -525,7 +533,7 @@
       }
       stepIndex++;
       showStep(stepIndex);
-      trackEvent && trackEvent('discovery_step_view', { step: stepIndex + 1 });
+      window.trackEvent && window.trackEvent('discovery_step_view', { step: stepIndex + 1 });
     });
     backBtn.addEventListener('click', ()=>{
       if(stepIndex === 0) return;
@@ -561,7 +569,7 @@
 
         window.edgewebLeads = window.edgewebLeads || [];
         window.edgewebLeads.push(lead);
-        trackEvent && trackEvent('discovery_submit', { build_type: lead.buildType, goal: lead.goal, budget: lead.budget });
+        window.trackEvent && window.trackEvent('discovery_submit', { build_type: lead.buildType, goal: lead.goal, budget: lead.budget });
         stepIndex = totalSteps;
         showStep(stepIndex);
       } catch (error) {

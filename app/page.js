@@ -14,7 +14,7 @@ import { absoluteUrl, DEFAULT_OG_IMAGE } from '../lib/site';
 export const metadata = {
   title: 'Custom Software & Web Development Company | EdgeWeb',
   description:
-    'EdgeWeb builds custom websites, software, AI automation and growth systems for businesses in the USA, Europe, Australia & India. Talk to us about your project.',
+    'EdgeWeb has shipped 120+ custom software, web and automation systems for businesses in the USA, Europe, Australia & India since 2019. See the work.',
   alternates: { canonical: absoluteUrl('/') },
   keywords:
     'web development company, web development agency, website development company, website development services, web design company, software development company, IT services company, digital agency, web development USA, web development company Europe, web development company Australia',
@@ -23,7 +23,7 @@ export const metadata = {
     siteName: 'EdgeWeb',
     title: 'Custom Software & Web Development Company | EdgeWeb',
     description:
-      'EdgeWeb helps businesses across the USA, Europe and Australia with custom websites, digital systems, software and growth-focused technology solutions.',
+      '120+ delivered systems, 340+ automated workflows, one full-stack team — EdgeWeb builds custom websites, software and growth systems for businesses in the USA, Europe & Australia.',
     url: absoluteUrl('/'),
     locale: 'en_IN',
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: 'EdgeWeb — IT solutions and digital engineering' }],
@@ -32,7 +32,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'EdgeWeb | IT Solutions, Web & App Development, Automation',
     description:
-      'Custom web and mobile applications, process automation, cloud infrastructure and digital marketing — engineered as one system, not assembled from parts.',
+      '120+ systems delivered, 340+ workflows automated — custom web and mobile applications, process automation and digital marketing, engineered as one system.',
     images: [DEFAULT_OG_IMAGE],
     site: '@edgewebco',
   },
