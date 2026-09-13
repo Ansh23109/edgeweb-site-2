@@ -3,21 +3,21 @@ import { readContent } from '../../lib/content';
 import { absoluteUrl } from '../../lib/site';
 
 export const metadata = {
-  title: 'Ansh Kashyap — Founder & Director of EdgeWeb',
+  title: 'Ansh Kashyap — Founder & CEO of EdgeWeb',
   description:
-    'Meet Ansh Kashyap, Founder & Director of EdgeWeb. Building digital products, business systems, automation and technology solutions around real business problems.',
+    'Meet Ansh Kashyap, Founder & CEO of EdgeWeb. Building digital products, business systems, automation and technology solutions around real business problems.',
   alternates: { canonical: absoluteUrl('/founder-anshkashyap') },
   openGraph: {
     type: 'website',
     url: absoluteUrl('/founder-anshkashyap'),
-    title: 'Ansh Kashyap — Founder & Director of EdgeWeb',
-    description: 'I build digital systems around real business problems. Founder & Director at EdgeWeb.',
+    title: 'Ansh Kashyap — Founder & CEO of EdgeWeb',
+    description: 'I build digital systems around real business problems. Founder & CEO at EdgeWeb.',
     images: [{ url: absoluteUrl('/founder-anshkashyap/og-image.jpg') }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ansh Kashyap — Founder & Director of EdgeWeb',
-    description: 'I build digital systems around real business problems. Founder & Director at EdgeWeb.',
+    title: 'Ansh Kashyap — Founder & CEO of EdgeWeb',
+    description: 'I build digital systems around real business problems. Founder & CEO at EdgeWeb.',
     images: [absoluteUrl('/founder-anshkashyap/og-image.jpg')],
   },
 };
