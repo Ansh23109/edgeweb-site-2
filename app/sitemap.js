@@ -11,6 +11,7 @@ export default function sitemap() {
     { path: '/', changeFrequency: 'weekly', priority: 1.0 },
     { path: '/services', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/delhi-ncr', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/consultation', changeFrequency: 'monthly', priority: 0.85 },
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/case-studies', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/case-studies/golf-garage', changeFrequency: 'monthly', priority: 0.65 },
