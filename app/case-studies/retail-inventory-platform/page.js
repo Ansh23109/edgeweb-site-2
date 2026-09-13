@@ -17,6 +17,7 @@ export const metadata = {
   description:
     '6 hours of daily reconciliation removed, 0 overselling since launch — how EdgeWeb built a real-time inventory ledger for a USA-based retailer.',
   alternates: { canonical: absoluteUrl('/case-studies/retail-inventory-platform') },
+  keywords: 'retail inventory platform case study, inventory management system case study, multi-location stock sync case study',
   openGraph: {
     type: 'article',
     siteName: 'EdgeWeb',

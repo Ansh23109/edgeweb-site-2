@@ -1,5 +1,7 @@
 import HeroVortex from '../../components/HeroVortex';
+import JsonLd from '../../components/JsonLd';
 import { readContent } from '../../lib/content';
+import { personSchema } from '../../lib/schema';
 import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../lib/site';
 
 export const metadata = {
@@ -7,6 +9,7 @@ export const metadata = {
   description:
     'Meet Aneesh Garg, Co-Founder (Marketing & Technology) at EdgeWeb. 5+ years connecting growth strategy and marketing systems with the technology that runs them.',
   alternates: { canonical: absoluteUrl('/founder-aneeshgarg') },
+  keywords: 'Aneesh Garg, Aneesh Garg EdgeWeb, EdgeWeb co-founder, marketing technology co-founder, growth marketing specialist',
   openGraph: {
     type: 'website',
     url: absoluteUrl('/founder-aneeshgarg'),
@@ -34,6 +37,14 @@ export default function FounderAneeshPage() {
 
   return (
     <>
+      <JsonLd
+        data={personSchema({
+          name: 'Aneesh Garg',
+          jobTitle: 'Co-Founder, Marketing & Technology',
+          url: absoluteUrl('/founder-aneeshgarg'),
+          description: 'Co-Founder (Marketing & Technology) at EdgeWeb, connecting growth strategy and marketing systems with the technology that runs them.',
+        })}
+      />
       <style dangerouslySetInnerHTML={{ __html: css }} />
       <div dangerouslySetInnerHTML={{ __html: headerHtml }} />
 

@@ -16,6 +16,7 @@ export const metadata = {
   description:
     'How EdgeWeb built the brand identity, packaging and Shopify storefront for Golf Garage, India’s pre-owned golf equipment marketplace founded by Rahul Bajaj.',
   alternates: { canonical: absoluteUrl('/case-studies/golf-garage') },
+  keywords: 'Golf Garage case study, Shopify brand identity case study, ecommerce packaging design case study, golf equipment ecommerce branding',
   openGraph: {
     type: 'article',
     siteName: 'EdgeWeb',

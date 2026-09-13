@@ -16,6 +16,8 @@ export const metadata = {
   description:
     "Real EdgeWeb work — from Golf Garage's brand and Shopify build to retail, fintech and healthcare systems — with the outcomes that came from them.",
   alternates: { canonical: absoluteUrl('/case-studies') },
+  keywords:
+    'software agency case studies USA, web development case studies Australia, custom software case studies Europe, IT agency portfolio India, EdgeWeb client work',
   openGraph: {
     type: 'website',
     siteName: 'EdgeWeb',

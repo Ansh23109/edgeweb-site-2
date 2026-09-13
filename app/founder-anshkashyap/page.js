@@ -1,5 +1,7 @@
 import HeroVortex from '../../components/HeroVortex';
+import JsonLd from '../../components/JsonLd';
 import { readContent } from '../../lib/content';
+import { personSchema } from '../../lib/schema';
 import { absoluteUrl } from '../../lib/site';
 
 export const metadata = {
@@ -7,6 +9,7 @@ export const metadata = {
   description:
     'Meet Ansh Kashyap, Founder & CEO of EdgeWeb. Building digital products, business systems, automation and technology solutions around real business problems.',
   alternates: { canonical: absoluteUrl('/founder-anshkashyap') },
+  keywords: 'Ansh Kashyap, Ansh Kashyap EdgeWeb, EdgeWeb founder, EdgeWeb CEO, software company founder India',
   openGraph: {
     type: 'website',
     url: absoluteUrl('/founder-anshkashyap'),
@@ -34,6 +37,15 @@ export default function FounderPage() {
 
   return (
     <>
+      <JsonLd
+        data={personSchema({
+          name: 'Ansh Kashyap',
+          jobTitle: 'Founder & CEO',
+          url: absoluteUrl('/founder-anshkashyap'),
+          sameAs: ['https://www.linkedin.com/in/ansh-a919a621a/'],
+          description: 'Founder & CEO of EdgeWeb, building digital products, business systems and automation around real business problems.',
+        })}
+      />
       <style dangerouslySetInnerHTML={{ __html: css }} />
       <div dangerouslySetInnerHTML={{ __html: headerHtml }} />
 

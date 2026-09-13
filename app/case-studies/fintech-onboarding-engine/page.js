@@ -17,6 +17,7 @@ export const metadata = {
   description:
     '71% faster onboarding, 0 compliance checks skipped — how EdgeWeb built a document AI pipeline for a USA-based financial services company.',
   alternates: { canonical: absoluteUrl('/case-studies/fintech-onboarding-engine') },
+  keywords: 'fintech onboarding case study, document AI case study, KYC automation case study, compliance automation case study',
   openGraph: {
     type: 'article',
     siteName: 'EdgeWeb',

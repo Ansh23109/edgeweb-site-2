@@ -17,6 +17,7 @@ export const metadata = {
   description:
     '42% faster bay discovery, 19% more revenue from dynamic pricing — how EdgeWeb built a real-time parking management platform for a USA-based operator.',
   alternates: { canonical: absoluteUrl('/case-studies/parking-management-system') },
+  keywords: 'parking management system case study, real-time parking platform case study, IoT parking case study, dynamic pricing system case study',
   openGraph: {
     type: 'article',
     siteName: 'EdgeWeb',

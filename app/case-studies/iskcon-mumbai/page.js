@@ -16,6 +16,7 @@ export const metadata = {
   description:
     'How EdgeWeb built a website and a MERN learning-video management portal for the Bureau of ISKCON Mumbai, delivered under NDA for its trustees.',
   alternates: { canonical: absoluteUrl('/case-studies/iskcon-mumbai') },
+  keywords: 'MERN stack case study, custom web platform case study, video management system case study, MongoDB Express React Node case study',
   openGraph: {
     type: 'article',
     siteName: 'EdgeWeb',

@@ -17,6 +17,7 @@ export const metadata = {
   description:
     '99.9% uptime, 0 double-bookings since launch — how EdgeWeb rebuilt a clinic network scheduling system for a USA-based healthcare provider.',
   alternates: { canonical: absoluteUrl('/case-studies/healthcare-scheduling-platform') },
+  keywords: 'healthcare scheduling case study, cloud infrastructure case study, clinic booking system case study, appointment scheduling platform case study',
   openGraph: {
     type: 'article',
     siteName: 'EdgeWeb',

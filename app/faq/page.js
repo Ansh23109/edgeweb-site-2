@@ -16,6 +16,8 @@ export const metadata = {
   description:
     'Answers to what EdgeWeb builds, how a project starts, typical engagement length, post-launch support, and who we work with.',
   alternates: { canonical: absoluteUrl('/faq') },
+  keywords:
+    'how does a software project start, how long does app development take, software agency FAQ, web development company FAQ, custom software cost',
   openGraph: {
     type: 'website',
     siteName: 'EdgeWeb',
