@@ -9,7 +9,7 @@ import HeroVortex from '../../components/HeroVortex';
 import JsonLd from '../../components/JsonLd';
 import { readContent } from '../../lib/content';
 import { breadcrumbSchema, faqSchema } from '../../lib/schema';
-import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../lib/site';
+import { absoluteUrl, DEFAULT_OG_IMAGE, SITE_URL } from '../../lib/site';
 
 export const metadata = {
   title: 'Free 1:1 Consultation | EdgeWeb',
@@ -17,7 +17,7 @@ export const metadata = {
     'A free 30-minute call with the EdgeWeb team to understand your project and point you toward the right direction — no sales pitch, no obligation.',
   alternates: { canonical: absoluteUrl('/consultation') },
   keywords:
-    'free software consultation, free web development consultation, free technology consulting call, book a call with a software agency, free discovery call USA Australia Europe India',
+    'free software consultation USA, free technology consulting call Australia, free web development consultation Europe, free discovery call India, book a call with a software agency, free 1:1 mentorship call',
   openGraph: {
     type: 'website',
     siteName: 'EdgeWeb',
@@ -49,6 +49,24 @@ export default function ConsultationPage() {
         data={[
           breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Free Consultation', path: '/consultation' }]),
           faqSchema(FAQS),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'Free Technology Consultation',
+            name: 'Free 1:1 Consultation',
+            provider: { '@id': `${SITE_URL}/#organization` },
+            areaServed: ['United States', 'United Kingdom', 'Australia', 'India'],
+            description:
+              'A free 30-minute 1:1 call with the EdgeWeb team to understand a business problem and give direction on the right approach — not a sales pitch.',
+            url: absoluteUrl('/consultation'),
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'USD',
+              availability: 'https://schema.org/InStock',
+              url: absoluteUrl('/consultation'),
+            },
+          },
         ]}
       />
       <style dangerouslySetInnerHTML={{ __html: css }} />
