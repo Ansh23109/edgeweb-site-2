@@ -450,13 +450,16 @@
       }
     });
 
-    window.addEventListener('beforeunload', (e)=>{
-      if(!overlay.classList.contains('open')){
-        e.preventDefault();
-        e.returnValue = '';
-        triggerExitIntent('before_unload');
-      }
-    });
+    // Deliberately no `beforeunload` handler here. A beforeunload listener
+    // that calls preventDefault()/sets returnValue forces the browser's own
+    // native "Leave site? Changes you made may not be saved" dialog — it
+    // cannot be replaced with the custom exit-intent modal (browsers block
+    // custom UI during beforeunload). Since this site navigates via plain
+    // full-page <a href> links, that dialog fired on every single internal
+    // link click (Services, Case Studies, ...), not just genuine tab-close/
+    // back-button exits — a real, disruptive bug, not a feature. The
+    // mouseout and visibilitychange listeners above/below are the real,
+    // non-blocking exit-intent signals and are unaffected by this removal.
 
     function renderProgress(){
       progressDots.forEach((d,i)=> d.classList.toggle('done', i <= stepIndex));
