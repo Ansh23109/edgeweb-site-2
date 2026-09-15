@@ -1,4 +1,5 @@
 import { SITE_URL, SERVICE_PAGES } from '../lib/site';
+import { BLOG_POSTS } from '../lib/blog';
 
 // Section 3.1 + 3.3 fix: every URL here is canonical on https://www.edgeweb.co
 // (no non-www duplicates), and the old #about / #work / #faq homepage
@@ -12,6 +13,7 @@ export default function sitemap() {
     { path: '/services', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/delhi-ncr', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/consultation', changeFrequency: 'monthly', priority: 0.85 },
+    { path: '/blog', changeFrequency: 'weekly', priority: 0.7 },
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/case-studies', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/case-studies/golf-garage', changeFrequency: 'monthly', priority: 0.65 },
@@ -34,7 +36,13 @@ export default function sitemap() {
     priority: 0.8,
   }));
 
-  return [...staticEntries, ...serviceEntries].map((entry) => ({
+  const blogEntries = BLOG_POSTS.map((p) => ({
+    path: `/blog/${p.slug}`,
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }));
+
+  return [...staticEntries, ...serviceEntries, ...blogEntries].map((entry) => ({
     url: `${SITE_URL}${entry.path === '/' ? '' : entry.path}`,
     lastModified: now,
     changeFrequency: entry.changeFrequency,
