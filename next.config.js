@@ -16,7 +16,7 @@ const CSP = [
   "img-src 'self' data: https:",
   "font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com",
   "connect-src 'self' https://www.googleapis.com https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.google.com https://www.googletagmanager.com https://images.dmca.com https://www.dmca.com https://calendly.com https://api.calendly.com",
-  "frame-src 'self' https://calendly.com",
+  "frame-src 'self' https://calendly.com https://www.googletagmanager.com",
   "media-src 'self'",
   "manifest-src 'self'",
   "worker-src 'self' blob:",
