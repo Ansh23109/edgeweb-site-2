@@ -8,16 +8,16 @@ import ChromeEffects from '../../components/ChromeEffects';
 import HeroVortex from '../../components/HeroVortex';
 import JsonLd from '../../components/JsonLd';
 import { readContent } from '../../lib/content';
-import { breadcrumbSchema, faqSchema, HOME_FAQS } from '../../lib/schema';
+import { breadcrumbSchema, faqSchema, FAQ_PAGE_FAQS } from '../../lib/schema';
 import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../lib/site';
 
 export const metadata = {
   title: 'FAQ | Questions Before You Start a Project | EdgeWeb',
   description:
-    'Answers to what EdgeWeb builds, how a project starts, typical engagement length, post-launch support, and who we work with.',
+    'Answers on cost, tech stack, IP ownership, timelines, NDAs, time zones and post-launch support — everything to know before starting a project with EdgeWeb.',
   alternates: { canonical: absoluteUrl('/faq') },
   keywords:
-    'how does a software project start, how long does app development take, software agency FAQ, web development company FAQ, custom software cost',
+    'how does a software project start, how long does app development take, software agency FAQ, web development company FAQ, custom software cost, who owns the code after development, software development agency vs freelancer',
   openGraph: {
     type: 'website',
     siteName: 'EdgeWeb',
@@ -40,7 +40,7 @@ export default function FaqPage() {
       <JsonLd
         data={[
           breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq' }]),
-          faqSchema(HOME_FAQS),
+          faqSchema(FAQ_PAGE_FAQS),
         ]}
       />
       <style dangerouslySetInnerHTML={{ __html: css }} />

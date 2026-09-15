@@ -39,6 +39,9 @@ const FAQS = [
   { q: 'Do you work with early-stage startups in Gurgaon or Noida?', a: 'Yes. Early-stage teams usually need one product built well; we scope in phases so you see something working early.' },
   { q: 'Can we meet in person before starting a project?', a: 'Absolutely — for Delhi NCR businesses, an in-person discovery conversation is often the fastest way to get the scope right.' },
   { q: 'Do you only work with Delhi NCR businesses?', a: 'No — Delhi NCR is home base, but the same team delivers for clients across India and internationally.' },
+  { q: 'What industries do you typically work with in Delhi NCR?', a: 'Retail and D2C brands, manufacturing and distribution businesses, healthcare providers and consulting firms make up most of our Delhi NCR client base — though the architecture-first approach works for any operating business.' },
+  { q: 'Do you help with local SEO and Google Business Profile for Delhi NCR businesses?', a: 'Yes — local SEO, Google Business Profile optimization and location-based landing pages are part of our digital marketing service, especially useful for businesses competing across Delhi, Gurgaon and Noida specifically.' },
+  { q: 'Do you quote in Indian Rupees for Delhi NCR clients?', a: 'Yes — Delhi NCR and other India-based clients are quoted in INR; international clients are typically quoted in USD.' },
 ];
 
 export default function DelhiNcrPage() {
