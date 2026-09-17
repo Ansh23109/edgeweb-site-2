@@ -8,7 +8,7 @@ import ChromeEffects from '../../components/ChromeEffects';
 import HeroVortex from '../../components/HeroVortex';
 import JsonLd from '../../components/JsonLd';
 import { readContent } from '../../lib/content';
-import { breadcrumbSchema } from '../../lib/schema';
+import { breadcrumbSchema, faqSchema } from '../../lib/schema';
 import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../lib/site';
 
 export const metadata = {
@@ -35,10 +35,22 @@ const heroInnerHtml = readContent('case-studies/hero-inner.html');
 const mainHtml = readContent('case-studies/main.html');
 const script = readContent('services-detail/script.js');
 
+const FAQS = [
+  { q: 'Are these real clients, or composite examples?', a: "Every case study on this page is a real EdgeWeb client engagement. A small number of details are described in general terms rather than named outright, at the client's request — never invented." },
+  { q: "Why don't some case studies name the client?", a: "A few engagements are confidential by contract — most commonly in fintech, healthcare and institutional work, where the client's own policy restricts what can be published publicly. We still describe the real problem and the real outcome, without the name." },
+  { q: 'Do you have a case study from my industry?', a: "The work here spans retail, financial services, healthcare, consumer brands, nonprofits and physical infrastructure. If your industry isn't represented yet, the same architecture-first approach applies regardless." },
+  { q: 'Can I talk to a past client as a reference?', a: "For engagements where the client has agreed to be a reference, yes — ask us on a call and we'll make the introduction where it's possible." },
+];
+
 export default function CaseStudiesPage() {
   return (
     <>
-      <JsonLd data={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Case Studies', path: '/case-studies' }])} />
+      <JsonLd
+        data={[
+          breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Case Studies', path: '/case-studies' }]),
+          faqSchema(FAQS),
+        ]}
+      />
       <style dangerouslySetInnerHTML={{ __html: css }} />
 
       <ChromeEffects />
