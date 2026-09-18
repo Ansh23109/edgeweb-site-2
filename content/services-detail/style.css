@@ -372,7 +372,7 @@
      .social-row, etc.) — this file was missing the whole block, which left
      Footer's social icons rendering at their unstyled native SVG size and
      the column layout unstyled on every service-detail page. */
-  .mega-footer{ border-top:1px solid var(--line); padding:80px 0 0; }
+  .mega-footer{ border-top:1px solid var(--line); padding-top:80px; }
   .mega-footer-top{ display:grid; grid-template-columns:1.3fr 1fr 1fr 1.2fr; gap:40px; padding-bottom:64px; }
   .mega-col h4{ font-size:12px; letter-spacing:0.06em; color:var(--ink-faint); margin:0 0 20px; font-weight:600; }
   .mega-col ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:13px; }
