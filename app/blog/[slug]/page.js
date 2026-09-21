@@ -48,6 +48,9 @@ export default async function BlogPostPage({ params }) {
   if (!post) notFound();
 
   const bodyHtml = readContent(`blog/${post.slug}/main.html`);
+  const related = BLOG_POSTS.filter((p) => p.slug !== post.slug)
+    .sort((x, y) => (y.category === post.category) - (x.category === post.category) || new Date(y.date) - new Date(x.date))
+    .slice(0, 3);
   const dateDisplay = new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
   return (
@@ -89,6 +92,22 @@ export default async function BlogPostPage({ params }) {
         <section className="detail-block">
           <div className="wrap">
             <div className="article-body reveal" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+          </div>
+        </section>
+
+        <section className="detail-block section-alt">
+          <div className="wrap">
+            <p className="eyebrow reveal">Keep Reading</p>
+            <div className="post-grid reveal">
+              {related.map((r) => (
+                <a key={r.slug} href={`/blog/${r.slug}`} className="post-card">
+                  <span className="cat">{r.category}</span>
+                  <h2>{r.title}</h2>
+                  <p>{r.excerpt}</p>
+                  <span className="meta">{r.readTime}</span>
+                </a>
+              ))}
+            </div>
           </div>
         </section>
 
