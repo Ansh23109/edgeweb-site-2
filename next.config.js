@@ -32,6 +32,10 @@ const nextConfig = {
         destination: 'https://www.edgeweb.co/:path*',
         permanent: true,
       },
+      // The pre-Next.js static site served pages at /<path>/index.html; Google
+      // still remembers those URLs, so 301 them to the clean route.
+      { source: '/index.html', destination: '/', permanent: true },
+      { source: '/:path+/index.html', destination: '/:path+', permanent: true },
     ];
   },
   async headers() {
