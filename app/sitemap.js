@@ -12,6 +12,7 @@ export default function sitemap() {
     { path: '/', changeFrequency: 'weekly', priority: 1.0 },
     { path: '/services', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/delhi-ncr', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/areas-we-serve', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/consultation', changeFrequency: 'monthly', priority: 0.85 },
     { path: '/blog', changeFrequency: 'weekly', priority: 0.7 },
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },

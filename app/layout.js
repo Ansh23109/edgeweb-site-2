@@ -16,6 +16,8 @@ export const metadata = {
     apple: '/apple-touch-icon.png',
   },
   manifest: '/manifest.json',
+  keywords:
+    'web development company near me, best SEO expert near me, digital marketing agency near me, app development company near me, software development company in India, web development company USA, digital agency Europe, web development company Australia, custom software development, AI automation agency, website design company, SEO services',
   robots: { index: true, follow: true },
 };
 

@@ -17,7 +17,7 @@ export const metadata = {
     'EdgeWeb has shipped 120+ custom software, web and automation systems for businesses in the USA, Europe, Australia & India since 2019. See the work.',
   alternates: { canonical: absoluteUrl('/') },
   keywords:
-    'web development company, web development agency, website development company, website development services, web design company, software development company, IT services company, digital agency, web development USA, web development company Europe, web development company Australia',
+    'web development company, web development agency, website development company, website development services, web design company, software development company, IT services company, digital agency, web development USA, web development company Europe, web development company Australia, best SEO expert near me, digital marketing agency near me, web development company near me, app development company near me, best web development company in India, top software development company in India, hire web developers, affordable web design services, SEO company India, AI automation agency, web development company all states India',
   openGraph: {
     type: 'website',
     siteName: 'EdgeWeb',
