@@ -64,6 +64,7 @@ Retail & Distribution, Financial Services, Healthcare — evidenced by delivered
 - Fintech: built a client onboarding engine using document AI for a financial services company. https://www.edgeweb.co/case-studies
 - Healthcare: built scheduling infrastructure for a clinic network, achieving 99.9% uptime. https://www.edgeweb.co/case-studies
 - Furniture retail: ongoing SEO, paid ads management and conversion improvement for Chaaya Furniture, an active client. https://www.edgeweb.co/case-studies/chaaya-furniture
+- SaaS product design: ScrapGrid, a multi-tenant cloud ERP for scrap and recycling vendors with a field mobile app and AI verification, designed by EdgeWeb as its own product. https://www.edgeweb.co/case-studies/scrapgrid
 
 ## Frequently Asked Questions
 
