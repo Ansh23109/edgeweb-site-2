@@ -18,6 +18,7 @@ export default function sitemap() {
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/case-studies', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/case-studies/golf-garage', changeFrequency: 'monthly', priority: 0.65 },
+    { path: '/case-studies/chaaya-furniture', changeFrequency: 'monthly', priority: 0.65 },
     { path: '/case-studies/iskcon-mumbai', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/case-studies/parking-management-system', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/case-studies/retail-inventory-platform', changeFrequency: 'yearly', priority: 0.6 },
