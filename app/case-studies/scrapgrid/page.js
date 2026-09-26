@@ -35,7 +35,7 @@ const mainHtml = readContent('case-studies/scrapgrid/main.html');
 const script = readContent('services-detail/script.js');
 
 const FAQS = [
-  { q: 'Is ScrapGrid a client project?', a: 'No. ScrapGrid is a SaaS product and solution designed by EdgeWeb, presented here as product strategy, architecture and design work.' },
+  { q: 'Is ScrapGrid a client project?', a: "Yes. ScrapGrid is a client project: EdgeWeb designed the SaaS product for a client, who isn't named on this page. It's presented here as product strategy, architecture and design work." },
   { q: 'What does the AI Verification Engine do?', a: 'It checks material photos and field entries against each other and flags mismatches for review, to reduce errors and fraud.' },
   { q: 'Can EdgeWeb design a similar SaaS product for my industry?', a: 'Yes. We start from how your industry actually operates, then design the architecture, interface and pricing model together.' },
 ];
