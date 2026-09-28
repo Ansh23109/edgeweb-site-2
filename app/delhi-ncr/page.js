@@ -12,7 +12,7 @@ import { breadcrumbSchema, faqSchema, localBusinessSchema } from '../../lib/sche
 import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../lib/site';
 
 export const metadata = {
-  title: 'Web Development & Digital Marketing Agency Delhi NCR | EdgeWeb',
+  title: 'Web Development & Marketing Agency, Delhi NCR | EdgeWeb',
   description:
     'EdgeWeb — 120+ systems delivered since 2019 — is a web development & digital marketing agency in Delhi, serving Delhi, Gurgaon, Noida & Faridabad.',
   alternates: { canonical: absoluteUrl('/delhi-ncr') },
@@ -21,7 +21,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     siteName: 'EdgeWeb',
-    title: 'Web Development & Digital Marketing Agency Delhi NCR | EdgeWeb',
+    title: 'Web Development & Marketing Agency, Delhi NCR | EdgeWeb',
     description: '120+ systems delivered since 2019 — a Delhi NCR web development and digital marketing agency serving Delhi, Gurgaon, Noida, Faridabad & Ghaziabad.',
     url: absoluteUrl('/delhi-ncr'),
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: 'EdgeWeb — Delhi NCR web development & digital marketing agency' }],

@@ -11,7 +11,7 @@ import JsonLd from '../../../components/JsonLd';
 import { readContent } from '../../../lib/content';
 import { breadcrumbSchema, articleSchema } from '../../../lib/schema';
 import { BLOG_POSTS, getBlogPost } from '../../../lib/blog';
-import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../../lib/site';
+import { absoluteUrl, DEFAULT_OG_IMAGE, AUTHORS } from '../../../lib/site';
 
 export function generateStaticParams() {
   return BLOG_POSTS.map((p) => ({ slug: p.slug }));
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
   const post = getBlogPost(slug);
   if (!post) return {};
   return {
-    title: `${post.title} | EdgeWeb Blog`,
+    title: `${post.metaTitle || post.title} | EdgeWeb`,
     description: post.description,
     alternates: { canonical: absoluteUrl(`/blog/${post.slug}`) },
     keywords: post.keywords,
@@ -52,6 +52,7 @@ export default async function BlogPostPage({ params }) {
     .sort((x, y) => (y.category === post.category) - (x.category === post.category) || new Date(y.date) - new Date(x.date))
     .slice(0, 3);
   const dateDisplay = new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  const author = post.author && AUTHORS[post.author];
 
   return (
     <>
@@ -81,6 +82,11 @@ export default async function BlogPostPage({ params }) {
             </div>
             <div className="post-meta" style={{ marginTop: 20 }}>
               <span className="cat">{post.category}</span>
+              {author && (
+                <span>
+                  By <a href={author.url} style={{ color: 'inherit', textDecoration: 'underline', textDecorationColor: 'var(--line-strong)' }}>{author.name}</a>, {author.jobTitle}
+                </span>
+              )}
               <span>{dateDisplay}</span>
               <span>{post.readTime}</span>
             </div>
@@ -92,6 +98,16 @@ export default async function BlogPostPage({ params }) {
         <section className="detail-block">
           <div className="wrap">
             <div className="article-body reveal" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+            {author && (
+              <div className="article-cta-inline reveal" style={{ marginTop: 48 }}>
+                <p style={{ maxWidth: 'none' }}>
+                  Written by <a href={author.url} style={{ color: 'var(--ink)', textDecoration: 'underline' }}>{author.name}</a>, {author.jobTitle} at EdgeWeb.
+                </p>
+                <a href={author.url} className="btn btn-ghost magnetic" data-cursor="View">
+                  About {author.name.split(' ')[0]}
+                </a>
+              </div>
+            )}
           </div>
         </section>
 

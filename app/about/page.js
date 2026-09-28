@@ -14,7 +14,7 @@ import { absoluteUrl, DEFAULT_OG_IMAGE } from '../../lib/site';
 export const metadata = {
   title: 'About EdgeWeb | Full-Stack Technology Partner',
   description:
-    'EdgeWeb is a full-stack technology solutions company founded in 2019, building custom software, web platforms and automation for businesses in the USA, Europe, Australia and India.',
+    'EdgeWeb is a full-stack technology company building custom software and automation for businesses in the USA, Europe, Australia and India since 2019.',
   alternates: { canonical: absoluteUrl('/about') },
   keywords:
     'technology partner USA, software company Australia, IT solutions company Europe, technology company India, full-stack development agency',
