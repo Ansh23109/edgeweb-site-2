@@ -29,7 +29,7 @@ export default function sitemap() {
     { path: '/faq', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/contact', changeFrequency: 'yearly', priority: 0.7 },
     { path: '/founder-anshkashyap', changeFrequency: 'yearly', priority: 0.4 },
-    { path: '/founder-aneeshgarg', changeFrequency: 'yearly', priority: 0.4 },
+    // /founder-aneeshgarg intentionally excluded — noindexed, not listed in the sitemap.
     { path: '/privacy', changeFrequency: 'yearly', priority: 0.3 },
     { path: '/terms', changeFrequency: 'yearly', priority: 0.3 },
   ];
