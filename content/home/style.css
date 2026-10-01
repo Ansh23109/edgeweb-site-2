@@ -167,35 +167,24 @@
     position:absolute; inset:0; z-index:1; pointer-events:none;
     background:radial-gradient(circle at 50% 42%, transparent 0%, rgba(11,10,12,0.35) 55%, rgba(11,10,12,0.85) 100%);
   }
-  /* Oversized background wordmark, painted first (= furthest back) inside
-     .hero-inner's own stacking context — the same move the Donabe/Sir
-     Orrick's-style references use to give a dark hero some depth beyond
-     the vortex canvas, without competing with the real headline for focus. */
-  .hero-wordmark{
-    position:absolute; top:50%; left:50%; transform:translate(-50%,-52%);
-    margin:0; z-index:0; pointer-events:none; white-space:nowrap;
-    font-family:var(--f-display); font-style:italic; font-weight:400;
-    font-size:clamp(160px, 24vw, 420px); line-height:1; color:var(--ink);
-    opacity:0.045; letter-spacing:-0.02em;
-  }
   .hero-inner{
     position:relative; z-index:2; width:100%;
-    display:grid; grid-template-columns:1.05fr 0.95fr; gap:clamp(32px, 5vw, 64px); align-items:center;
+    display:flex; align-items:center; justify-content:center;
   }
   .hero-copy{
-    position:relative; z-index:3; width:100%; text-align:left;
-    margin:0;
+    position:relative; z-index:3; width:min(980px, 100%); text-align:center;
+    margin:0 auto;
   }
-  .hero-copy .eyebrow{ margin:0 0 26px; justify-content:flex-start; }
+  .hero-copy .eyebrow{ margin:0 auto 26px; justify-content:center; }
   .hero-copy h1{ color:var(--ink); }
   .hero-copy h1 i{ font-style:italic; color:var(--ink-dim); }
-  .hero-sub{ margin:28px 0 0; max-width:46rem; }
-  .hero-actions{ margin-top:44px; display:flex; gap:16px; flex-wrap:wrap; align-items:center; justify-content:flex-start; }
-  .hero-trust{ justify-content:flex-start; text-align:left; }
-  .hero-trust-list{ justify-content:flex-start; }
+  .hero-sub{ margin:28px auto 0; max-width:46rem; }
+  .hero-actions{ margin-top:44px; display:flex; gap:16px; flex-wrap:wrap; align-items:center; justify-content:center; }
+  .hero-trust{ justify-content:center; text-align:center; }
+  .hero-trust-list{ justify-content:center; }
   .hero-meta{
-    margin:52px 0 0; display:flex; gap:36px; padding-top:22px; border-top:1px solid var(--line);
-    max-width:640px; flex-wrap:wrap; justify-content:flex-start; text-align:left;
+    margin:52px auto 0; display:flex; gap:36px; padding-top:22px; border-top:1px solid var(--line);
+    max-width:640px; flex-wrap:wrap; justify-content:center; text-align:center;
   }
   .hero-meta div{ display:flex; flex-direction:column; gap:4px; }
   .hero-meta .n{ font-family:var(--f-display); font-style:italic; font-size:22px; color:var(--ink); }
@@ -238,29 +227,29 @@
   .footer-goodfirms img{ display:block; width:40px; height:auto; }
 
   .hero-media-shell{
-    position:relative; display:flex; align-items:stretch;
+    position:relative; min-height:620px; display:flex; align-items:stretch;
     padding:12px 0;
   }
   .hero-media{
-    position:relative; display:block; width:100%; aspect-ratio:3/2; border-radius:30px; overflow:hidden;
+    position:relative; width:100%; min-height:620px; border-radius:30px; overflow:hidden;
     border:1px solid rgba(255,255,255,0.12); background:
       linear-gradient(180deg, rgba(16,15,17,0.4), rgba(16,15,17,0.82)),
       radial-gradient(circle at center, rgba(184,58,87,0.18), rgba(11,10,12,0.96) 46%);
     box-shadow: 0 24px 80px rgba(0,0,0,0.42);
-    isolation:isolate; transition:transform .5s var(--ease);
+    isolation:isolate;
   }
-  .hero-media:hover{ transform:translateY(-4px); }
-  .hero-media img,
   .hero-media video{
-    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:top;
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.78; filter:grayscale(1) contrast(1.1) brightness(0.55) saturate(0.9);
+    transform:scale(1.06);
   }
   .hero-media::before{
-    content:''; position:absolute; inset:0; z-index:1;
-    background:linear-gradient(200deg, rgba(17,17,19,0.05) 20%, rgba(17,17,19,0.5) 100%);
+    content:''; position:absolute; inset:0; z-index:0;
+    background:linear-gradient(120deg, rgba(17,17,19,0.42), rgba(17,17,19,0.06) 35%, rgba(17,17,19,0.72));
   }
   .hero-media::after{
-    content:''; position:absolute; inset:0; z-index:1;
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
+    content:''; position:absolute; inset:0; z-index:0;
+    background:radial-gradient(circle at 50% 54%, rgba(211,63,80,0.34), transparent 23%),
+      radial-gradient(circle at 50% 50%, rgba(255,123,91,0.08), transparent 32%);
   }
   .hero-metric-card,
   .hero-bullet-card,
@@ -289,24 +278,14 @@
   .hero-quote-card p{ margin:0; font-size:14px; line-height:1.5; color:var(--ink); }
 
   @media (max-width: 980px){
-    .hero-inner{ grid-template-columns:1fr; text-align:center; justify-items:center; }
-    .hero-copy{ width:min(680px, 100%); text-align:center; }
-    .hero-copy .eyebrow{ margin:0 auto 26px; justify-content:center; }
-    .hero-sub{ margin:28px auto 0; }
-    .hero-actions{ justify-content:center; }
-    .hero-trust{ justify-content:center; text-align:center; }
-    .hero-trust-list{ justify-content:center; }
-    .hero-meta{ margin:52px auto 0; gap:20px; justify-content:center; text-align:center; }
-    .hero-media-shell{ margin-top:48px; width:min(560px, 100%); }
-    .hero-wordmark{ font-size:clamp(110px, 32vw, 260px); }
+    .hero-inner{ justify-content:center; }
+    .hero-copy{ width:min(760px, 100%); }
+    .hero-meta{ gap:20px; }
   }
   @media (max-width: 560px){
     .hero{ padding-top:110px; }
     .hero-copy h1{ font-size:clamp(42px, 16vw, 72px); }
     .hero-actions{ margin-top:26px; }
-    .hero-metric-card{ left:14px; bottom:14px; width:140px; padding:14px; }
-    .hero-bullet-card{ right:14px; top:14px; width:160px; padding:12px 14px; }
-    .hero-quote-card{ display:none; }
   }
 
   /* ================= SECTION SHELL ================= */
@@ -468,12 +447,7 @@
   @media (max-width:900px){ .insight-row{ grid-template-columns:1fr; gap:30px; } }
 
   /* ---------- final cta ---------- */
-  .final-cta{ position:relative; overflow:hidden; text-align:left; padding-top:150px; padding-bottom:150px; }
-  .final-cta .hero-wordmark{
-    top:auto; bottom:-8%; left:auto; right:-2%; transform:none; text-align:right;
-    font-size:clamp(140px, 20vw, 360px); opacity:0.05;
-  }
-  @media (max-width:560px){ .final-cta .hero-wordmark{ display:none; } }
+  .final-cta{ text-align:left; padding-top:150px; padding-bottom:150px; }
   .final-cta .display-xl{ color:var(--ink); }
   .final-cta .display-xl i{ font-style:italic; color:var(--accent-bright); }
   .final-cta-row{ display:flex; justify-content:space-between; align-items:flex-end; gap:40px; margin-top:56px; flex-wrap:wrap; }
