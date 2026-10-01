@@ -1,0 +1,99 @@
+  <section class="detail-block">
+    <div class="wrap">
+      <p class="eyebrow reveal">The Problem</p>
+      <h2 class="reveal" style="margin-top:14px;">Hardware that works, software that didn't exist yet.</h2>
+      <p class="body reveal" style="margin-top:14px; max-width:70ch;">Installing a charger is the easy part. Running a network of them is the hard part: knowing which stations are free right now, letting a driver reserve and pay for a session from their phone, and giving the operator one place to see uptime, usage and revenue across every site — instead of checking each charger's own small screen one at a time.</p>
+    </div>
+  </section>
+
+  <section class="detail-block section-alt">
+    <div class="wrap">
+      <p class="eyebrow reveal">The Solution</p>
+      <h2 class="reveal" style="margin-top:14px;">Three parts, one real-time system.</h2>
+      <div class="capability-list reveal" style="margin-top:36px;">
+        <div class="cap-cell"><h4>Driver App</h4><p>Find nearby stations, see live availability, start and stop a charging session, and pay, all from one app.</p></div>
+<div class="cap-cell"><h4>Operator Dashboard</h4><p>A web console showing every station's status, usage and revenue in one place, instead of site by site.</p></div>
+<div class="cap-cell"><h4>Charger Integration Layer</h4><p>The service that talks to the charging hardware itself and keeps the app and dashboard in sync with what's actually happening at each station.</p></div>
+<div class="cap-cell"><h4>Billing &amp; Pricing Engine</h4><p>Per-session and per-kWh billing, with pricing that can vary by station, time of day or demand.</p></div>
+      </div>
+      <p class="body reveal" style="margin-top:28px; max-width:70ch;">The three pieces share one source of truth: a charging session's state moves from the hardware, through the integration layer, into both the driver's app and the operator's dashboard in real time.</p>
+    </div>
+  </section>
+
+  <section class="detail-block">
+    <div class="wrap">
+      <p class="eyebrow reveal">Key Features</p>
+      <h2 class="reveal" style="margin-top:14px;">Designed around how a charging network actually runs.</h2>
+      <div class="use-case-grid reveal" style="margin-top:36px;">
+        <div class="use-case"><h4>Live availability</h4><p>Drivers see which chargers are free right now, not a static list of locations.</p></div>
+<div class="use-case"><h4>Reserve &amp; start remotely</h4><p>A session can be reserved and started from the app before the driver arrives at the station.</p></div>
+<div class="use-case"><h4>Session monitoring</h4><p>Both driver and operator can see a session's progress — energy delivered, time elapsed, cost so far — while it's running.</p></div>
+<div class="use-case"><h4>Fault &amp; maintenance alerts</h4><p>A charger reporting a fault surfaces to the operator immediately, instead of being discovered by the next driver who tries to use it.</p></div>
+<div class="use-case"><h4>Flexible pricing</h4><p>Rates can be set per station and adjusted by time of day or demand, without a code change.</p></div>
+<div class="use-case"><h4>Usage &amp; revenue reporting</h4><p>Operators see utilization and revenue across the whole network, filterable down to a single site.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-block section-alt">
+    <div class="wrap">
+      <p class="eyebrow reveal">Architecture &amp; Tech Approach</p>
+      <h2 class="reveal" style="margin-top:14px;">Built on the protocol charging hardware already speaks.</h2>
+      <p class="body reveal" style="margin-top:14px; max-width:70ch;">EV chargers from different manufacturers communicate over OCPP (Open Charge Point Protocol), the industry-standard for charge point management. The integration layer speaks OCPP to the hardware directly, rather than relying on each manufacturer's own closed app — which is what keeps the platform able to add chargers from more than one vendor to the same network.</p>
+      <p class="body reveal" style="margin-top:20px; max-width:70ch;">Session state changes (a charger going occupied, a session ending, a fault being raised) are pushed to the app and dashboard in real time rather than polled on a delay, so what a driver or operator sees matches what's actually happening at the station. The design targets managed cloud infrastructure for the backend, with the driver app built cross-platform for iOS and Android from one codebase.</p>
+      <div class="tech-tags reveal" style="margin-top:28px;"><span>OCPP integration</span><span>Real-time session sync</span><span>Cross-platform mobile app</span><span>Web operator dashboard</span><span>Payment gateway integration</span><span>Cloud infrastructure</span><span>Role-based access</span></div>
+    </div>
+  </section>
+
+  <section class="detail-block">
+    <div class="wrap">
+      <p class="eyebrow reveal">Business Model</p>
+      <h2 class="reveal" style="margin-top:14px;">Revenue that mirrors how charging is actually sold.</h2>
+      <div class="capability-list reveal" style="margin-top:36px;">
+        <div class="cap-cell"><h4>Per-session &amp; per-kWh billing</h4><p>Drivers pay for what they use, billed either per session or by energy delivered.</p></div>
+<div class="cap-cell"><h4>Time &amp; demand-based pricing</h4><p>Rates can flex by time of day or station demand, set by the operator per site.</p></div>
+<div class="cap-cell"><h4>Subscription tiers</h4><p>An optional plan for frequent drivers, priced separately from pay-as-you-go sessions.</p></div>
+<div class="cap-cell"><h4>Multi-operator ready</h4><p>The platform is designed so more than one station operator could run on it, each seeing only their own stations and revenue.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-block section-alt">
+    <div class="wrap">
+      <p class="eyebrow reveal">EdgeWeb's Role</p>
+      <h2 class="reveal" style="margin-top:14px;">From problem to running architecture.</h2>
+      <p class="body reveal" style="margin-top:14px; max-width:70ch;">On this client project, EdgeWeb's role covered the <strong style="color:var(--ink); font-weight:600;">product strategy</strong>, the <strong style="color:var(--ink); font-weight:600;">system architecture</strong>, the <strong style="color:var(--ink); font-weight:600;">UX/UI design</strong> for both the driver app and the operator dashboard, and the <strong style="color:var(--ink); font-weight:600;">pricing model</strong>. It reflects the same approach we bring to any real-time, hardware-connected platform: start from how the physical system actually behaves, then design the software around that. See our <a href="/services/custom-software">Custom Software</a> and <a href="/services/ai-automation">AI &amp; Automation</a> services for how that approach applies more broadly, or our <a href="/case-studies/parking-management-system">parking management case study</a> for a related real-time infrastructure build.</p>
+    </div>
+  </section>
+
+  <section class="detail-block">
+    <div class="wrap">
+      <p class="eyebrow reveal">FAQ</p>
+      <div class="faq-list reveal" style="margin-top:28px;">
+        <details class="faq-item" open><summary>Is this a client project?<span class="faq-icon"></span></summary><p class="body">Yes. EdgeWeb designed and built this EV charging platform for a client operating a charging network, who isn't named on this page. It's presented here as product strategy, architecture and design work.</p></details>
+<details class="faq-item"><summary>What is OCPP, and why does it matter?<span class="faq-icon"></span></summary><p class="body">OCPP (Open Charge Point Protocol) is the industry-standard protocol most EV chargers use to communicate with management software. Building the integration layer on OCPP, rather than a single manufacturer's proprietary system, keeps the platform able to work with chargers from more than one vendor.</p></details>
+<details class="faq-item"><summary>Can EdgeWeb build a similar platform for a different kind of hardware network?<span class="faq-icon"></span></summary><p class="body">Yes. The underlying pattern — connecting physical hardware to a real-time app and dashboard, with billing on top — applies to more than EV charging. Talk to us about what you're connecting.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-alt final-cta">
+    <div class="wrap">
+      <p class="eyebrow reveal" style="margin-bottom:30px;">Start a Conversation</p>
+      <h2 class="display-xl reveal">Have a hardware<br><i>platform to build?</i></h2>
+      <p class="body reveal" style="margin-top:20px; max-width:60ch;">If you're running or building out a network of connected hardware — charging stations, meters, kiosks, sensors — talk to EdgeWeb about the software that runs it.</p>
+      <div class="final-cta-row reveal">
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="/contact?service=Custom%20Software" class="btn btn-primary magnetic" data-cursor="Open" data-track="cta_ev_charging_case_final">Start a conversation
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="https://wa.me/919266726490?text=Hi%20EdgeWeb%2C%20I%27m%20interested%20in%20a%20connected%20hardware%20platform." class="btn btn-ghost magnetic" target="_blank" rel="noopener" data-track="cta_whatsapp_ev_charging_case">Prefer WhatsApp? Chat with EdgeWeb →</a>
+          <a href="/consultation" class="btn btn-ghost magnetic" data-cursor="Open" data-track="cta_consultation_case-studies_ev-charging-platform">Not sure yet? Book a free 1:1 call →</a>
+        </div>
+        <div class="final-contact">
+          <a href="mailto:info@edgeweb.co">info@edgeweb.co</a>
+          <a href="tel:+919266726490">+91 92667 26490</a>
+        </div>
+      </div>
+    </div>
+  </section>
