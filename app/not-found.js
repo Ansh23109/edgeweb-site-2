@@ -1,3 +1,5 @@
+import NotFoundSavage from '../components/NotFoundSavage';
+
 export const metadata = {
   title: 'Page Not Found',
   description:
@@ -19,7 +21,9 @@ const css = `
   .nf-code{ font-family:var(--f-display); font-style:italic; font-weight:400; font-size:clamp(64px,14vw,140px); line-height:1; color:var(--ink-dim); }
   .nf-wrap h1{ font-family:var(--f-display); font-weight:400; font-size:clamp(26px,3.4vw,38px); margin:18px 0 14px; }
   .nf-wrap p{ color:var(--ink-dim); max-width:46ch; margin:0 auto 34px; line-height:1.6; }
-  .nf-btn{
+  .nf-wrap .nf-savage{ font-family:var(--f-display); font-style:italic; color:var(--accent-bright); font-size:clamp(16px,2vw,19px); max-width:38ch; margin:-14px auto 30px; line-height:1.45; }
+  .nf-savage-aim{ display:block; font-family:var(--f-body); font-style:normal; color:var(--ink-faint); font-size:12px; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:8px; }
+  .nf-wrap .nf-btn{
     display:inline-flex; align-items:center; gap:10px; background:var(--ink); color:var(--bg);
     font-weight:600; font-size:14.5px; padding:15px 28px; border-radius:100px; text-decoration:none;
     transition:background .3s ease;
@@ -38,6 +42,7 @@ export default function NotFound() {
         <div className="nf-code">404</div>
         <h1>This page doesn&apos;t exist.</h1>
         <p>The page you&apos;re looking for may have moved or the link may be out of date. Here&apos;s how to find what you need instead.</p>
+        <NotFoundSavage />
         <a href="/" className="nf-btn">Back to homepage</a>
         <div className="nf-links">
           <a href="/services">Services</a>

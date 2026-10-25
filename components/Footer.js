@@ -82,6 +82,7 @@ export default function Footer({ showGoodfirmsBadge = false }) {
 
         <div className="mega-footer-bottom">
           <p className="body">© {year} EdgeWeb. Engineered in India.</p>
+          <p className="body" style={{ fontSize: 13, color: 'var(--ink-faint)' }}>Don&apos;t support? Fine. Just don&apos;t jinx the journey.</p>
           <a
             href={`//www.dmca.com/Protection/Status.aspx?ID=${DMCA_BADGE_ID}`}
             title="DMCA.com Protection Status"
