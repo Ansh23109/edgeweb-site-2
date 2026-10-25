@@ -22,15 +22,12 @@ export default function sitemap() {
     { path: '/case-studies/chaaya-furniture', changeFrequency: 'monthly', priority: 0.65 },
     { path: '/case-studies/ev-charging-platform', changeFrequency: 'monthly', priority: 0.65 },
     { path: '/case-studies/scrapgrid', changeFrequency: 'monthly', priority: 0.65 },
-    { path: '/case-studies/iskcon-mumbai', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/case-studies/parking-management-system', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/case-studies/retail-inventory-platform', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/case-studies/fintech-onboarding-engine', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/case-studies/healthcare-scheduling-platform', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/faq', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/contact', changeFrequency: 'yearly', priority: 0.7 },
-    { path: '/founder-anshkashyap', changeFrequency: 'yearly', priority: 0.4 },
-    // /founder-aneeshgarg intentionally excluded — noindexed, not listed in the sitemap.
     { path: '/privacy', changeFrequency: 'yearly', priority: 0.3 },
     { path: '/terms', changeFrequency: 'yearly', priority: 0.3 },
   ];

@@ -83,9 +83,7 @@ export default async function BlogPostPage({ params }) {
             <div className="post-meta" style={{ marginTop: 20 }}>
               <span className="cat">{post.category}</span>
               {author && (
-                <span>
-                  By <a href={author.url} style={{ color: 'inherit', textDecoration: 'underline', textDecorationColor: 'var(--line-strong)' }}>{author.name}</a>, {author.jobTitle}
-                </span>
+                <span>By {author.name}, {author.jobTitle}</span>
               )}
               <span>{dateDisplay}</span>
               <span>{post.readTime}</span>
@@ -99,14 +97,9 @@ export default async function BlogPostPage({ params }) {
           <div className="wrap">
             <div className="article-body reveal" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
             {author && (
-              <div className="article-cta-inline reveal" style={{ marginTop: 48 }}>
-                <p style={{ maxWidth: 'none' }}>
-                  Written by <a href={author.url} style={{ color: 'var(--ink)', textDecoration: 'underline' }}>{author.name}</a>, {author.jobTitle} at EdgeWeb.
-                </p>
-                <a href={author.url} className="btn btn-ghost magnetic" data-cursor="View">
-                  About {author.name.split(' ')[0]}
-                </a>
-              </div>
+              <p className="body reveal" style={{ marginTop: 48, color: 'var(--ink-faint)', fontSize: 14 }}>
+                Written by {author.name}, {author.jobTitle} at EdgeWeb.
+              </p>
             )}
           </div>
         </section>

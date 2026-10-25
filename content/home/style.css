@@ -397,6 +397,15 @@
   .product-mark{ width:34px; height:34px; border:1px solid var(--line-strong); border-radius:50%; display:flex; align-items:center; justify-content:center; }
   .product-mark span{ width:7px; height:7px; background:var(--accent-bright); border-radius:50%; }
   @media (max-width:860px){ .product-grid{ grid-template-columns:1fr; } }
+  /* .industries-grid: used where the card count doesn't evenly divide the
+     3-column grid (e.g. 5 cards = a dangling empty 6th cell). The default
+     .product-grid paints its "grid lines" via a coloured background showing
+     through a 1px gap — with no child to paint over that gap in an empty
+     cell, the raw background color shows as a solid blank box. Swapping to
+     per-cell borders means an empty slot has no element at all, so nothing
+     renders there. */
+  .industries-grid{ background:none !important; gap:0 !important; border:none !important; border-top:1px solid var(--line) !important; border-left:1px solid var(--line) !important; }
+  .industries-grid .product-cell{ border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
 
   /* ---------- proof ---------- */
   .proof-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:40px; border-top:1px solid var(--line); padding-top:56px; }
