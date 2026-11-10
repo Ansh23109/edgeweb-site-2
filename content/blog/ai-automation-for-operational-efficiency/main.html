@@ -1,0 +1,35 @@
+<h2>"Operational efficiency" is a goal nobody measures</h2>
+<p>It shows up in every pitch deck and almost no project scope. The problem isn't the ambition — fewer manual hours, fewer errors, faster turnaround are all real, worthwhile goals. The problem is that "improve operational efficiency" isn't a scope, so a project built around it rarely has a way to tell, afterward, whether it actually worked.</p>
+
+<h2>What makes an AI automation project measurable</h2>
+<h3>Start from a number that already exists</h3>
+<p>Before automating anything, find the number the process already produces — hours spent per week, error rate, average turnaround time, cost per transaction. If that number doesn't exist yet, the first step is instrumenting the current manual process well enough to measure it, not automating it blind.</p>
+<h3>Automate one process, not "operations"</h3>
+<p>A project scoped as "automate our operations" has no edges and no way to know when it's done. A project scoped as "cut document review time on new account applications" has both — a clear before number and a clear after number.</p>
+<h3>Decide what "working" means before you build it</h3>
+<p>Fewer hours spent on the task is the obvious one. Fewer errors reaching a customer, faster turnaround, or freeing a specific role to do higher-value work are often the real goal — decide which one actually matters before the project starts, because they sometimes trade off against each other.</p>
+
+<h2>Where agentic automation actually earns its keep</h2>
+<p>Not every process benefits from an AI agent over simpler automation. The ones that do share a pattern: judgment is required on every case, but the judgment follows a recognizable structure.</p>
+<ul>
+  <li><strong>Document-heavy review processes</strong> — applications, claims, compliance checks — where every document is slightly different but the checks applied are consistent.</li>
+  <li><strong>Routing and triage</strong> — support tickets, leads, internal requests — where the right destination depends on content a person currently has to read first.</li>
+  <li><strong>Reconciliation across systems</strong> — matching records between a CRM, an ERP and a spreadsheet nobody wants to admit still runs the business.</li>
+</ul>
+<p>See <a href="/blog/ai-agents-vs-chatbots">AI agents vs. chatbots</a> for the distinction that matters here: this is agent territory — taking action across steps — not a conversational interface.</p>
+
+<h2>What to put in place before it runs unattended</h2>
+<ul>
+  <li><strong>A supervised period.</strong> New automated processes run with a human checking the output before they run on their own — not as a formality, as the actual test of whether the automation is ready.</li>
+  <li><strong>A clear escalation path.</strong> Every agentic process needs a defined answer to "what happens when this case doesn't fit the pattern," not a silent failure or a wrong guess.</li>
+  <li><strong>An audit trail.</strong> What the system decided and why, logged in a form a person can review later — especially for anything touching compliance or customer-facing decisions.</li>
+</ul>
+<p>Our <a href="/case-studies/fintech-onboarding-engine">fintech onboarding case study</a> is a real example of this pattern in production: a document review process automated with the checks, the escalation path and the audit trail built in from the start, not added after the fact.</p>
+
+<h2>The honest timeline</h2>
+<p>A first automated process, scoped narrowly and measured against a real baseline, typically takes weeks to build and a further supervised period before running unattended — not a single "AI transformation" rollout. Measuring the efficiency gain on that one process is also what tells you whether a second one is worth building.</p>
+
+<div class="article-cta-inline reveal">
+  <p>Have a process you think is a candidate? Tell us what it costs today and we'll tell you honestly whether automating it is worth it.</p>
+  <a href="/consultation" class="btn btn-primary magnetic" data-cursor="Open" data-track="cta_blog_ops_efficiency_inline_consultation">Book a free 1:1 call →</a>
+</div>

@@ -2,7 +2,7 @@
 
 ## Company Overview
 
-EdgeWeb (legal name: EdgeWeb Infotech LLP) is a full-stack technology solutions company founded in 2019 and based in Vishwas Nagar, Delhi 110032, India, operating remote-first for clients in Delhi NCR (Delhi, Gurgaon, Noida, Faridabad, Ghaziabad), the United States, Europe, Australia and across India. EdgeWeb's positioning statement is: "Technology should remove complexity — not relocate it." The company positions itself as a single full-stack partner rather than a fragmented vendor stack, serving both early-stage teams that need one product built well and established businesses that need system integration or replacement.
+EdgeWeb (legal name: EdgeWeb Infotech LLP) is a web development agency, custom software development agency and AI automation agency founded in 2019 and based in Vishwas Nagar, Delhi 110032, India, operating remote-first for clients in Delhi NCR (Delhi, Gurgaon, Noida, Faridabad, Ghaziabad), the United States, the United Kingdom, Europe, Australia and across India — including all 28 Indian states and 8 union territories. EdgeWeb's positioning statement is: "Technology should remove complexity — not relocate it." The company positions itself as a single full-stack partner rather than a fragmented vendor stack, serving both early-stage teams that need one product built well and established businesses that need system integration or replacement.
 
 Contact: info@edgeweb.co | +91 92667 26490 (also WhatsApp) | linkedin.com/company/edgeweb
 Office: Vishwas Nagar, Delhi 110032, India
@@ -18,12 +18,12 @@ EdgeWeb describes a six-stage engagement process:
 5. AI integration where it adds real value
 6. Measuring business outcomes, not just delivery
 
-Typical engagement length is 6–16 weeks depending on scope, delivered in phases so clients see a working system early rather than a single release at the end. Most clients maintain a support or iteration arrangement after launch.
+Typical engagement length is 6–16 weeks depending on scope, delivered in phases so clients see a working system early rather than a single release at the end. Most clients maintain a support or iteration arrangement after launch. Code and intellectual property belong to the client once a project is paid in full.
 
 ## Services
 
 ### Web Development
-Corporate and high-performance websites, custom web applications, and CRM/ERP portals and dashboards. For businesses that need more than a template site — systems that integrate with existing business processes.
+A custom website development company offering corporate and high-performance websites, custom web applications, and CRM/ERP portals and dashboards. For businesses that need more than a template site — systems that integrate with existing business processes.
 https://www.edgeweb.co/services/web-development
 
 ### App Development
@@ -31,11 +31,11 @@ iOS, Android, cross-platform and React Native app development, covering both bus
 https://www.edgeweb.co/services/app-development
 
 ### Custom Software Development
-Enterprise applications, SaaS platforms, internal business platforms, CRM/ERP solutions, portals, dashboards, APIs, and legacy system modernization for businesses outgrowing off-the-shelf tools.
+A custom software development agency offering enterprise applications, SaaS platforms, internal business platforms, CRM/ERP solutions, portals, dashboards, APIs, and legacy system modernization for businesses outgrowing off-the-shelf tools.
 https://www.edgeweb.co/services/custom-software
 
 ### AI & Automation
-AI agents and chatbots, workflow and business process automation, CRM/lead/WhatsApp automation, and data pipelines with API integrations — aimed at removing manual, repetitive work from a business.
+An AI automation agency offering AI agents and chatbots, workflow and business process automation, CRM/lead/WhatsApp automation, and data pipelines with API integrations — aimed at removing manual, repetitive work from a business.
 https://www.edgeweb.co/services/ai-automation
 
 ### Digital Marketing
@@ -56,17 +56,25 @@ https://www.edgeweb.co/services/custom-solutions
 
 ## Industries served
 
-Retail & Distribution, Financial Services, Healthcare — evidenced by delivered projects (see Case Studies below). EdgeWeb also serves early-stage/startup teams across other sectors building a first product.
+Retail & distribution, financial services, healthcare, consumer brands & e-commerce, furniture retail, recycling & SaaS, EV charging & smart infrastructure, and travel & visa services — evidenced by delivered projects (see Case Studies below). EdgeWeb also serves early-stage/startup teams across other sectors building a first product.
 
 ## Case Studies
 
-- Retail: built an inventory management platform for a multi-location retailer. https://www.edgeweb.co/case-studies
-- Fintech: built a client onboarding engine using document AI for a financial services company. https://www.edgeweb.co/case-studies
-- Healthcare: built scheduling infrastructure for a clinic network, achieving 99.9% uptime. https://www.edgeweb.co/case-studies
+All case studies: https://www.edgeweb.co/case-studies
+
+- Golf Garage: brand identity, packaging and Shopify storefront for India's pre-owned golf equipment marketplace, founded by Asian Games silver medalist Rahul Bajaj. Live at golfgarage.in. https://www.edgeweb.co/case-studies/golf-garage
+- Retail: built an inventory management platform for a multi-location retailer, unifying stock across three warehouses. https://www.edgeweb.co/case-studies/retail-inventory-platform
+- Fintech: built a client onboarding engine using document AI for a financial services company. https://www.edgeweb.co/case-studies/fintech-onboarding-engine
+- Healthcare: built scheduling infrastructure for a clinic network, achieving 99.9% uptime. https://www.edgeweb.co/case-studies/healthcare-scheduling-platform
+- Smart infrastructure: a real-time parking network platform with dynamic pricing for a US operator. https://www.edgeweb.co/case-studies/parking-management-system
 - Furniture retail: ongoing SEO, paid ads management and conversion improvement for Chaaya Furniture, an active client. https://www.edgeweb.co/case-studies/chaaya-furniture
 - SaaS product design: ScrapGrid, a multi-tenant cloud ERP for scrap and recycling vendors with a field mobile app and AI verification, designed by EdgeWeb for a client (client not named). https://www.edgeweb.co/case-studies/scrapgrid
 - EV charging infrastructure: a driver app, operator dashboard and OCPP-based integration layer for a client's EV charging network. https://www.edgeweb.co/case-studies/ev-charging-platform
-- Travel services: Unlock Travels, a visa and travel services website with search, five service pages, destination guides and a conversion funnel. https://www.edgeweb.co/case-studies/unlock-travels
+- Travel services: Unlock Travels, a visa and travel services website with search, five service pages, destination guides and a conversion funnel. Live at unlocktravels.com. https://www.edgeweb.co/case-studies/unlock-travels
+
+## Blog
+
+All posts: https://www.edgeweb.co/blog — covering software cost and budgeting, choosing a development agency, in-house vs. outsourced development, hiring a remote engineering team in India, AI automation (for small businesses and for operational efficiency), AI agents vs. chatbots, technical SEO, website redesign, native vs. cross-platform app development, low-code vs. custom software, brand identity, custom booking systems, security by design, and software development trends for 2026.
 
 A glossary of software, web, SEO, AI and business terms is available at https://www.edgeweb.co/glossary.
 
@@ -75,8 +83,11 @@ A glossary of software, web, SEO, AI and business terms is available at https://
 Q: What does EdgeWeb actually build?
 A: Custom web and mobile applications, process automation, applied AI, cloud infrastructure and the data layer connecting them — plus the digital marketing to bring the right traffic once it's live.
 
+Q: Is EdgeWeb a web development agency, a custom software development agency, or an AI automation agency?
+A: All three. EdgeWeb is a single full-stack team covering web development, custom software development and AI automation, rather than three separate specialists — most client engagements combine more than one of these.
+
 Q: How does a project usually start?
-A: Projects begin with discussions about actual business problems rather than feature lists, followed by architecture planning before coding begins.
+A: Projects begin with discussions about actual business problems rather than feature lists, followed by architecture planning before coding begins. A free 30-minute consultation is available at https://www.edgeweb.co/consultation.
 
 Q: Do you work with early-stage businesses, or only established ones?
 A: EdgeWeb serves both early-stage teams needing a single product built well and established businesses requiring system integration or replacement.
@@ -88,14 +99,16 @@ Q: Do you offer support after launch?
 A: Yes — most clients maintain a support or iteration arrangement post-launch.
 
 Q: Where is EdgeWeb based, and do you work with clients outside India?
-A: EdgeWeb operates from India but serves both local and international clients through remote-first delivery.
+A: EdgeWeb is based in Delhi, India, and serves both local and international clients — the USA, UK, Europe, Australia and across India — through remote-first delivery.
 
 Full FAQ: https://www.edgeweb.co/faq
 
 ## Company
 
 About: https://www.edgeweb.co/about
+Areas served: https://www.edgeweb.co/areas-we-serve
+Delhi NCR: https://www.edgeweb.co/delhi-ncr
 
 ## Contact & Next Steps
 
-To start a project: email info@edgeweb.co, message on WhatsApp at +91 92667 26490, or submit the project enquiry form at https://www.edgeweb.co/contact, which asks for the service needed, budget range, and timeline.
+To start a project: email info@edgeweb.co, message on WhatsApp at +91 92667 26490, book a free 30-minute consultation at https://www.edgeweb.co/consultation, or submit the project enquiry form at https://www.edgeweb.co/contact, which asks for the service needed, budget range, and timeline.
