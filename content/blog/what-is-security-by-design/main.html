@@ -1,0 +1,38 @@
+<h2>Security bolted on at the end is a patch job, not a system</h2>
+<p>The common pattern: build the product, ship it, then run a security audit and fix whatever it finds. That works, in the sense that the holes get patched — but every fix is now a change to a system already in production, touching code that was never designed with that constraint in mind. Security by design is the alternative: treating security as a requirement from the first architecture decision, not a review step at the end.</p>
+
+<h2>What it actually means in practice</h2>
+<h3>Least privilege by default</h3>
+<p>Every part of a system — a user role, a service, an API key — gets access to only what it specifically needs, not broad access that happens to be convenient. Narrowing this down later, after other parts of the system have come to depend on that broad access, is far harder than starting narrow.</p>
+<h3>Data minimization</h3>
+<p>Collecting and storing only the data a feature actually requires, rather than everything that might be useful someday. Data you never collected can't be the subject of a breach.</p>
+<h3>Secure defaults, not secure options</h3>
+<p>The safe configuration should be what happens automatically, not a setting someone has to remember to turn on. A login flow that requires strong passwords by default is secure by design; one where strong passwords are merely "recommended" is not.</p>
+<h3>Threat modeling before the build, not after</h3>
+<p>Asking "what could go wrong here, and who would want to make it go wrong" as part of designing a feature — not as a separate audit conducted once the feature already exists.</p>
+
+<h2>Why retrofitting it costs more</h2>
+<p>Three reasons this isn't just caution talking:</p>
+<ul>
+  <li><strong>Architecture is expensive to change after the fact.</strong> A data model built without access boundaries in mind often needs real restructuring to add them properly later, not just a permissions check bolted on top.</li>
+  <li><strong>Fixes made under pressure are riskier.</strong> A security gap found in production usually needs fixing fast, which is exactly the condition under which new bugs get introduced.</li>
+  <li><strong>Some gaps can't be fully closed after the fact.</strong> If sensitive data was logged, cached, or sent to a third-party service before anyone caught it, no later fix removes it from everywhere it already went.</li>
+</ul>
+
+<h2>What this looks like on a real project</h2>
+<p>In practice, security by design isn't a separate phase with its own line item — it's a set of questions asked at each stage of a build already happening: what does this role actually need access to, what happens if this input is malicious, what's logged and for how long, what happens if this third-party integration is compromised. None of it requires a dedicated security team for most business software; it requires asking those questions while the architecture is still easy to change.</p>
+
+<h2>Where this matters most</h2>
+<table>
+  <tr><th>System type</th><th>Why it matters more here</th></tr>
+  <tr><td>Anything handling payment or financial data</td><td>Direct regulatory and liability exposure</td></tr>
+  <tr><td>Multi-tenant SaaS platforms</td><td>A gap in tenant isolation exposes every customer at once, not just one</td></tr>
+  <tr><td>Systems with third-party integrations</td><td>Each integration is a new boundary that needs its own access limits</td></tr>
+  <tr><td>Anything storing personal or health data</td><td>Regulatory requirements (GDPR, HIPAA-equivalent) and genuine user trust</td></tr>
+</table>
+<p>See our <a href="/case-studies/scrapgrid">ScrapGrid case study</a> for an example of tenant isolation designed in from the architecture stage, on a multi-tenant SaaS product.</p>
+
+<div class="article-cta-inline reveal">
+  <p>Building something that'll handle sensitive data or multiple customer accounts? Talk to us about the architecture before the first line of code.</p>
+  <a href="/consultation" class="btn btn-primary magnetic" data-cursor="Open" data-track="cta_blog_security_by_design_inline_consultation">Book a free 1:1 call →</a>
+</div>

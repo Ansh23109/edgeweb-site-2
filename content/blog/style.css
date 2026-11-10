@@ -26,8 +26,14 @@
   .article-cta-inline p{ margin:0; font-size:15px; color:var(--ink); max-width:44ch; }
 
   /* ---------- blog: index grid ---------- */
-  .post-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:40px; }
-  .post-card{ background:var(--bg); padding:38px 34px; display:flex; flex-direction:column; gap:14px; text-decoration:none; transition:background .25s ease; }
+  /* Per-cell borders rather than a shared-background gap trick: with
+     auto-fit, the column count is computed once for the whole grid, so a
+     final row with fewer items than that count would otherwise show the
+     raw gap background through the empty tracks (seen with 14 posts at
+     4 columns — last row only fills 2). An element-less empty track has
+     nothing to paint a border on, so this renders nothing there instead. */
+  .post-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:0; border-top:1px solid var(--line); border-left:1px solid var(--line); margin-top:40px; }
+  .post-card{ background:var(--bg); padding:38px 34px; display:flex; flex-direction:column; gap:14px; text-decoration:none; transition:background .25s ease; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
   .post-card:hover{ background:var(--bg-raised); }
   .post-card .cat{ font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-bright); }
   .post-card h2{ font-family:var(--f-display); font-style:italic; font-weight:400; font-size:22px; color:var(--ink); line-height:1.32; margin:0; }
