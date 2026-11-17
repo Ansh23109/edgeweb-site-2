@@ -1,0 +1,49 @@
+<h2>Three numbers, and what each one actually measures</h2>
+<p>Core Web Vitals are Google's attempt to measure page experience the way a real visitor feels it, not the way a server log does. There are three of them, and each one maps to a specific, recognizable annoyance.</p>
+
+<h2>LCP — Largest Contentful Paint</h2>
+<p>How long until the main content — usually the biggest image or block of text in the viewport — actually appears. This is "how long did I stare at a blank or half-loaded page." Google's target is under 2.5 seconds.</p>
+<h3>What usually causes a bad LCP</h3>
+<ul>
+  <li>A large hero image or video that isn't optimized for the size it's actually displayed at</li>
+  <li>Render-blocking CSS or JavaScript loading before the content can paint</li>
+  <li>A slow server response for the initial HTML</li>
+  <li>Web fonts that delay text rendering until they've downloaded</li>
+</ul>
+
+<h2>INP — Interaction to Next Paint</h2>
+<p>How long the page takes to visibly respond after a click, tap, or key press. This is "I clicked and nothing happened for a second." Google's target is under 200 milliseconds. It replaced an older metric (First Input Delay) specifically because FID only measured the first interaction — INP measures responsiveness throughout the whole visit.</p>
+<h3>What usually causes a bad INP</h3>
+<ul>
+  <li>Heavy JavaScript running on the main thread when a user interacts</li>
+  <li>Large, unoptimized event handlers firing on every scroll or click</li>
+  <li>Too much work happening at once in response to a single interaction</li>
+</ul>
+
+<h2>CLS — Cumulative Layout Shift</h2>
+<p>How much visible content jumps around while the page loads. This is "I was about to tap a button and the page shifted and I tapped the wrong thing." Google's target is under 0.1.</p>
+<h3>What usually causes a bad CLS</h3>
+<ul>
+  <li>Images and embeds with no declared width and height, so the browser doesn't reserve space for them before they load</li>
+  <li>Web fonts that render at a different size than the fallback font, pushing text around</li>
+  <li>Ads, banners or cookie notices injected after the page has already rendered</li>
+</ul>
+
+<h2>A real example: what we found auditing this exact site</h2>
+<p>While working on this page, we ran a real performance check on our own case study pages and found two concrete issues worth fixing — not hypothetical advice, what we actually did:</p>
+<ul>
+  <li><strong>Oversized images.</strong> Two logo files were being served at roughly 2,600 pixels wide for a slot displayed at 220 pixels — about 12 times more image data than the page needed. Resizing them to match their actual display size cut those two files from 188KB and 168KB down to 64KB and 132KB.</li>
+  <li><strong>No lazy loading on below-the-fold images.</strong> Every image on a long case study page was loading immediately, regardless of whether a visitor ever scrolled that far. Adding <code>loading="lazy"</code> and explicit width/height attributes meant a visitor who doesn't scroll to the bottom of the page now loads roughly 90% less image weight than before — confirmed by checking what the browser actually fetched before and after scrolling, not assumed.</li>
+</ul>
+<p>Both fixes are small, specific, and have nothing to do with rewriting a site — they're the kind of thing a real Core Web Vitals pass finds on almost any content-heavy site that's grown over time.</p>
+
+<h2>Why this affects SEO, not just user experience</h2>
+<p>Core Web Vitals are a confirmed Google ranking signal, though a comparatively minor one against content relevance and backlinks. The more direct effect is on conversion: a slow or jumpy page loses visitors before they ever read your content, which shows up as lower engagement signals Google can also see. See our <a href="/blog/technical-seo-checklist-2026">technical SEO checklist</a> for where this fits into the broader picture.</p>
+
+<h2>How to check your own site</h2>
+<p>Google's PageSpeed Insights and the Core Web Vitals report in Search Console both give real, field data from actual visitors rather than a lab simulation — that field data is what Google uses for ranking, so it's the number that actually matters, more than a single lab test run.</p>
+
+<div class="article-cta-inline reveal">
+  <p>Want a real audit of your own site's Core Web Vitals, not a generic checklist? Send us the link.</p>
+  <a href="/consultation" class="btn btn-primary magnetic" data-cursor="Open" data-track="cta_blog_core_web_vitals_inline_consultation">Book a free 1:1 call →</a>
+</div>
