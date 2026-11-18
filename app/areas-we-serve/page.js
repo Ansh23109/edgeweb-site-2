@@ -25,7 +25,7 @@ export const metadata = {
     'Web development, app development, SEO & AI automation for businesses in all 28 Indian states and 8 UTs, every US state, Europe and Australia. Remote-first.',
   alternates: { canonical: absoluteUrl('/areas-we-serve') },
   keywords:
-    'web development company near me, best SEO expert near me, digital marketing agency near me, app development company near me, software development company near me, website designer near me, SEO services near me, web development company in India, best digital marketing agency in India, web development company USA, SEO agency USA, web development company UK, digital agency Europe, web development company Australia, SEO expert Australia, hire web developers India, affordable web development company, custom software development company, AI automation agency',
+    'web development company near me, best SEO expert near me, digital marketing agency near me, app development company near me, software development company near me, website designer near me, SEO services near me, web development company in India, best digital marketing agency in India, web development company USA, SEO agency USA, web development company UK, digital agency Europe, web development company Australia, SEO expert Australia, hire web developers India, affordable web development company, custom software development company, AI automation agency, AI automation agency in India, AI automation agency in Europe, AI automation agency in France, AI automation agency in Australia, AI automation agency in the USA',
   openGraph: {
     type: 'website',
     siteName: 'EdgeWeb',
@@ -78,7 +78,7 @@ const REGIONS = [
     label: 'India',
     h2: 'Web development, app development & SEO in India — all 28 states and 8 union territories',
     intro:
-      "EdgeWeb has been building websites, apps, custom software and running digital marketing from Delhi since 2019. Whether you're a startup in Bengaluru, a manufacturer in Gujarat or a tourism business in Goa, you get the same architecture-first process, delivered remote-first, with in-person meetings across Delhi NCR.",
+      "EdgeWeb has been building websites, apps, custom software and running digital marketing from Delhi since 2019 — and works as an AI automation agency in India for businesses automating document review, lead routing and support workflows. Whether you're a startup in Bengaluru, a manufacturer in Gujarat or a tourism business in Goa, you get the same architecture-first process, delivered remote-first, with in-person meetings across Delhi NCR.",
     groups: [
       { title: 'States', items: INDIA_STATES },
       { title: 'Union territories', items: INDIA_UTS },
@@ -90,7 +90,7 @@ const REGIONS = [
     label: 'USA',
     h2: 'Web development, app development & SEO for businesses in every US state',
     intro:
-      "From California technology companies to Texas energy firms and Florida hospitality groups, EdgeWeb delivers websites, custom software, AI automation and SEO to US businesses remote-first, with calls scheduled inside your working hours.",
+      "From California technology companies to Texas energy firms and Florida hospitality groups, EdgeWeb works as an AI automation agency in the USA alongside web development, custom software and SEO — delivered remote-first, with calls scheduled inside your working hours.",
     groups: [{ title: 'States', items: USA_STATES }],
     service: 'web development company in the USA',
   },
@@ -99,7 +99,7 @@ const REGIONS = [
     label: 'Europe',
     h2: 'Web development, app development & digital marketing across Europe',
     intro:
-      "EdgeWeb works with businesses across the United Kingdom and mainland Europe — from London fintechs to Berlin manufacturers and Nordic technology teams — delivering websites, custom software, automation and SEO with GDPR-aware practices.",
+      "EdgeWeb works as an AI automation agency in Europe — including France, Germany and the Nordics — alongside web development, custom software and SEO, with GDPR-aware practices. From London fintechs to Paris retailers and Berlin manufacturers, delivery is remote-first with calls scheduled inside your working hours.",
     groups: [{ title: 'Countries', items: EUROPE_COUNTRIES }],
     service: 'digital agency in Europe',
   },
@@ -108,7 +108,7 @@ const REGIONS = [
     label: 'Australia',
     h2: 'Web development, app development & SEO across Australia',
     intro:
-      "From Sydney professional services to Perth mining suppliers and Melbourne healthcare providers, EdgeWeb delivers websites, custom software, automation and SEO to Australian businesses remote-first, with calls that fit Australian time zones.",
+      "From Sydney professional services to Perth mining suppliers and Melbourne healthcare providers, EdgeWeb works as an AI automation agency in Australia alongside web development, custom software and SEO — delivered remote-first, with calls that fit Australian time zones.",
     groups: [{ title: 'States and territories', items: AUSTRALIA_STATES }],
     service: 'web development company in Australia',
   },

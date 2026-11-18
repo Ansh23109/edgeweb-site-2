@@ -41,6 +41,7 @@ const FAQS = [
   { q: "Will AI replace our team's judgment on important decisions?", a: 'Not by default. Most systems we build are scoped to a specific, bounded task — classification, drafting, triage — with a human reviewing anything above a risk or confidence threshold you set.' },
   { q: 'How do you decide what to automate first?', a: "By volume and pain: the manual step that happens most often and causes the most delay or error usually gets automated first, since that's where the return is fastest to see." },
   { q: 'Can this integrate with the CRM/ERP we already use?', a: "In most cases, yes — through the platform's API or, where no API exists, through a lighter-weight integration approach we scope during the architecture phase." },
+  { q: 'Do you work as an AI automation agency outside India — Europe, France, Australia, the USA?', a: 'Yes. EdgeWeb delivers AI automation remote-first for businesses across India, Europe (including France), Australia and the USA, on scheduled calls inside your working hours.' },
 ];
 
 export default function AiAutomationPage() {
