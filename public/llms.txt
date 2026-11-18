@@ -23,6 +23,7 @@ EdgeWeb was founded in 2019 (legal name: EdgeWeb Infotech LLP) and builds custom
 - [Case Studies](https://www.edgeweb.co/case-studies): Real client work across retail, fintech, healthcare, consumer brands, furniture retail, recycling SaaS, EV charging infrastructure and travel services.
 - [Blog](https://www.edgeweb.co/blog): Guides on software cost, choosing an agency, AI automation, technical SEO, and more.
 - [Glossary](https://www.edgeweb.co/glossary): Plain-English definitions of software, web, SEO, AI and business terms.
+- [Cost Calculator](https://www.edgeweb.co/cost-calculator): A free, instant project cost estimate — no email required.
 - [Free Consultation](https://www.edgeweb.co/consultation): A free 30-minute 1:1 call to scope a project, no sales pitch.
 - [FAQ](https://www.edgeweb.co/faq): Answers about pricing, process, tech stack, IP ownership, timelines, and support.
 - [Contact](https://www.edgeweb.co/contact): Start a project — email, WhatsApp, or project enquiry form.
@@ -30,3 +31,4 @@ EdgeWeb was founded in 2019 (legal name: EdgeWeb Infotech LLP) and builds custom
 ## Optional
 
 - [Sitemap](https://www.edgeweb.co/sitemap.xml)
+- [RSS Feed](https://www.edgeweb.co/rss.xml)

@@ -16,7 +16,7 @@ export const metadata = {
   title: 'Blog | Software, Web Development & Agency Advice | EdgeWeb',
   description:
     'Cost breakdowns, how to choose an agency, and the signs your business has outgrown spreadsheets — straight answers from the EdgeWeb team.',
-  alternates: { canonical: absoluteUrl('/blog') },
+  alternates: { canonical: absoluteUrl('/blog'), types: { 'application/rss+xml': absoluteUrl('/rss.xml') } },
   keywords:
     'software development blog, custom software cost guide, how to choose a software agency, business automation blog',
   openGraph: {
