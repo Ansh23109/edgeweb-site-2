@@ -40,6 +40,7 @@ const FAQS = [
   { q: 'Do you work with early-stage businesses, or only established ones?', a: 'Both. Early-stage teams usually need one thing built well; established businesses usually need existing systems connected or replaced. The approach works the same either way.' },
   { q: 'What do you need from us to get started?', a: "A working session on what's actually breaking or missing today, plus access to any existing systems or brand material relevant to the project." },
   { q: 'Do you offer support after launch?', a: 'Yes, most clients stay on a support or iteration arrangement after launch, since real usage is where decisions actually get tested.' },
+  { q: 'Do you work as a branding and UI/UX agency outside India — Europe, France, Australia, the USA?', a: 'Yes. EdgeWeb delivers branding and UI/UX design remote-first for businesses across India, Europe (including France), Australia and the USA, on scheduled calls inside your working hours.' },
 ];
 
 export default function BrandingUiUxPage() {
