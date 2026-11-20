@@ -185,6 +185,31 @@
     counters.forEach(c=>cio.observe(c));
   }
 
+  /* ---------- hero stats panel: bar reveal + hover tilt ---------- */
+  const heroStatsPanel = document.getElementById('heroStatsPanel');
+  if(heroStatsPanel){
+    const bars = heroStatsPanel.querySelector('.hsp-bars');
+    if(bars){
+      if(reduceMotion || !('IntersectionObserver' in window)){
+        bars.classList.add('in-view');
+      } else {
+        const bio = new IntersectionObserver((entries)=>{
+          entries.forEach(e=>{ if(e.isIntersecting){ bars.classList.add('in-view'); bio.unobserve(e.target); } });
+        }, { threshold:0.4 });
+        bio.observe(bars);
+      }
+    }
+    if(!reduceMotion && matchMedia('(pointer:fine)').matches){
+      heroStatsPanel.addEventListener('mousemove', (e)=>{
+        const r = heroStatsPanel.getBoundingClientRect();
+        const px = (e.clientX - r.left)/r.width - 0.5;
+        const py = (e.clientY - r.top)/r.height - 0.5;
+        heroStatsPanel.style.transform = `perspective(900px) rotateY(${px*6}deg) rotateX(${py*-6}deg) translateY(-4px)`;
+      });
+      heroStatsPanel.addEventListener('mouseleave', ()=>{ heroStatsPanel.style.transform = ''; });
+    }
+  }
+
   /* ---------- capabilities interactive list ---------- */
   const capabilities = [
     {
